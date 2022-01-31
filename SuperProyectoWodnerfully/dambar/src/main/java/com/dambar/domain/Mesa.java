@@ -21,8 +21,8 @@ public class Mesa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Schema(description = "Estado de la mesa", example = "Ocupada", required = true)
-    estadoMesa estado = estadoMesa.Libre;
+    //@Schema(description = "Estado de la mesa", example = "Ocupada", required = true)
+    //estadoMesa estado = estadoMesa.Libre;
 
 
 
