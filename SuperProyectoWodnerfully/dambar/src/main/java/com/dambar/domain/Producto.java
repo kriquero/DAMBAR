@@ -18,6 +18,7 @@ public class Producto {
     @Schema(description = "Identificador del producto", example = "1", required = true)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private long id;
 
     @Schema(description = "Nombre del producto", example = "Ensalada cesar", required = true)
@@ -49,4 +50,8 @@ public class Producto {
     @NotBlank
     @Column
     private float foto; //URL del producto
+
+    @OneToOne(mappedBy = "producto", fetch = FetchType.LAZY)
+    LineaComanda lineaComanda;
+
 }
