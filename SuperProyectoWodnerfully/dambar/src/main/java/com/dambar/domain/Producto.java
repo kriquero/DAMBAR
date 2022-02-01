@@ -23,32 +23,32 @@ public class Producto {
 
     @Schema(description = "Nombre del producto", example = "Ensalada cesar", required = true)
     @NotBlank
-    @Column
+    @Column(name="nombre")
     private String nombre;
 
     @Schema(description = "Descripcion del producto", example = "Ensalada con salsa cesar", required = true)
     @NotBlank
-    @Column
+    @Column(name="descripcion")
     private String descripcion;
 
     @Schema(description = "Precio del producto", example = "6.5", required = true)
     @NotBlank
-    @Column
+    @Column(name="precio")
     private float precio;
 
     @Schema(description = "Cantidad de productos en el stock", example = "6", required = true)
     @NotBlank
-    @Column
+    @Column(name="stock")
     private int stock;
 
     @Schema(description = "Tipo de producto", example = "Marisco", required = true)
     @NotBlank
-    @Column
+    @Column(name="tipo")
     private String tipo;
 
-    @Schema(description = "Foto del producto", example = "url", required = true)
+    @Schema(description = "Foto del producto", example = "https://okdiario.com/img/2020/01/16/potaje-de-garbanzos-con-chorizo.jpg", required = true)
     @NotBlank
-    @Column
+    @Column(name="foto")
     private float foto; //URL del producto
 
     @OneToOne(mappedBy = "producto", fetch = FetchType.LAZY)

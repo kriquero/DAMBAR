@@ -17,26 +17,31 @@ public class Camarero {
 
     @Schema(description = "Identificador del camarero", example = "1", required = true)
     @Id
+    @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idCamarero;
 
     @Schema(description = "Nombre del camarero", example = "Pepe", required = true)
     @NotBlank
-    @Column
+    @Column(name="nombre")
     private String nombre;
 
     @Schema(description = "Puesto del camarero", example = "Terraza", required = true)
     @NotBlank
-    @Column
+    @Column(name="puesto")
     private String puesto;
 
     @Schema(description = "Fecha de inicio del camarero", example = "2022-2-20", required = true)
     @NotBlank
-    @Column
+    @Column(name="fechaAlta")
     private LocalDate fechaInicio;
 
     @Schema(description = "telefono del camarero", example = "669447151", required = true)
     @NotBlank
-    @Column
+    @Column(name="telefono")
     private String telefono;
+
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "id_comanda")
+    private Comanda comanda;
 }

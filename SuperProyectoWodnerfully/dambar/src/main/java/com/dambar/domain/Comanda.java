@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -40,7 +42,14 @@ public class Comanda {
     @Column(name = "fecha_pedido")
     private LocalDate fechaPedido;
 
-//    @OneToMany(mappedBy = "lineacomanda")
+    @OneToOne(mappedBy ="mesa",fetch = FetchType.LAZY)
+    private Mesa mesa;
+
+    @OneToOne(mappedBy ="camarero",fetch = FetchType.LAZY)
+    private Camarero camarero;
+
+    @OneToMany(mappedBy = "lineacomanda",cascade = CascadeType.ALL)
+    private List<LineaComanda> lineasComanda = new ArrayList<>();
 
 
 }
