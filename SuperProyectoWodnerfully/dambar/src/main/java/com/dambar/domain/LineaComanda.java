@@ -10,13 +10,12 @@ import javax.validation.constraints.NotBlank;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity(name = "lineacomanda")
+/*@IdClass(producto_ComandaID.class)*/
 public class LineaComanda {
 
-    @Schema(description = "Identificador", example = "1", required = true)
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Identificador", example = "15", required = true)
+    @EmbeddedId
     @Column(name = "id")
     private long id;
 
@@ -25,10 +24,10 @@ public class LineaComanda {
     @Column(name = "cantidad")
     private int cantidad;
 
-    @OneToOne (cascade = {CascadeType.ALL})
+   /* @OneToOne (cascade = {CascadeType.ALL})
     @JoinColumn(name="id_producto")
     private Producto producto;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Comanda comanda;
+    private Comanda comanda;*/
 }

@@ -48,8 +48,8 @@ public class Comanda {
     @OneToOne(mappedBy ="camarero",fetch = FetchType.LAZY)
     private Camarero camarero;
 
-    @OneToMany(mappedBy = "lineacomanda",cascade = CascadeType.ALL)
-    private List<LineaComanda> lineasComanda = new ArrayList<>();
+ /*   @OneToMany(mappedBy = "lineacomanda",cascade = CascadeType.ALL)
+    private List<LineaComanda> lineasComanda = new ArrayList<>();*/
 
 
 }

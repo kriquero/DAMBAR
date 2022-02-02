@@ -51,7 +51,7 @@ public class Producto {
     @Column(name="foto")
     private float foto; //URL del producto
 
-    @OneToOne(mappedBy = "producto", fetch = FetchType.LAZY)
-    LineaComanda lineaComanda;
+    /*@OneToOne(mappedBy = "producto", fetch = FetchType.LAZY)
+    LineaComanda lineaComanda;*/
 
 }
