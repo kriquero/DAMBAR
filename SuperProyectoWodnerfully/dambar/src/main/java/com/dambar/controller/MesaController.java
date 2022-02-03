@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
 @RestController
-@Tag(name="mesas", description = "lista de mesas")
+@Tag(name="mesas", description = "Lista de mesas")
 public class MesaController {
 
     @Autowired
@@ -31,8 +31,7 @@ public class MesaController {
     })
     @GetMapping(value = "/mesas", produces = "application/json")
     public ResponseEntity<Set<Mesa>> getMesas(){
-        Set<Mesa> mesas = null;
-        mesas = mesaService.findAll();
+        Set<Mesa> mesas =  mesaService.findAll();
         return new ResponseEntity<>(mesas, HttpStatus.OK);
     }
 
