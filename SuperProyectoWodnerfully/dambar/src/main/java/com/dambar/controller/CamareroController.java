@@ -29,7 +29,7 @@ public class CamareroController {
             @ApiResponse(responseCode = "200", description = "Listado de camareros",
                     content = @Content(array = @ArraySchema(schema = @Schema(implementation = Camarero.class)))),
     })
-    @GetMapping(value = "/Camareros", produces = "application/json")
+    @GetMapping(value = "/camareros", produces = "application/json")
     public ResponseEntity<Set<Camarero>> getCamareros(){
         Set<Camarero> camareros =  CamareroService.findAll();
         return new ResponseEntity<>(camareros, HttpStatus.OK);
@@ -49,7 +49,7 @@ public class CamareroController {
 
     @Operation(summary = "Registra un nuevo camarero")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Se registra la camarero", content = @Content(schema = @Schema(implementation = Camarero.class))),
+            @ApiResponse(responseCode = "200", description = "Se registra el camarero", content = @Content(schema = @Schema(implementation = Camarero.class))),
     })
     @PostMapping(value = "/camareros", produces = "application/json", consumes = "application/json")
     public ResponseEntity<Camarero> addCamarero(@RequestBody Camarero camarero) {
@@ -57,10 +57,10 @@ public class CamareroController {
         return new ResponseEntity<>(addedCamarero, HttpStatus.OK);
     }
 
-    @Operation(summary = "Modifica una camarero de la lista")
+    @Operation(summary = "Modifica un camarero de la lista")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Se modifica la camarero", content = @Content(schema = @Schema(implementation = Camarero.class))),
-            @ApiResponse(responseCode = "404", description = "La Camarero no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+            @ApiResponse(responseCode = "200", description = "Se modifica el camarero", content = @Content(schema = @Schema(implementation = Camarero.class))),
+            @ApiResponse(responseCode = "404", description = "El Camarero no existe", content = @Content(schema = @Schema(implementation = Response.class))),
     })
     @PutMapping(value = "/camareros/{id}", produces = "application/json", consumes = "application/json")
     public ResponseEntity<Camarero> modifyCamarero(@PathVariable long id, @RequestBody Camarero newCamarero) {
