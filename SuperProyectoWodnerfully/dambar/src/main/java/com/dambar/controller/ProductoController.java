@@ -70,7 +70,7 @@ public class ProductoController {
     @Operation(summary = "Modifica un producto de la lista")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Se modifica el producto", content = @Content(schema = @Schema(implementation = Producto.class))),
-            @ApiResponse(responseCode = "404", description = "el producto no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+            @ApiResponse(responseCode = "404", description = "El producto no existe", content = @Content(schema = @Schema(implementation = Response.class))),
     })
     @PutMapping(value = "/productos/{id}", produces = "application/json", consumes = "application/json")
     public ResponseEntity<Producto> modifyproducto(@PathVariable long id, @RequestBody Producto newProducto) {
@@ -78,10 +78,10 @@ public class ProductoController {
         return new ResponseEntity<>(producto, HttpStatus.OK);
     }
 
-    @Operation(summary = "Elimina una producto")
+    @Operation(summary = "Elimina un producto")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Se elimina el producto", content = @Content(schema = @Schema(implementation = Response.class))),
-            @ApiResponse(responseCode = "404", description = "el producto no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+            @ApiResponse(responseCode = "404", description = "El producto no existe", content = @Content(schema = @Schema(implementation = Response.class))),
     })
     @DeleteMapping(value = "/productos/{id}", produces = "application/json")
     public ResponseEntity<Response> deleteProducto(@PathVariable long id)
