@@ -45,7 +45,7 @@ public class LineaComandaController {
         LineaComanda linea = lineaService.findById(id)
                 .orElseThrow(() -> new LineaComandaNotFoundException(id));
         return new ResponseEntity<>(linea, HttpStatus.OK);
-    }//////////////////////////////////////
+    }
 
     @Operation(summary = "Registra una nueva linea de comanda")
     @ApiResponses(value = {

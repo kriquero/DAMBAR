@@ -67,7 +67,7 @@ public class ComandaController {
     })
     @PutMapping(value = "/comandas/{id}", produces = "application/json", consumes = "application/json")
     public ResponseEntity<Comanda> modifyComanda(@PathVariable long id, @RequestBody Comanda newComanda) {
-        Comanda comanda = ComandaService.modifyComanda(id, newComanda);
+        Comanda comanda = comandaService.modifyComanda(id, newComanda);
         return new ResponseEntity<>(comanda, HttpStatus.OK);
     }
 
@@ -79,7 +79,7 @@ public class ComandaController {
     @DeleteMapping(value = "/comandas/{id}", produces = "application/json")
     public ResponseEntity<Response> deleteComanda(@PathVariable long id)
     {
-        ComandaService.deleteComanda(id);
+        comandaService.deleteComanda(id);
         return new ResponseEntity<>(Response.noErrorResponse(), HttpStatus.OK);
     }
 }
