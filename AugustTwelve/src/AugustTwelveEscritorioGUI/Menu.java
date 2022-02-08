@@ -98,7 +98,7 @@ public class Menu extends javax.swing.JFrame {
             public void run() {
                 Menu menu = new Menu();
                 menu.setVisible(true);
-                //menu.colorear();
+                menu.colorear();
                 
             }
         });
