@@ -20,7 +20,7 @@ public class Comanda {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long id;
+    private long idComanda;
 
     @Schema(description = "Indica si se ha pagado", example = "1", required = true)
     @NotBlank
@@ -47,6 +47,8 @@ public class Comanda {
 
     @OneToOne(mappedBy ="camarero",fetch = FetchType.LAZY)
     private Camarero camarero;
+
+
 
  /*   @OneToMany(mappedBy = "lineacomanda",cascade = CascadeType.ALL)
     private List<LineaComanda> lineasComanda = new ArrayList<>();*/
