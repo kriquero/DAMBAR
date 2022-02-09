@@ -27,6 +27,20 @@ public class Menu extends javax.swing.JFrame {
         initComponents();
     }
 
+    private void estadoMesa(){
+        MGlobal.setSize(Princ.getWidth(),Pmesa.getHeight()+MOpc.getHeight());
+        PGlobal.setSize(Princ.getWidth(),Pprod.getHeight());
+        MGlobal.setLocation(0,Logo.getHeight());
+        PGlobal.setLocation(0,Logo.getHeight()+MGlobal.getHeight());
+        MOpc.setSize(Princ.getWidth(),Balta.getHeight()+Bbaja.getHeight()+Bmod.getHeight()+Bvis.getHeight());
+        
+    
+    }
+    
+    private void estadoProd(){
+    
+    
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,10 +50,10 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        Princ = new javax.swing.JPanel();
+        Logo = new javax.swing.JPanel();
+        MGlobal = new javax.swing.JPanel();
+        MOpc = new javax.swing.JPanel();
         Palta = new javax.swing.JPanel();
         Balta = new javax.swing.JButton();
         Pbaja = new javax.swing.JPanel();
@@ -48,31 +62,44 @@ public class Menu extends javax.swing.JFrame {
         Bvis = new javax.swing.JButton();
         Pmod = new javax.swing.JPanel();
         Bmod = new javax.swing.JButton();
+        Pmesa = new javax.swing.JPanel();
+        Bmesa = new javax.swing.JButton();
+        PGlobal = new javax.swing.JPanel();
+        Pprod = new javax.swing.JPanel();
+        Bprod = new javax.swing.JButton();
+        POpc = new javax.swing.JPanel();
+        Palta1 = new javax.swing.JPanel();
+        Balta1 = new javax.swing.JButton();
+        Pbaja1 = new javax.swing.JPanel();
+        Bbaja1 = new javax.swing.JButton();
+        Pvis1 = new javax.swing.JPanel();
+        Bvis1 = new javax.swing.JButton();
+        Pmod1 = new javax.swing.JPanel();
+        Bmod1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(95, 75, 139));
+        Princ.setBackground(new java.awt.Color(95, 75, 139));
+        Princ.setPreferredSize(new java.awt.Dimension(150, 600));
 
-        jPanel2.setBackground(new java.awt.Color(95, 75, 139));
+        Logo.setBackground(new java.awt.Color(95, 75, 139));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout LogoLayout = new javax.swing.GroupLayout(Logo);
+        Logo.setLayout(LogoLayout);
+        LogoLayout.setHorizontalGroup(
+            LogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 149, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        LogoLayout.setVerticalGroup(
+            LogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jButton1.setBackground(new java.awt.Color(95, 75, 139));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Mesas");
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
+        MGlobal.setBackground(new java.awt.Color(95, 75, 139));
+        MGlobal.setPreferredSize(new java.awt.Dimension(150, 40));
 
-        jPanel3.setBackground(new java.awt.Color(1, 14, 17));
+        MOpc.setBackground(new java.awt.Color(95, 75, 139));
+        MOpc.setPreferredSize(new java.awt.Dimension(0, 0));
 
         Palta.setBackground(new java.awt.Color(159, 134, 170));
         Palta.setPreferredSize(new java.awt.Dimension(150, 45));
@@ -107,7 +134,7 @@ public class Menu extends javax.swing.JFrame {
             PaltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PaltaLayout.createSequentialGroup()
                 .addComponent(Balta, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         PaltaLayout.setVerticalGroup(
             PaltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,6 +151,19 @@ public class Menu extends javax.swing.JFrame {
         Bbaja.setText("Baja");
         Bbaja.setBorderPainted(false);
         Bbaja.setContentAreaFilled(false);
+        Bbaja.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BbajaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BbajaMouseExited(evt);
+            }
+        });
+        Bbaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BbajaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PbajaLayout = new javax.swing.GroupLayout(Pbaja);
         Pbaja.setLayout(PbajaLayout);
@@ -147,6 +187,19 @@ public class Menu extends javax.swing.JFrame {
         Bvis.setText("Visualizar");
         Bvis.setBorderPainted(false);
         Bvis.setContentAreaFilled(false);
+        Bvis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BvisMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BvisMouseExited(evt);
+            }
+        });
+        Bvis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BvisActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PvisLayout = new javax.swing.GroupLayout(Pvis);
         Pvis.setLayout(PvisLayout);
@@ -167,6 +220,19 @@ public class Menu extends javax.swing.JFrame {
         Bmod.setText("Modificar");
         Bmod.setBorderPainted(false);
         Bmod.setContentAreaFilled(false);
+        Bmod.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BmodMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BmodMouseExited(evt);
+            }
+        });
+        Bmod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BmodActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PmodLayout = new javax.swing.GroupLayout(Pmod);
         Pmod.setLayout(PmodLayout);
@@ -179,18 +245,18 @@ public class Menu extends javax.swing.JFrame {
             .addComponent(Bmod, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Palta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Pbaja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Pvis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Pmod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout MOpcLayout = new javax.swing.GroupLayout(MOpc);
+        MOpc.setLayout(MOpcLayout);
+        MOpcLayout.setHorizontalGroup(
+            MOpcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Palta, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+            .addComponent(Pbaja, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+            .addComponent(Pvis, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+            .addComponent(Pmod, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        MOpcLayout.setVerticalGroup(
+            MOpcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MOpcLayout.createSequentialGroup()
                 .addComponent(Palta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(Pbaja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -201,28 +267,349 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        Pmesa.setBackground(new java.awt.Color(95, 75, 139));
+        Pmesa.setPreferredSize(new java.awt.Dimension(150, 40));
+
+        Bmesa.setBackground(new java.awt.Color(95, 75, 139));
+        Bmesa.setForeground(new java.awt.Color(255, 255, 255));
+        Bmesa.setText("Mesas");
+        Bmesa.setBorderPainted(false);
+        Bmesa.setContentAreaFilled(false);
+        Bmesa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BmesaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BmesaMouseExited(evt);
+            }
+        });
+        Bmesa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BmesaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PmesaLayout = new javax.swing.GroupLayout(Pmesa);
+        Pmesa.setLayout(PmesaLayout);
+        PmesaLayout.setHorizontalGroup(
+            PmesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 150, Short.MAX_VALUE)
+            .addGroup(PmesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PmesaLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(Bmesa, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        PmesaLayout.setVerticalGroup(
+            PmesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 26, Short.MAX_VALUE)
+            .addGroup(PmesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PmesaLayout.createSequentialGroup()
+                    .addComponent(Bmesa)
+                    .addGap(0, 49, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout MGlobalLayout = new javax.swing.GroupLayout(MGlobal);
+        MGlobal.setLayout(MGlobalLayout);
+        MGlobalLayout.setHorizontalGroup(
+            MGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 150, Short.MAX_VALUE)
+            .addGroup(MGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MGlobalLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(MOpc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(MGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MGlobalLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Pmesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        MGlobalLayout.setVerticalGroup(
+            MGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(MGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MGlobalLayout.createSequentialGroup()
+                    .addGap(0, 13, Short.MAX_VALUE)
+                    .addComponent(MOpc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 13, Short.MAX_VALUE)))
+            .addGroup(MGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MGlobalLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Pmesa, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        PGlobal.setBackground(new java.awt.Color(95, 75, 139));
+        PGlobal.setPreferredSize(new java.awt.Dimension(150, 40));
+
+        Pprod.setBackground(new java.awt.Color(95, 75, 139));
+        Pprod.setPreferredSize(new java.awt.Dimension(150, 40));
+
+        Bprod.setBackground(new java.awt.Color(95, 75, 139));
+        Bprod.setForeground(new java.awt.Color(255, 255, 255));
+        Bprod.setText("Productos");
+        Bprod.setBorderPainted(false);
+        Bprod.setContentAreaFilled(false);
+        Bprod.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BprodMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BprodMouseExited(evt);
+            }
+        });
+        Bprod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BprodActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PprodLayout = new javax.swing.GroupLayout(Pprod);
+        Pprod.setLayout(PprodLayout);
+        PprodLayout.setHorizontalGroup(
+            PprodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 150, Short.MAX_VALUE)
+            .addGroup(PprodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PprodLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(Bprod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        PprodLayout.setVerticalGroup(
+            PprodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PprodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PprodLayout.createSequentialGroup()
+                    .addGap(1, 1, 1)
+                    .addComponent(Bprod)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        POpc.setBackground(new java.awt.Color(95, 75, 139));
+        POpc.setPreferredSize(new java.awt.Dimension(0, 0));
+
+        Palta1.setBackground(new java.awt.Color(159, 134, 170));
+        Palta1.setPreferredSize(new java.awt.Dimension(150, 45));
+
+        Balta1.setBackground(new java.awt.Color(159, 134, 170));
+        Balta1.setForeground(new java.awt.Color(255, 255, 255));
+        Balta1.setText("Alta");
+        Balta1.setBorderPainted(false);
+        Balta1.setContentAreaFilled(false);
+        Balta1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                Balta1FocusGained(evt);
+            }
+        });
+        Balta1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Balta1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Balta1MouseExited(evt);
+            }
+        });
+        Balta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Balta1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Palta1Layout = new javax.swing.GroupLayout(Palta1);
+        Palta1.setLayout(Palta1Layout);
+        Palta1Layout.setHorizontalGroup(
+            Palta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Palta1Layout.createSequentialGroup()
+                .addComponent(Balta1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        Palta1Layout.setVerticalGroup(
+            Palta1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Palta1Layout.createSequentialGroup()
+                .addGap(0, 1, Short.MAX_VALUE)
+                .addComponent(Balta1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        Pbaja1.setBackground(new java.awt.Color(159, 134, 170));
+        Pbaja1.setPreferredSize(new java.awt.Dimension(150, 45));
+
+        Bbaja1.setBackground(new java.awt.Color(159, 134, 170));
+        Bbaja1.setForeground(new java.awt.Color(255, 255, 255));
+        Bbaja1.setText("Baja");
+        Bbaja1.setBorderPainted(false);
+        Bbaja1.setContentAreaFilled(false);
+        Bbaja1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Bbaja1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Bbaja1MouseExited(evt);
+            }
+        });
+        Bbaja1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bbaja1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Pbaja1Layout = new javax.swing.GroupLayout(Pbaja1);
+        Pbaja1.setLayout(Pbaja1Layout);
+        Pbaja1Layout.setHorizontalGroup(
+            Pbaja1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Pbaja1Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(Bbaja1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        Pbaja1Layout.setVerticalGroup(
+            Pbaja1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Bbaja1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+        );
+
+        Pvis1.setBackground(new java.awt.Color(159, 134, 170));
+        Pvis1.setPreferredSize(new java.awt.Dimension(150, 45));
+
+        Bvis1.setBackground(new java.awt.Color(159, 134, 170));
+        Bvis1.setForeground(new java.awt.Color(255, 255, 255));
+        Bvis1.setText("Visualizar");
+        Bvis1.setBorderPainted(false);
+        Bvis1.setContentAreaFilled(false);
+        Bvis1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Bvis1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Bvis1MouseExited(evt);
+            }
+        });
+        Bvis1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bvis1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Pvis1Layout = new javax.swing.GroupLayout(Pvis1);
+        Pvis1.setLayout(Pvis1Layout);
+        Pvis1Layout.setHorizontalGroup(
+            Pvis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Bvis1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        Pvis1Layout.setVerticalGroup(
+            Pvis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Bvis1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+        );
+
+        Pmod1.setBackground(new java.awt.Color(159, 134, 170));
+        Pmod1.setPreferredSize(new java.awt.Dimension(150, 45));
+
+        Bmod1.setBackground(new java.awt.Color(159, 134, 170));
+        Bmod1.setForeground(new java.awt.Color(255, 255, 255));
+        Bmod1.setText("Modificar");
+        Bmod1.setBorderPainted(false);
+        Bmod1.setContentAreaFilled(false);
+        Bmod1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Bmod1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Bmod1MouseExited(evt);
+            }
+        });
+        Bmod1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bmod1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Pmod1Layout = new javax.swing.GroupLayout(Pmod1);
+        Pmod1.setLayout(Pmod1Layout);
+        Pmod1Layout.setHorizontalGroup(
+            Pmod1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Bmod1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        Pmod1Layout.setVerticalGroup(
+            Pmod1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Bmod1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout POpcLayout = new javax.swing.GroupLayout(POpc);
+        POpc.setLayout(POpcLayout);
+        POpcLayout.setHorizontalGroup(
+            POpcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Palta1, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+            .addComponent(Pbaja1, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+            .addComponent(Pvis1, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+            .addComponent(Pmod1, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+        );
+        POpcLayout.setVerticalGroup(
+            POpcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(POpcLayout.createSequentialGroup()
+                .addComponent(Palta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Pbaja1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jButton1)
+                .addComponent(Pvis1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(Pmod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PGlobalLayout = new javax.swing.GroupLayout(PGlobal);
+        PGlobal.setLayout(PGlobalLayout);
+        PGlobalLayout.setHorizontalGroup(
+            PGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PGlobalLayout.createSequentialGroup()
+                    .addGap(0, 0, 0)
+                    .addComponent(Pprod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(PGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PGlobalLayout.createSequentialGroup()
+                    .addGap(75, 75, 75)
+                    .addComponent(POpc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(85, Short.MAX_VALUE)))
+        );
+        PGlobalLayout.setVerticalGroup(
+            PGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PGlobalLayout.createSequentialGroup()
+                    .addGap(0, 0, 0)
+                    .addComponent(Pprod, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(PGlobalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PGlobalLayout.createSequentialGroup()
+                    .addGap(20, 20, 20)
+                    .addComponent(POpc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(17, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout PrincLayout = new javax.swing.GroupLayout(Princ);
+        Princ.setLayout(PrincLayout);
+        PrincLayout.setHorizontalGroup(
+            PrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PrincLayout.createSequentialGroup()
+                .addGroup(PrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PrincLayout.createSequentialGroup()
+                        .addGroup(PrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(MGlobal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PGlobal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrincLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        PrincLayout.setVerticalGroup(
+            PrincLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PrincLayout.createSequentialGroup()
+                .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(MGlobal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PGlobal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -231,12 +618,12 @@ public class Menu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 627, Short.MAX_VALUE))
+                .addComponent(Princ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 514, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Princ, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
         );
 
         pack();
@@ -254,7 +641,7 @@ public class Menu extends javax.swing.JFrame {
        
     }
     private void reset(){
-    
+        
     }
     private void BaltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BaltaActionPerformed
         botoneees(Balta,Palta);
@@ -262,13 +649,147 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_BaltaActionPerformed
 
     private void BaltaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BaltaMouseEntered
-        Palta.setBackground(new Color(113,89,166));
+        Palta.setBackground(Balta.isEnabled()?new Color(113,89,166):Palta.getBackground());
     }//GEN-LAST:event_BaltaMouseEntered
 
     private void BaltaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BaltaMouseExited
         Palta.setBackground(Balta.isEnabled()?new Color(159,134,170):new Color(200, 186, 206));
         
     }//GEN-LAST:event_BaltaMouseExited
+
+    private void BmesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BmesaActionPerformed
+        MOpc.setSize(150,180);
+        MOpc.setLocation(0,Pmesa.getHeight()+Pmesa.getY());
+        MGlobal.setSize(150, 220);
+        POpc.setSize(0,0);
+        PGlobal.setSize(150,40);
+        PGlobal.setLocation(0,Pmesa.getY()+MOpc.getHeight()+Pmesa.getHeight()+Logo.getHeight());
+        Pprod.setLocation(0,PGlobal.getY());
+        Bprod.setLocation(0,PGlobal.getY());
+        Pprod.setBackground(new Color(95,75,139));
+        POpc.setLocation(0,Pmesa.getY()+Pmesa.getHeight()+Pprod.getHeight());
+        Pmesa.setBackground(new Color(73,58,107));
+        Bmesa.setEnabled(false);
+        Bprod.setEnabled(true);
+    }//GEN-LAST:event_BmesaActionPerformed
+
+    private void BmesaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BmesaMouseEntered
+       Pmesa.setBackground(Bmesa.isEnabled()?new Color(83,66,121):Pmesa.getBackground());
+    }//GEN-LAST:event_BmesaMouseEntered
+
+    private void BmesaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BmesaMouseExited
+        Pmesa.setBackground(Bmesa.isEnabled()?new Color(95,75,139):Pmesa.getBackground());
+    }//GEN-LAST:event_BmesaMouseExited
+
+    private void BbajaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BbajaMouseEntered
+        Pbaja.setBackground(Bbaja.isEnabled()?new Color(113,89,166):Pbaja.getBackground());
+    }//GEN-LAST:event_BbajaMouseEntered
+
+    private void BbajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BbajaActionPerformed
+       botoneees(Bbaja,Pbaja);
+    }//GEN-LAST:event_BbajaActionPerformed
+
+    private void BbajaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BbajaMouseExited
+        Pbaja.setBackground(Bbaja.isEnabled()?new Color(159,134,170):new Color(200, 186, 206));
+    }//GEN-LAST:event_BbajaMouseExited
+
+    private void BvisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BvisMouseEntered
+        Pvis.setBackground(Bvis.isEnabled()?new Color(113,89,166):Pvis.getBackground());
+    }//GEN-LAST:event_BvisMouseEntered
+
+    private void BvisMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BvisMouseExited
+        Pvis.setBackground(Bvis.isEnabled()?new Color(159,134,170):new Color(200, 186, 206));
+    }//GEN-LAST:event_BvisMouseExited
+
+    private void BvisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BvisActionPerformed
+        botoneees(Bvis,Pvis);
+    }//GEN-LAST:event_BvisActionPerformed
+
+    private void BmodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BmodMouseEntered
+        Pmod.setBackground(Bmod.isEnabled()?new Color(113,89,166):Pmod.getBackground());
+    }//GEN-LAST:event_BmodMouseEntered
+
+    private void BmodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BmodMouseExited
+        Pmod.setBackground(Bmod.isEnabled()?new Color(159,134,170):new Color(200, 186, 206));
+    }//GEN-LAST:event_BmodMouseExited
+
+    private void BmodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BmodActionPerformed
+        botoneees(Bmod,Pmod);
+    }//GEN-LAST:event_BmodActionPerformed
+
+    private void BprodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BprodMouseEntered
+        Pprod.setBackground(Bprod.isEnabled()?new Color(83,66,121):Pprod.getBackground());
+    }//GEN-LAST:event_BprodMouseEntered
+
+    private void BprodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BprodMouseExited
+        Pprod.setBackground(Bprod.isEnabled()?new Color(95,75,139):Pprod.getBackground());
+    }//GEN-LAST:event_BprodMouseExited
+
+    private void BprodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BprodActionPerformed
+        POpc.setSize(150,180);
+        MGlobal.setSize(150,40);
+        POpc.setLocation(0,Logo.getHeight()+MGlobal.getHeight()+Pprod.getHeight());
+        MOpc.setSize(0,0);
+        PGlobal.setSize(150, 220);
+        Pprod.setLocation(0,Pmesa.getY()+MOpc.getHeight()+Pmesa.getHeight());
+        Bprod.setLocation(0,Pmesa.getY()+MOpc.getHeight()+Pmesa.getHeight());
+        Pmesa.setBackground(new Color(95,75,139));
+        Pprod.setBackground(new Color(73,58,107));
+        Bprod.setEnabled(false);
+        Bmesa.setEnabled(true);
+    }//GEN-LAST:event_BprodActionPerformed
+
+    private void Balta1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Balta1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Balta1FocusGained
+
+    private void Balta1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Balta1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Balta1MouseEntered
+
+    private void Balta1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Balta1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Balta1MouseExited
+
+    private void Balta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Balta1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Balta1ActionPerformed
+
+    private void Bbaja1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Bbaja1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bbaja1MouseEntered
+
+    private void Bbaja1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Bbaja1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bbaja1MouseExited
+
+    private void Bbaja1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bbaja1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bbaja1ActionPerformed
+
+    private void Bvis1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Bvis1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bvis1MouseEntered
+
+    private void Bvis1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Bvis1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bvis1MouseExited
+
+    private void Bvis1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bvis1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bvis1ActionPerformed
+
+    private void Bmod1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Bmod1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bmod1MouseEntered
+
+    private void Bmod1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Bmod1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bmod1MouseExited
+
+    private void Bmod1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bmod1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bmod1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -309,17 +830,31 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Balta;
+    private javax.swing.JButton Balta1;
     private javax.swing.JButton Bbaja;
+    private javax.swing.JButton Bbaja1;
+    private javax.swing.JButton Bmesa;
     private javax.swing.JButton Bmod;
+    private javax.swing.JButton Bmod1;
+    private javax.swing.JButton Bprod;
     private javax.swing.JButton Bvis;
+    private javax.swing.JButton Bvis1;
+    private javax.swing.JPanel Logo;
+    private javax.swing.JPanel MGlobal;
+    private javax.swing.JPanel MOpc;
+    private javax.swing.JPanel PGlobal;
+    private javax.swing.JPanel POpc;
     private javax.swing.JPanel Palta;
+    private javax.swing.JPanel Palta1;
     private javax.swing.JPanel Pbaja;
+    private javax.swing.JPanel Pbaja1;
+    private javax.swing.JPanel Pmesa;
     private javax.swing.JPanel Pmod;
+    private javax.swing.JPanel Pmod1;
+    private javax.swing.JPanel Pprod;
+    private javax.swing.JPanel Princ;
     private javax.swing.JPanel Pvis;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel Pvis1;
     // End of variables declaration//GEN-END:variables
 
     
