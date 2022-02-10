@@ -42,7 +42,8 @@ public class Comanda {
     @Column(name = "fecha_pedido")
     private LocalDate fechaPedido;
 
-    @OneToOne(mappedBy ="mesa",fetch = FetchType.LAZY)
+    //https://refactorizando.com/ejemplo-relacion-onetomany-hibernate/
+    @ManyToOne
     private Mesa mesa;
 
     @OneToOne(mappedBy ="camarero",fetch = FetchType.LAZY)
