@@ -15,9 +15,17 @@ import javax.validation.constraints.NotBlank;
 public class LineaComanda {
 
     @Schema(description = "Identificador", example = "15", required = true)
-    @EmbeddedId
+    @Id
     @Column(name = "id")
-    private long id;
+    long id;
+
+    @ManyToOne
+    @JoinColumn(name="producto_id")
+    Producto producto;
+
+    @ManyToOne
+    @JoinColumn(name="comanda_id")
+    Comanda comanda;
 
     @Schema(description = "Cantidad", example = "1", required = true)
     @NotBlank

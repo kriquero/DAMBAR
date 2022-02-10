@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -24,20 +25,8 @@ public class Mesa {
     @Schema(description = "Estado de la mesa", example = "Ocupada", required = true)
     estadoMesa estado = estadoMesa.Libre;
 
-    //https://refactorizando.com/ejemplo-relacion-onetomany-hibernate/
-    @OneToMany(mappedBy = "comanda",cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Comanda> comandas;
+    @OneToMany(mappedBy = "mesa", cascade = CascadeType.ALL)
+    private List<Comanda> comandas;
 
-    public void addComanda(Comanda comanda){
-        if(null == comandas){
-            comandas = new HashSet<>();
-        }
-        comandas.add(comanda);
-        comanda.setMesa(this);
-    }
 
-    public void removeComanda(Comanda comanda){
-        comandas.remove(comanda);
-        comanda.setMesa(null);
-    }
 }

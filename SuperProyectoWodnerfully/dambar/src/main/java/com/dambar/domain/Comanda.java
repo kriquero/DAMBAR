@@ -10,6 +10,7 @@ import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -42,12 +43,15 @@ public class Comanda {
     @Column(name = "fecha_pedido")
     private LocalDate fechaPedido;
 
-    //https://refactorizando.com/ejemplo-relacion-onetomany-hibernate/
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.LAZY)
     private Mesa mesa;
 
-    @OneToOne(mappedBy ="camarero",fetch = FetchType.LAZY)
+    @ManyToOne (fetch = FetchType.LAZY)
     private Camarero camarero;
+
+
+    @OneToMany(mappedBy = "comanda")
+    Set<LineaComanda> lineaComandas;
 
 
 
