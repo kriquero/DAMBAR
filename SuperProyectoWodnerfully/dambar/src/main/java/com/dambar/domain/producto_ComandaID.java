@@ -1,3 +1,4 @@
+/*
 package com.dambar.domain;
 
 import lombok.AllArgsConstructor;
@@ -18,3 +19,4 @@ public class producto_ComandaID implements Serializable {
     private long comandaID;
 
 }
+*/

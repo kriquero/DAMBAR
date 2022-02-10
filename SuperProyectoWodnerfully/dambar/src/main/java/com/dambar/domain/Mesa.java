@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -22,10 +25,8 @@ public class Mesa {
     @Schema(description = "Estado de la mesa", example = "Ocupada", required = true)
     estadoMesa estado = estadoMesa.Libre;
 
-    @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name="id_comanda")
-    private Comanda comanda;
-
+    @OneToMany(mappedBy = "mesa", cascade = CascadeType.ALL)
+    private List<Comanda> comandas;
 
 
 }

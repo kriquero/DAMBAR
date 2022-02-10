@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -50,6 +51,12 @@ public class Producto {
     @NotBlank
     @Column(name="foto")
     private float foto; //URL del producto
+
+
+    @OneToMany(mappedBy = "producto")
+    Set<LineaComanda> lineaComandas;
+
+
 
     /*@OneToOne(mappedBy = "producto", fetch = FetchType.LAZY)
     LineaComanda lineaComanda;*/

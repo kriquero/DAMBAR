@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -41,7 +44,10 @@ public class Camarero {
     @Column(name="telefono")
     private String telefono;
 
-    @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "id_comanda")
-    private Comanda comanda;
+
+    @OneToMany(mappedBy = "camarero", cascade = CascadeType.ALL)
+    private List<Comanda> comandas;
+
+
+
 }
