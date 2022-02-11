@@ -80,6 +80,13 @@ flutter:
         - asset: assets/fonts/CinzelDecorative-Bold.ttf
           weight: 700
         - asset: assets/fonts/CinzelDecorative-Regular.ttf
+    
+    - family: Enriqueta
+      fonts:
+        - asset: assets/fonts/Enriqueta-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Enriqueta-Regular.ttf
+        
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
