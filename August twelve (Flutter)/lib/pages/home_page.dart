@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen/widgets/mesa.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -13,10 +14,8 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-          child: Text(
-        "Aqui hay que meter las mesas",
-        textScaleFactor: 2,
-      )),
+        child: mesa(),
+      ),
     );
   }
 }
