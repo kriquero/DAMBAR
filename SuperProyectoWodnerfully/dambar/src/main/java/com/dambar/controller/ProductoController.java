@@ -34,12 +34,12 @@ public class ProductoController {
         return new ResponseEntity<>(productos, HttpStatus.OK);
     }
 
-    @Operation(summary = "Obtiene ua lista de productos filtrados por su tipo")
+    @Operation(summary = "Obtiene una lista de productos filtrados por su tipo")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Existe el producto", content = @Content(schema = @Schema(implementation = Producto.class))),
             @ApiResponse(responseCode = "404", description = "El producto no existe", content = @Content(schema = @Schema(implementation = Response.class))),
     })
-    @GetMapping(value = "/productos/{tipo}", produces = "application/json")
+    @GetMapping(value = "/productos/t/{tipo}", produces = "application/json")
     public ResponseEntity<Set<Producto>> getproductosByTipo(@PathVariable String tipo){
         Set<Producto> productos = productoService.findByTipo(tipo);
         return new ResponseEntity<>(productos, HttpStatus.OK);

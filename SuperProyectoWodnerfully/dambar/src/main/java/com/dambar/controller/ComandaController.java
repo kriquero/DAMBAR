@@ -32,7 +32,7 @@ public class ComandaController {
             @ApiResponse(responseCode = "200", description = "Listado de comandas",
                     content = @Content(array = @ArraySchema(schema = @Schema(implementation = Comanda.class)))),
     })
-    @GetMapping(value = "/Comanda", produces = "application/json")
+    @GetMapping(value = "/comandas", produces = "application/json")
     public ResponseEntity<Set<Comanda>> getComanda(){
         Set<Comanda> comandas =  comandaService.findAll();
         return new ResponseEntity<>(comandas, HttpStatus.OK);

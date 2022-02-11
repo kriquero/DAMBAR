@@ -17,7 +17,7 @@ public class ComandaServiceImpl implements ComandaService{
 
     @Override
     public Set<Comanda> findAll() {
-        return comandaRepository.finfall();
+        return comandaRepository.findAll();
     }
 
     @Override

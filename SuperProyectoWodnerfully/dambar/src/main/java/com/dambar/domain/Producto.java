@@ -32,7 +32,7 @@ public class Producto {
     @Column(name="descripcion")
     private String descripcion;
 
-    @Schema(description = "Precio del producto", example = "6.5", required = true)
+    @Schema(description = "Precio del producto", example = "16.5", required = true)
     @NotBlank
     @Column(name="precio")
     private float precio;
@@ -50,7 +50,7 @@ public class Producto {
     @Schema(description = "Foto del producto", example = "https://okdiario.com/img/2020/01/16/potaje-de-garbanzos-con-chorizo.jpg", required = true)
     @NotBlank
     @Column(name="foto")
-    private float foto; //URL del producto
+    private String foto; //URL del producto
 
 
     @OneToMany(mappedBy = "producto")
