@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const IconData cua = IconData(0xe105, fontFamily: 'MaterialIcons');
+
 class mesa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,9 +14,11 @@ class mesa extends StatelessWidget {
             fontSize: 20,
           ),
         ),
+        Padding(padding: padding)
         Icon(
-          const IconData(0xf0570, fontFamily: 'MaterialIcons'),
+          cua,
           color: Colors.red[500],
+          
         ),
       ],
     );

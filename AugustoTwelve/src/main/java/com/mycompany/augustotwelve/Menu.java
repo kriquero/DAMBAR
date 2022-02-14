@@ -5,8 +5,11 @@
  */
 package com.mycompany.augustotwelve;
 
+import com.mycompany.augustotwelve.screens.AddMesa;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
@@ -24,6 +27,14 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        icon.setIcon(new ImageIcon("src/Logo100.png"));
+        Menu.setDefaultLookAndFeelDecorated(true);
+        JFrame m = this;
+        m.setIconImage(new ImageIcon("src/Logo100.png").getImage());
+        this.setSize(775,550);
+        
+        
+        reset();
     }
 
     /**
@@ -38,7 +49,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         pr = new javax.swing.JPanel();
         l = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        icon = new javax.swing.JLabel();
         mesa = new javax.swing.JPanel();
         Mesa = new javax.swing.JButton();
         mo = new javax.swing.JPanel();
@@ -61,6 +72,27 @@ public class Menu extends javax.swing.JFrame {
         pmodi = new javax.swing.JButton();
         pv = new javax.swing.JPanel();
         pvisu = new javax.swing.JButton();
+        mesaalta = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        Cerrar = new javax.swing.JButton();
+        Add = new javax.swing.JButton();
+        mesabaja = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        Cerrar2 = new javax.swing.JButton();
+        delete = new javax.swing.JButton();
+        mesavisu = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        Cerrar1 = new javax.swing.JButton();
+        Actualizar = new javax.swing.JButton();
+        mesamodi = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        Cerrar3 = new javax.swing.JButton();
+        modify = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         jPanel5.setPreferredSize(new java.awt.Dimension(150, 40));
 
@@ -76,6 +108,7 @@ public class Menu extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("AUGUST TWELVE");
 
         pr.setBackground(new java.awt.Color(95, 75, 139));
         pr.setPreferredSize(new java.awt.Dimension(150, 750));
@@ -89,13 +122,13 @@ public class Menu extends javax.swing.JFrame {
             lLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel2)
+                .addComponent(icon)
                 .addContainerGap(125, Short.MAX_VALUE))
         );
         lLayout.setVerticalGroup(
             lLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lLayout.createSequentialGroup()
-                .addComponent(jLabel2)
+                .addComponent(icon)
                 .addGap(0, 100, Short.MAX_VALUE))
         );
 
@@ -108,7 +141,6 @@ public class Menu extends javax.swing.JFrame {
         Mesa.setContentAreaFilled(false);
         Mesa.setMaximumSize(new java.awt.Dimension(150, 40));
         Mesa.setMinimumSize(new java.awt.Dimension(150, 40));
-        Mesa.setOpaque(false);
         Mesa.setPreferredSize(new java.awt.Dimension(150, 40));
         Mesa.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -660,10 +692,7 @@ public class Menu extends javax.swing.JFrame {
         prLayout.setHorizontalGroup(
             prLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(l, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(prLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(mesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addComponent(mesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(prLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(prLayout.createSequentialGroup()
                     .addGap(0, 0, 0)
@@ -677,12 +706,271 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(l, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(mesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(prLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(prLayout.createSequentialGroup()
                     .addGap(300, 300, 300)
                     .addComponent(prod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, 0)))
+        );
+
+        mesaalta.setMaximumSize(new java.awt.Dimension(600, 500));
+        mesaalta.setMinimumSize(new java.awt.Dimension(600, 500));
+        mesaalta.setPreferredSize(new java.awt.Dimension(600, 500));
+
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(580, 400));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable1.setMaximumSize(new java.awt.Dimension(580, 400));
+        jTable1.setMinimumSize(new java.awt.Dimension(580, 400));
+        jTable1.setPreferredSize(new java.awt.Dimension(580, 400));
+        jTable1.setRequestFocusEnabled(false);
+        jScrollPane1.setViewportView(jTable1);
+
+        Cerrar.setText("Cerrar");
+        Cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CerrarActionPerformed(evt);
+            }
+        });
+
+        Add.setText("Añadir");
+        Add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout mesaaltaLayout = new javax.swing.GroupLayout(mesaalta);
+        mesaalta.setLayout(mesaaltaLayout);
+        mesaaltaLayout.setHorizontalGroup(
+            mesaaltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mesaaltaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mesaaltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mesaaltaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Add)
+                        .addGap(18, 18, 18)
+                        .addComponent(Cerrar)))
+                .addContainerGap())
+        );
+        mesaaltaLayout.setVerticalGroup(
+            mesaaltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mesaaltaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGroup(mesaaltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Cerrar)
+                    .addComponent(Add))
+                .addContainerGap())
+        );
+
+        mesabaja.setMaximumSize(new java.awt.Dimension(600, 500));
+        mesabaja.setMinimumSize(new java.awt.Dimension(600, 500));
+        mesabaja.setPreferredSize(new java.awt.Dimension(600, 500));
+
+        jScrollPane3.setPreferredSize(new java.awt.Dimension(580, 400));
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable3.setMaximumSize(new java.awt.Dimension(580, 400));
+        jTable3.setMinimumSize(new java.awt.Dimension(580, 400));
+        jTable3.setPreferredSize(new java.awt.Dimension(580, 400));
+        jTable3.setRequestFocusEnabled(false);
+        jScrollPane3.setViewportView(jTable3);
+
+        Cerrar2.setText("Cerrar");
+        Cerrar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cerrar2ActionPerformed(evt);
+            }
+        });
+
+        delete.setText("Eliminar");
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout mesabajaLayout = new javax.swing.GroupLayout(mesabaja);
+        mesabaja.setLayout(mesabajaLayout);
+        mesabajaLayout.setHorizontalGroup(
+            mesabajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mesabajaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mesabajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mesabajaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(delete)
+                        .addGap(18, 18, 18)
+                        .addComponent(Cerrar2)))
+                .addContainerGap())
+        );
+        mesabajaLayout.setVerticalGroup(
+            mesabajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mesabajaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGroup(mesabajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(delete)
+                    .addComponent(Cerrar2))
+                .addContainerGap())
+        );
+
+        mesavisu.setMaximumSize(new java.awt.Dimension(600, 500));
+        mesavisu.setMinimumSize(new java.awt.Dimension(600, 500));
+
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(580, 400));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable2.setMaximumSize(new java.awt.Dimension(580, 400));
+        jTable2.setMinimumSize(new java.awt.Dimension(580, 400));
+        jTable2.setPreferredSize(new java.awt.Dimension(580, 400));
+        jTable2.setRequestFocusEnabled(false);
+        jScrollPane2.setViewportView(jTable2);
+
+        Cerrar1.setText("Cerrar");
+        Cerrar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cerrar1ActionPerformed(evt);
+            }
+        });
+
+        Actualizar.setText("Actualizar");
+        Actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActualizarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout mesavisuLayout = new javax.swing.GroupLayout(mesavisu);
+        mesavisu.setLayout(mesavisuLayout);
+        mesavisuLayout.setHorizontalGroup(
+            mesavisuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mesavisuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mesavisuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mesavisuLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Actualizar)
+                        .addGap(18, 18, 18)
+                        .addComponent(Cerrar1)))
+                .addContainerGap())
+        );
+        mesavisuLayout.setVerticalGroup(
+            mesavisuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mesavisuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGroup(mesavisuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Cerrar1)
+                    .addComponent(Actualizar))
+                .addContainerGap())
+        );
+
+        mesamodi.setMaximumSize(new java.awt.Dimension(600, 500));
+        mesamodi.setMinimumSize(new java.awt.Dimension(600, 500));
+
+        jScrollPane4.setPreferredSize(new java.awt.Dimension(580, 400));
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable4.setMaximumSize(new java.awt.Dimension(580, 400));
+        jTable4.setMinimumSize(new java.awt.Dimension(580, 400));
+        jTable4.setPreferredSize(new java.awt.Dimension(580, 400));
+        jTable4.setRequestFocusEnabled(false);
+        jScrollPane4.setViewportView(jTable4);
+
+        Cerrar3.setText("Cerrar");
+        Cerrar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cerrar3ActionPerformed(evt);
+            }
+        });
+
+        modify.setText("Modificar");
+        modify.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modifyActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Libre", "Ocupada", "Reservada" }));
+
+        javax.swing.GroupLayout mesamodiLayout = new javax.swing.GroupLayout(mesamodi);
+        mesamodi.setLayout(mesamodiLayout);
+        mesamodiLayout.setHorizontalGroup(
+            mesamodiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mesamodiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mesamodiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mesamodiLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(modify)
+                        .addGap(18, 18, 18)
+                        .addComponent(Cerrar3)))
+                .addContainerGap())
+        );
+        mesamodiLayout.setVerticalGroup(
+            mesamodiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mesamodiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGroup(mesamodiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Cerrar3)
+                    .addComponent(modify)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -691,11 +979,34 @@ public class Menu extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 671, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(mesaalta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(mesavisu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(mesamodi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(mesabaja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(604, 604, 604))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pr, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(pr, javax.swing.GroupLayout.DEFAULT_SIZE, 1475, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(mesamodi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(mesabaja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mesavisu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mesaalta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();
@@ -808,24 +1119,29 @@ public class Menu extends javax.swing.JFrame {
         reset();
         esteBoton(ma,malta);
          //INSERTAR VENTANA UWU
+         mesaalta.setSize(600,500);
+        
     }//GEN-LAST:event_maltaActionPerformed
 
     private void mbajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mbajaActionPerformed
         reset();
         esteBoton(mb,mbaja);     
         //INSERTAR VENTANA UWU
+        mesabaja.setSize(600,500);
     }//GEN-LAST:event_mbajaActionPerformed
 
     private void mmodiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mmodiActionPerformed
         reset();
         esteBoton(mm,mmodi);
         //INSERTAR VENTANA UWU
+        mesamodi.setSize(600,500);
     }//GEN-LAST:event_mmodiActionPerformed
 
     private void mvisuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mvisuActionPerformed
         reset();
         esteBoton(mv,mvisu);
         //INSERTAR VENTANA UWU
+        mesavisu.setSize(600,500);
     }//GEN-LAST:event_mvisuActionPerformed
 
     private void paltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paltaActionPerformed
@@ -851,6 +1167,38 @@ public class Menu extends javax.swing.JFrame {
         esteBoton(pv,pvisu);
         //INSERTAR VENTANA UWU
     }//GEN-LAST:event_pvisuActionPerformed
+
+    private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
+        reset();
+    }//GEN-LAST:event_CerrarActionPerformed
+
+    private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddActionPerformed
+
+    private void Cerrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cerrar1ActionPerformed
+        reset();
+    }//GEN-LAST:event_Cerrar1ActionPerformed
+
+    private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ActualizarActionPerformed
+
+    private void Cerrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cerrar2ActionPerformed
+       reset();
+    }//GEN-LAST:event_Cerrar2ActionPerformed
+
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteActionPerformed
+
+    private void Cerrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cerrar3ActionPerformed
+        reset();
+    }//GEN-LAST:event_Cerrar3ActionPerformed
+
+    private void modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modifyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -888,19 +1236,40 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Actualizar;
+    private javax.swing.JButton Add;
+    private javax.swing.JButton Cerrar;
+    private javax.swing.JButton Cerrar1;
+    private javax.swing.JButton Cerrar2;
+    private javax.swing.JButton Cerrar3;
     private javax.swing.JButton Mesa;
     private javax.swing.JButton Prod;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton delete;
+    private javax.swing.JLabel icon;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
     private javax.swing.JPanel l;
     private javax.swing.JPanel ma;
     private javax.swing.JButton malta;
     private javax.swing.JPanel mb;
     private javax.swing.JButton mbaja;
     private javax.swing.JPanel mesa;
+    private javax.swing.JPanel mesaalta;
+    private javax.swing.JPanel mesabaja;
+    private javax.swing.JPanel mesamodi;
+    private javax.swing.JPanel mesavisu;
     private javax.swing.JPanel mm;
     private javax.swing.JButton mmodi;
     private javax.swing.JPanel mo;
+    private javax.swing.JButton modify;
     private javax.swing.JPanel mv;
     private javax.swing.JButton mvisu;
     private javax.swing.JPanel pa;
@@ -936,6 +1305,17 @@ public class Menu extends javax.swing.JFrame {
         pb.setBackground(LB);
         pm.setBackground(LB);
         pv.setBackground(LB);
+        
+        mesaalta.setLocation(150,0);
+        mesabaja.setLocation(150,0);
+        mesamodi.setLocation(150,0);
+        mesavisu.setLocation(150,0);
+        
+        mesaalta.setSize(0, 0);
+        mesabaja.setSize(0, 0);
+        mesamodi.setSize(0, 0);
+        mesavisu.setSize(0, 0);
+        
         
     }
     
