@@ -1,0 +1,10 @@
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe.config
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).pdb
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.AssemblyReference.cache
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Form1.resources
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Properties.Resources.resources
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.GenerateResource.cache
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CoreCompileInputs.cache
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).exe
+C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).pdb
