@@ -14,8 +14,10 @@ namespace August_Twelve__.net_
     {
         public Form1()
         {
+            RestMesa rm = new RestMesa("http://localhost:8080/mesas", "GET");
             InitializeComponent();
             hideSubmenu();
+            Console.WriteLine(rm.getItem());
         }
 
         private void buttonMesa_Click(object sender, EventArgs e)
