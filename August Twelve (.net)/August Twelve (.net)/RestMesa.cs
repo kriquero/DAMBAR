@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace August_Twelve__.net_
             request.Accept = "application/json";
         }
 
-        public String getItem()
+        public MesaModel getItem()
         {
             try
             {
@@ -42,8 +43,9 @@ namespace August_Twelve__.net_
                 if (strReader != null)
                 {
                     StreamReader sr = new StreamReader(strReader);
-                    String str = sr.ReadLine();
-                    return str;
+                    String str = sr.ReadToEnd();
+                    MesaModel m = JsonConvert.DeserializeObject<MesaModel>(str);
+                    return m;
                 }
                 else return null;
             }

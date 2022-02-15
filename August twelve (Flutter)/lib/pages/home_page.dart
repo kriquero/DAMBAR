@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen/models/mesa_model.dart';
+import 'package:splash_screen/providers/mesa_provider.dart';
 import 'package:splash_screen/widgets/mesa.dart';
 
 class HomePage extends StatelessWidget {
+  final mesaProvider = MesaProvider();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,8 +17,23 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: mesa(),
+        child: _swiperMesas(),
       ),
+    );
+  }
+
+  Widget _swiperMesas() {
+    return FutureBuilder(
+      future: mesaProvider.getMesas(),
+      builder: (BuildContext context, AsyncSnapshot<List<Mesa>> snapshot) {
+        if (snapshot.hasData) {
+          print(snapshot.data!);
+          return Text('data');
+        } else {
+          return Container(
+              height: 350, child: Center(child: CircularProgressIndicator()));
+        }
+      },
     );
   }
 }

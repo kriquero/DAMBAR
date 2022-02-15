@@ -1,12 +1,12 @@
-class Cast {
-  List<Mesa> actores = [];
+class Mesas {
+  List<Mesa> mesas = [];
 
-  Cast();
-  Cast.fromJsonList(List<dynamic> jsonList) {
+  Mesas();
+  Mesas.fromJsonList(List<dynamic> jsonList) {
     if (jsonList == null) return;
     jsonList.forEach((element) {
-      final actor = new Mesa.fromJsonMap(element);
-      actores.add(actor);
+      final mesa = new Mesa.fromJsonMap(element);
+      mesas.add(mesa);
     });
   }
 }
