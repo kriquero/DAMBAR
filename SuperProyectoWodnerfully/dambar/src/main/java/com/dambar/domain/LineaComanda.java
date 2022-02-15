@@ -32,10 +32,5 @@ public class LineaComanda {
     @Column(name = "cantidad")
     private int cantidad;
 
-   /* @OneToOne (cascade = {CascadeType.ALL})
-    @JoinColumn(name="id_producto")
-    private Producto producto;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Comanda comanda;*/
 }
