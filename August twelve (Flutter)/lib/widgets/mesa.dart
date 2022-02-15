@@ -14,11 +14,9 @@ class mesa extends StatelessWidget {
             fontSize: 20,
           ),
         ),
-        Padding(padding: padding)
         Icon(
           cua,
           color: Colors.red[500],
-          
         ),
       ],
     );
