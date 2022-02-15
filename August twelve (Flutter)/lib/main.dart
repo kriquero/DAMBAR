@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:splash_screen/pages/home_page.dart';
+import 'package:splash_screen/pages/mesa_page.dart';
 import 'package:splash_screen/pcolors/palette.dart';
 
 void main() {
@@ -23,8 +24,12 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.grey[800],
       ),
       themeMode: ThemeMode.system,
-      home: HomePage(),
       debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (BuildContext context) => HomePage(),
+        'mesa_page': (BuildContext context) => MesaPage(),
+      },
     );
   }
 }

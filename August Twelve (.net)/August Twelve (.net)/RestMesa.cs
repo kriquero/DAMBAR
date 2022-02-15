@@ -33,7 +33,7 @@ namespace August_Twelve__.net_
             request.Accept = "application/json";
         }
 
-        public MesaModel getItem()
+        public String getItem()
         {
             try
             {
@@ -44,8 +44,7 @@ namespace August_Twelve__.net_
                 {
                     StreamReader sr = new StreamReader(strReader);
                     String str = sr.ReadToEnd();
-                    MesaModel m = JsonConvert.DeserializeObject<MesaModel>(str);
-                    return m;
+                    return str;
                 }
                 else return null;
             }

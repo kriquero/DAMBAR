@@ -8,11 +8,15 @@ namespace August_Twelve__.net_
 {
     class Models
     {
-    }
-
-    class MesaModel { 
         public int id { get; set; }
         public String estado { get; set; }
-        public String[] comanda { get; set; }
+        public List<> comanda { get; set; }
+    }
+
+    class MesaModel
+    {
+        public int id { get; set; }
+        public String estado { get; set; }
+        public List<object> comandas { get; set; }
     }
 }

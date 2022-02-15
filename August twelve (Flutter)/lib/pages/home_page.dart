@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:splash_screen/models/mesa_model.dart';
 import 'package:splash_screen/providers/mesa_provider.dart';
 import 'package:splash_screen/widgets/mesa.dart';
+import 'package:splash_screen/widgets/mesa_widget.dart';
 
 class HomePage extends StatelessWidget {
   final mesaProvider = MesaProvider();
@@ -27,8 +28,7 @@ class HomePage extends StatelessWidget {
       future: mesaProvider.getMesas(),
       builder: (BuildContext context, AsyncSnapshot<List<Mesa>> snapshot) {
         if (snapshot.hasData) {
-          print(snapshot.data!);
-          return Text('data');
+          return MesaWidget(mesas: snapshot.data!);
         } else {
           return Container(
               height: 350, child: Center(child: CircularProgressIndicator()));
