@@ -12,6 +12,7 @@ class MesaPage extends StatelessWidget {
           'Mesa ' + mesa.id.toString(),
           style: TextStyle(fontFamily: 'Enriqueta', fontSize: 70),
         ),
+        centerTitle: true,
       ),
       body: Text(mesa.estado.toString()),
     );

@@ -53,7 +53,7 @@ public class Producto {
     private String foto; //URL del producto
 
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "producto",cascade = CascadeType.ALL)
     Set<LineaComanda> lineaComandas;
 
 

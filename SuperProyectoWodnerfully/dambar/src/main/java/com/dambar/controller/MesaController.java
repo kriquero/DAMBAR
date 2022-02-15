@@ -1,7 +1,9 @@
 package com.dambar.controller;
 
+import com.dambar.domain.Comanda;
 import com.dambar.domain.Mesa;
 import com.dambar.exceptions.MesaNotFoundException;
+import com.dambar.service.ComandaService;
 import com.dambar.service.MesaService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -15,6 +17,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @RestController
@@ -23,6 +27,9 @@ public class MesaController {
 
     @Autowired
     private MesaService mesaService;
+
+    @Autowired
+    private ComandaService comandaService;
 
     @Operation(summary = "Obtiene la lista de mesas")
     @ApiResponses(value = {
@@ -79,4 +86,19 @@ public class MesaController {
         mesaService.deleteMesa(id);
         return new ResponseEntity<>(Response.noErrorResponse(), HttpStatus.OK);
     }
+
+    @Operation(summary = "Obtiene las comandas de una mesa determinada")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Existe la mesa", content = @Content(schema = @Schema(implementation = Mesa.class))),
+            @ApiResponse(responseCode = "404", description = "La mesa no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+    })
+    @GetMapping(value = "/mesas/{id}/comandas", produces = "application/json")
+    public ResponseEntity<List<Comanda>> getComandasMesa(@PathVariable long id) {
+        Mesa mesa = mesaService.findById(id)
+                .orElseThrow(() -> new MesaNotFoundException(id));
+        return new ResponseEntity<>(mesa.getComandas(), HttpStatus.OK);
+    }
+
+
+
 }

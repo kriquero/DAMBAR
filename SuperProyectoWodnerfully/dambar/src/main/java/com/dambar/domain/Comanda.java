@@ -28,16 +28,6 @@ public class Comanda {
     @Column(name = "pagado")
     private boolean pagado;
 
-    @Schema(description = "Codigo de la mesa", example = "1", required = true)
-    @NotBlank
-    @Column(name = "codigo_mesa")
-    private int codMesa;
-
-    @Schema(description = "Codigo del camarero", example = "1", required = true)
-    @NotBlank
-    @Column(name="codigo_camarero")
-    private int codCamarero;
-
     @Schema(description = "Fecha del pedido", example = "", required = true)
     @NotBlank
     @Column(name = "fecha_pedido")
@@ -50,13 +40,9 @@ public class Comanda {
     private Camarero camarero;
 
 
-    @OneToMany(mappedBy = "comanda")
+    @OneToMany(mappedBy = "comanda",cascade = CascadeType.ALL)
     Set<LineaComanda> lineaComandas;
 
-
-
- /*   @OneToMany(mappedBy = "lineacomanda",cascade = CascadeType.ALL)
-    private List<LineaComanda> lineasComanda = new ArrayList<>();*/
 
 
 }
