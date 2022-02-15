@@ -3,15 +3,15 @@ import 'package:splash_screen/models/producto_model.dart';
 import 'comanda_model.dart';
 import 'mesa_model.dart';
 
-class Cast {
-  List<LineaComanda> camareros = [];
+class LineasComanda {
+  List<LineaComanda> lineasComanda = [];
 
-  Cast();
-  Cast.fromJsonList(List<dynamic> jsonList) {
+  LineasComanda();
+  LineasComanda.fromJsonList(List<dynamic> jsonList) {
     if (jsonList == null) return;
     jsonList.forEach((element) {
       final linea = new LineaComanda.fromJsonMap(element);
-      camareros.add(linea);
+      lineasComanda.add(linea);
     });
   }
 }

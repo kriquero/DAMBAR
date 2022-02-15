@@ -1,11 +1,11 @@
 import 'camarero_model.dart';
 import 'mesa_model.dart';
 
-class Cast {
+class Comandas {
   List<Comanda> comandas = [];
 
-  Cast();
-  Cast.fromJsonList(List<dynamic> jsonList) {
+  Comandas();
+  Comandas.fromJsonList(List<dynamic> jsonList) {
     if (jsonList == null) return;
     jsonList.forEach((element) {
       final comanda = new Comanda.fromJsonMap(element);

@@ -1,10 +1,10 @@
 import 'mesa_model.dart';
 
-class Cast {
+class Camareros {
   List<Camarero> camareros = [];
 
-  Cast();
-  Cast.fromJsonList(List<dynamic> jsonList) {
+  Camareros();
+  Camareros.fromJsonList(List<dynamic> jsonList) {
     if (jsonList == null) return;
     jsonList.forEach((element) {
       final camarero = new Camarero.fromJsonMap(element);

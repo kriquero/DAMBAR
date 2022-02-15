@@ -1,8 +1,8 @@
-class Cast {
+class Productos {
   List<Producto> productos = [];
 
-  Cast();
-  Cast.fromJsonList(List<dynamic> jsonList) {
+  Productos();
+  Productos.fromJsonList(List<dynamic> jsonList) {
     if (jsonList == null) return;
     jsonList.forEach((element) {
       final producto = new Producto.fromJsonMap(element);

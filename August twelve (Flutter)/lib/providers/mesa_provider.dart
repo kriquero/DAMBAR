@@ -18,8 +18,7 @@ class MesaProvider {
   Future<List<Mesa>> _procesarRespuesta(Uri url) async {
     final resp = await http.get(url);
     final decodedData = json.decode(resp.body);
-    final mesas =
-        Mesas.fromJsonList(decodedData); //aqui no se que hay que poner
+    final mesas = Mesas.fromJsonList(decodedData);
     return mesas.mesas;
   }
 
