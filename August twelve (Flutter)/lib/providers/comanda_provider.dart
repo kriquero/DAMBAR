@@ -25,4 +25,9 @@ class ComandaProvider {
     final url = Uri.http(_url, '/comandas');
     return await _procesarRespuesta(url);
   }
+
+  Future<List<Comanda>> getComandasByMesaId(String mesaId) async {
+    final url = Uri.http(_url, '/mesas/$mesaId/comandas');
+    return await _procesarRespuesta(url);
+  }
 }

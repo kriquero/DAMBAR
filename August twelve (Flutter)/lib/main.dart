@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:splash_screen/pages/comanda_page.dart';
 import 'package:splash_screen/pages/home_page.dart';
 import 'package:splash_screen/pages/mesa_page.dart';
 import 'package:splash_screen/pcolors/palette.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (BuildContext context) => HomePage(),
         'mesa_page': (BuildContext context) => MesaPage(),
+        'comanda_page': (BuildContext context) => ComandaPage(),
       },
     );
   }
