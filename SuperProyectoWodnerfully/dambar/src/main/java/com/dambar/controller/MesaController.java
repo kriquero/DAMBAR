@@ -104,7 +104,7 @@ public class MesaController {
             @ApiResponse(responseCode = "200", description = "Se modifica la mesa", content = @Content(schema = @Schema(implementation = Mesa.class))),
             @ApiResponse(responseCode = "404", description = "La mesa no existe", content = @Content(schema = @Schema(implementation = Response.class))),
     })
-    @PutMapping(value = "/mesas/{id}", produces = "application/json", consumes = "application/json")
+    @PutMapping(value = "/mesas/addComanda/{id}", produces = "application/json", consumes = "application/json")
     public ResponseEntity<Mesa> addComanda(@PathVariable long id, @RequestBody Comanda comanda) {
         Mesa mesa = mesaService.addComanda(id, comanda);
         return new ResponseEntity<>(mesa, HttpStatus.OK);
