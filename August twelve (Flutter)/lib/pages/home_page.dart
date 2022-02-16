@@ -10,6 +10,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        /*leading: GestureDetector(
+          onTap: () => mesaProvider.deleteMesa('1'),
+          child: Icon(Icons.add),
+        ),*/
         toolbarHeight: 100,
         title: Text(
           "Mesas",

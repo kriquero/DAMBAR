@@ -26,4 +26,33 @@ class MesaProvider {
     final url = Uri.http(_url, '/mesas');
     return await _procesarRespuesta(url);
   }
+
+  //Ejemplo de post
+  Future<http.Response> createMesa(String estado) {
+    return http.post(Uri.parse('http://' + _url + "/mesas"),
+        headers: <String, String>{
+          'content-Type': 'application/json; charset=UTF-8'
+        },
+        body: jsonEncode(<String, String>{'estado': estado}));
+  }
+
+  //Ejemplo de delete
+  Future<http.Response> deleteMesa(String id) async {
+    final http.Response response = await http.delete(
+      Uri.parse('http://' + _url + '/mesas/$id'),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+    );
+    return response;
+  }
+
+  //Ejemplo de put
+  Future<http.Response> updateMesa(String estado, String id) {
+    return http.put(Uri.parse('http://' + _url + "/mesas/$id"),
+        headers: <String, String>{
+          'content-Type': 'application/json; charset=UTF-8'
+        },
+        body: jsonEncode(<String, String>{'estado': estado}));
+  }
 }
