@@ -53,12 +53,13 @@ public class Producto {
     private String foto; //URL del producto
 
 
-    @OneToMany(mappedBy = "producto",cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "linea_id")
     Set<LineaComanda> lineaComandas;
 
+    public Set<LineaComanda> getLineaComandas() {
+        return lineaComandas;
+    }
 
-
-    /*@OneToOne(mappedBy = "producto", fetch = FetchType.LAZY)
-    LineaComanda lineaComanda;*/
 
 }

@@ -25,9 +25,11 @@ public class Mesa {
     @Schema(description = "Estado de la mesa", example = "Ocupada", required = true)
     estadoMesa estado = estadoMesa.Libre;
 
-    @OneToMany(mappedBy = "mesa", cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "comanda_id")
     private List<Comanda> comandas;
 
-
-
+    public List<Comanda> getComandas() {
+        return comandas;
+    }
 }

@@ -2,9 +2,8 @@ package com.dambar.controller;
 
 import com.dambar.domain.Camarero;
 import com.dambar.domain.Comanda;
-import com.dambar.exceptions.CamareroNotFoundException;
+import com.dambar.domain.LineaComanda;
 import com.dambar.exceptions.ComandaNotFoundException;
-import com.dambar.service.CamareroService;
 import com.dambar.service.ComandaService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -82,4 +81,51 @@ public class ComandaController {
         comandaService.deleteComanda(id);
         return new ResponseEntity<>(Response.noErrorResponse(), HttpStatus.OK);
     }
+
+    @Operation(summary = "Modifica una linea de comanda de la comanda")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Se modifica la comanda", content = @Content(schema = @Schema(implementation = Comanda.class))),
+            @ApiResponse(responseCode = "404", description = "La comanda no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+    })
+    @PutMapping(value = "/comandas/addLinea/{id}", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Comanda> addLineaComanda(@PathVariable long id, @RequestBody LineaComanda linea) {
+        Comanda comanda = comandaService.addLinea(id, linea);
+        return new ResponseEntity<>(comanda, HttpStatus.OK);
+    }
+
+    @Operation(summary = "Elimina una linea de comanda de la comanda")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Se modifica la comanda", content = @Content(schema = @Schema(implementation = Comanda.class))),
+            @ApiResponse(responseCode = "404", description = "La comanda no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+    })
+    @PutMapping(value = "/comandas/{idC}/deleteLinea/{idL}", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Comanda> deleteLineaComanda(@PathVariable long idC, @PathVariable long idL) {
+        Comanda comanda = comandaService.deleteLinea(idC, idL);
+        return new ResponseEntity<>(comanda, HttpStatus.OK);
+    }
+
+    @Operation(summary = "Añade un camarero a la comanda")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Se modifica la comanda", content = @Content(schema = @Schema(implementation = Comanda.class))),
+            @ApiResponse(responseCode = "404", description = "La comanda no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+    })
+    @PutMapping(value = "/comandas/{id}", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Comanda> addCamarero(@PathVariable long id, @RequestBody Camarero camarero) {
+        Comanda comanda = comandaService.addCamarero(id, camarero);
+        return new ResponseEntity<>(comanda, HttpStatus.OK);
+    }
+
+    @Operation(summary = "Elimina el camarero de la comanda")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Se modifica la comanda", content = @Content(schema = @Schema(implementation = Comanda.class))),
+            @ApiResponse(responseCode = "404", description = "La comanda no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+    })
+    @PutMapping(value = "/comandas/{idCo}/eliminareCamarero/{idCa}", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Comanda> deleteCamarero(@PathVariable long idCo, @PathVariable long idCa) {
+        Comanda comanda = comandaService.deleteCamarero(idCo, idCa);
+        return new ResponseEntity<>(comanda, HttpStatus.OK);
+    }
+
+
+
 }

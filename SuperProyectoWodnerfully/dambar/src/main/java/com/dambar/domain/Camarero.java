@@ -45,9 +45,11 @@ public class Camarero {
     private String telefono;
 
 
-    @OneToMany(mappedBy = "camarero", cascade = CascadeType.ALL)
+    @JoinColumn(name = "comanda_id")
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Comanda> comandas;
 
-
-
+    public List<Comanda> getComandas() {
+        return comandas;
+    }
 }

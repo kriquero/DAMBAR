@@ -1,11 +1,14 @@
 package com.dambar.service;
 
+import com.dambar.domain.Camarero;
 import com.dambar.domain.Comanda;
+import com.dambar.domain.LineaComanda;
 import com.dambar.exceptions.ComandaNotFoundException;
 import com.dambar.repository.ComandaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Set;
 
@@ -37,6 +40,48 @@ public class ComandaServiceImpl implements ComandaService{
                 orElseThrow(()->new ComandaNotFoundException(id));
         newComanda.setIdComanda(id);
         return comandaRepository.save(newComanda);
+    }
+
+    @Override
+    public Comanda addLinea(long id, LineaComanda linea) {
+        Comanda comanda = comandaRepository.findById(id).
+                orElseThrow(()->new ComandaNotFoundException(id));
+        comanda.getLineaComandas().add(linea);
+        return comandaRepository.save(comanda);
+    }
+
+    @Override
+    public Comanda deleteLinea(long idComanda, long idLinea) {
+        Comanda comanda = comandaRepository.findById(idComanda).
+                orElseThrow(()->new ComandaNotFoundException(idComanda));
+        Set<LineaComanda> lineas = comanda.getLineaComandas();
+        for (LineaComanda l: lineas) {
+            long id =l.getId();
+            if(id==idLinea){
+                lineas.remove(l);
+            }
+        }
+        comanda.setLineaComandas(lineas);
+        return comandaRepository.save(comanda);
+    }
+
+    @Override
+    public Comanda addCamarero(long id, Camarero camarero) {
+        Comanda comanda = comandaRepository.findById(id).
+                orElseThrow(()->new ComandaNotFoundException(id));
+        comanda.setCamarero(camarero);
+        return comandaRepository.save(comanda);
+    }
+
+    @Override
+    public Comanda deleteCamarero(long idComanda, long idCamarero) {
+        Comanda comanda = comandaRepository.findById(idComanda).
+                orElseThrow(()->new ComandaNotFoundException(idComanda));
+        Camarero camarero = comanda.getCamarero();
+        if(camarero.getIdCamarero()==idCamarero) {
+            comanda.setCamarero(null);
+        }
+        return comandaRepository.save(comanda);
     }
 
     @Override

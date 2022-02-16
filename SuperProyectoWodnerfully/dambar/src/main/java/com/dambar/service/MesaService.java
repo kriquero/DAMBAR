@@ -1,5 +1,6 @@
 package com.dambar.service;
 
+import com.dambar.domain.Comanda;
 import com.dambar.domain.Mesa;
 
 import java.util.Optional;
@@ -11,4 +12,6 @@ public interface MesaService {
     Mesa addMesa (Mesa mesa);
     Mesa modifyMesa (long id, Mesa mesa);
     void deleteMesa(long id);
+    Mesa addComanda(long id, Comanda comanda);
+    Mesa deleteComanda(long idMesa, long idComanda);
 }

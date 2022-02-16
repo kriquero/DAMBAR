@@ -10,13 +10,14 @@ import javax.validation.constraints.NotBlank;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity(name = "lineacomanda")
-/*@IdClass(producto_ComandaID.class)*/
 public class LineaComanda {
 
     @Schema(description = "Identificador", example = "15", required = true)
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
     @ManyToOne

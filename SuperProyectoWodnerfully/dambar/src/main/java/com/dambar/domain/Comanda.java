@@ -33,16 +33,15 @@ public class Comanda {
     @Column(name = "fecha_pedido")
     private LocalDate fechaPedido;
 
-    @ManyToOne (fetch = FetchType.LAZY)
-    private Mesa mesa;
-
-    @ManyToOne (fetch = FetchType.LAZY)
-    private Camarero camarero;
-
-
-    @OneToMany(mappedBy = "comanda",cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "linea_id")
     Set<LineaComanda> lineaComandas;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "Camarero_id")
+    private Camarero camarero;
 
-
+    public Set<LineaComanda> getLineaComandas() {
+        return lineaComandas;
+    }
 }
