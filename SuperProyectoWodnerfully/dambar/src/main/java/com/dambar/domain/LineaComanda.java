@@ -19,7 +19,7 @@ public class LineaComanda {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
-    
+
     @Schema(description = "Cantidad", example = "1", required = true)
     @NotBlank
     @Column(name = "cantidad")

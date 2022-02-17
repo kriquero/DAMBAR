@@ -17,6 +17,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
 import java.util.Set;
 
 @RestController
@@ -125,5 +126,18 @@ public class ComandaController {
         Comanda comanda = comandaService.deleteCamarero(idCo);
         return new ResponseEntity<>(comanda, HttpStatus.OK);
     }
+
+    @Operation(summary = "Obtiene la lista de lineas de la comanda")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Listado de comandas",
+                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = Comanda.class)))),
+    })
+    @GetMapping(value = "/comandas/lineas/{id}", produces = "application/json")
+    public ResponseEntity<Set<LineaComanda>> getLineasComanda(@PathVariable long id){
+        Comanda comanda =  comandaService.findById(id).orElseThrow(() -> new ComandaNotFoundException(id));
+        Set<LineaComanda> lineasComanda = comanda.getLineaComandas();
+        return new ResponseEntity<>(lineasComanda, HttpStatus.OK);
+    }
+
 
 }
