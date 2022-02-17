@@ -37,9 +37,9 @@ public class Comanda {
     @JoinColumn(name = "linea_id")
     Set<LineaComanda> lineaComandas;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+/*    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Camarero_id")
-    private Camarero camarero;
+    private Camarero camarero;*/
 
     public Set<LineaComanda> getLineaComandas() {
         return lineaComandas;

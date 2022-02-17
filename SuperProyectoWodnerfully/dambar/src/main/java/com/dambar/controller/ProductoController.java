@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
 import java.util.Set;
 
 @RestController
@@ -40,10 +41,17 @@ public class ProductoController {
             @ApiResponse(responseCode = "404", description = "El producto no existe", content = @Content(schema = @Schema(implementation = Response.class))),
     })
     @GetMapping(value = "/productos/t/{tipo}", produces = "application/json")
-    public ResponseEntity<Set<Producto>> getproductosByTipo(@PathVariable String tipo){
-        Set<Producto> productos = productoService.findByTipo(tipo);
-        return new ResponseEntity<>(productos, HttpStatus.OK);
+    public ResponseEntity<Optional<Producto>> getproductosByTipo(@PathVariable String tipo){
+        Optional<Producto> productos = productoService.findAll().stream().findAny();
+        return new ResponseEntity<>(filtradoTipo(productos,tipo), HttpStatus.OK);
     }
+
+
+    private Optional<Producto> filtradoTipo(Optional<Producto> prod, String tipoQuerido) {
+        return prod.filter(produ -> produ.getTipo().equals(tipoQuerido));
+    }
+
+
 
     @Operation(summary = "Obtiene un producto determinado")
     @ApiResponses(value = {

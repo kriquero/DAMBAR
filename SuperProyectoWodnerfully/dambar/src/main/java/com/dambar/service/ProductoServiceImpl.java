@@ -19,14 +19,13 @@ public class ProductoServiceImpl implements ProductoService{
     @Autowired
     private ProductoRepository productoRepository;
 
-
     @Override
     public Set<Producto> findAll() {
         return productoRepository.findAll();
     }
 
     @Override
-    public Set<Producto> findByTipo(String tipo) {
+    public Optional<Producto> findByTipo(String tipo) {
         return productoRepository.findByTipo(tipo);
     }
 

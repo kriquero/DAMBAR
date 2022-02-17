@@ -23,7 +23,7 @@ public class Mesa {
     private long id;
 
     @Schema(description = "Estado de la mesa", example = "Ocupada", required = true)
-    estadoMesa estado = estadoMesa.Libre;
+    private String estado;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "comanda_id")
