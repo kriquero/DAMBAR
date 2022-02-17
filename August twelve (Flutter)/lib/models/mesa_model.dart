@@ -1,3 +1,5 @@
+import 'package:splash_screen/models/comanda_model.dart';
+
 class Mesas {
   List<Mesa> mesas = [];
 
@@ -14,6 +16,7 @@ class Mesas {
 class Mesa {
   int? id = 0;
   String? estado = "";
+  List<Comanda> comandas = [];
 
   Mesa({
     required this.id,
@@ -22,5 +25,6 @@ class Mesa {
   Mesa.fromJsonMap(Map<String, dynamic> json) {
     id = json['id'];
     estado = json['estado'];
+    comandas = json['comandas'];
   }
 }

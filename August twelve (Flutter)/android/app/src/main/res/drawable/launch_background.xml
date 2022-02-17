@@ -6,13 +6,7 @@
     <!-- You can insert your own image assets here -->
      <item>
         <bitmap
-            android:gravity="center"
-            android:src="@mipmap/logo" />
-    </item>
-    <item
-        android:bottom="200dp">
-        <bitmap
-            android:gravity="bottom"
-            android:src="@mipmap/text" />
+            android:gravity="fill"
+            android:src="@mipmap/splash_logo" />
     </item>
 </layer-list>

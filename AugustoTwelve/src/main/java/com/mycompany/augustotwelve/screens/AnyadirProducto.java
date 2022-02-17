@@ -27,19 +27,476 @@ public class AnyadirProducto extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        AnyadirProductoScrollPanelImagen = new javax.swing.JScrollPane();
+        AnyadirProductoImagen = new javax.swing.JTextArea();
+        AnyadirProductoScrollPanelDescripcion = new javax.swing.JScrollPane();
+        AnyadirProductoDescripcion = new javax.swing.JTextArea();
+        AnyadirProductoCerrarButton = new javax.swing.JButton();
+        AnyadirProductoInsertarButton = new javax.swing.JButton();
+        AnyadirProductoPrecio = new javax.swing.JSpinner();
+        AnyadirProductoStock = new javax.swing.JSpinner();
+        AnyadirProductonombre = new javax.swing.JTextField();
+        AnyadirProductoTipo = new javax.swing.JTextField();
+        AnyadirProductoImagenLabel = new javax.swing.JLabel();
+        AnyadirProductoPrecioLabel = new javax.swing.JLabel();
+        AnyadirProductoStockLabel = new javax.swing.JLabel();
+        AnyadirProductoNombreLabel = new javax.swing.JLabel();
+        AnyadirProductoAlergenosLabel = new javax.swing.JLabel();
+        AnyadirProductoDescripcionLabel = new javax.swing.JLabel();
+        AnyadirProductoTipoLabel = new javax.swing.JLabel();
+        AnyadirProductoAlergenosPanel = new javax.swing.JPanel();
+        AnyadirProductoSesamo = new javax.swing.JCheckBox();
+        AnyadirProductoMostaza = new javax.swing.JCheckBox();
+        AnyadirProductoApio = new javax.swing.JCheckBox();
+        AnyadirProductoFrutosCascara = new javax.swing.JCheckBox();
+        AnyadirProductoLacteos = new javax.swing.JCheckBox();
+        AnyadirProductoSoja = new javax.swing.JCheckBox();
+        AnyadirProductoCacahuetes = new javax.swing.JCheckBox();
+        AnyadirProductoPescado = new javax.swing.JCheckBox();
+        AnyadirProductoHuevo = new javax.swing.JCheckBox();
+        AnyadirProductoCrustaceos = new javax.swing.JCheckBox();
+        AnyadirProductoGluten = new javax.swing.JCheckBox();
+        AnyadirProductoAltramuces = new javax.swing.JCheckBox();
+        AnyadirProductoMoluscos = new javax.swing.JCheckBox();
+        AnyadirProductoAzufreSulfitos = new javax.swing.JCheckBox();
+
+        setMaximumSize(new java.awt.Dimension(600, 500));
+        setMinimumSize(new java.awt.Dimension(600, 500));
+        setPreferredSize(new java.awt.Dimension(600, 500));
+
+        AnyadirProductoImagen.setColumns(20);
+        AnyadirProductoImagen.setRows(5);
+        AnyadirProductoScrollPanelImagen.setViewportView(AnyadirProductoImagen);
+
+        AnyadirProductoDescripcion.setColumns(20);
+        AnyadirProductoDescripcion.setRows(5);
+        AnyadirProductoScrollPanelDescripcion.setViewportView(AnyadirProductoDescripcion);
+
+        AnyadirProductoCerrarButton.setText("Cerrar");
+        AnyadirProductoCerrarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoCerrarButtonActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoInsertarButton.setText("Insertar");
+        AnyadirProductoInsertarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoInsertarButtonActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoPrecio.setModel(new javax.swing.SpinnerNumberModel(0.0d, 0.0d, null, 1.0d));
+
+        AnyadirProductoStock.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+
+        AnyadirProductonombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductonombreActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoTipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoTipoActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoImagenLabel.setText("Imagen (URL)");
+
+        AnyadirProductoPrecioLabel.setText("Precio");
+
+        AnyadirProductoStockLabel.setText("Stock");
+
+        AnyadirProductoNombreLabel.setText("Nombre");
+
+        AnyadirProductoAlergenosLabel.setText("Alergenos");
+
+        AnyadirProductoDescripcionLabel.setText("Descripción");
+
+        AnyadirProductoTipoLabel.setText("Tipo");
+
+        AnyadirProductoAlergenosPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        AnyadirProductoSesamo.setText("Sesamo");
+        AnyadirProductoSesamo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoSesamoActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoMostaza.setText("Mostaza");
+        AnyadirProductoMostaza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoMostazaActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoApio.setText("Apio");
+        AnyadirProductoApio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoApioActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoFrutosCascara.setText("Frutos con cascara");
+        AnyadirProductoFrutosCascara.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoFrutosCascaraActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoLacteos.setText("Lácteos");
+        AnyadirProductoLacteos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoLacteosActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoSoja.setText("Soja");
+        AnyadirProductoSoja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoSojaActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoCacahuetes.setText("Cacahuetes");
+        AnyadirProductoCacahuetes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoCacahuetesActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoPescado.setText("Pescado");
+        AnyadirProductoPescado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoPescadoActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoHuevo.setText("Huevo");
+        AnyadirProductoHuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoHuevoActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoCrustaceos.setText("Crustáceos ");
+        AnyadirProductoCrustaceos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoCrustaceosActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoGluten.setText("Gluten");
+        AnyadirProductoGluten.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoGlutenActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoAltramuces.setText("Altramuces");
+        AnyadirProductoAltramuces.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoAltramucesActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoMoluscos.setText("Moluscos");
+        AnyadirProductoMoluscos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoMoluscosActionPerformed(evt);
+            }
+        });
+
+        AnyadirProductoAzufreSulfitos.setText("Dioxido de azufre y sulfitos");
+        AnyadirProductoAzufreSulfitos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnyadirProductoAzufreSulfitosActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout AnyadirProductoAlergenosPanelLayout = new javax.swing.GroupLayout(AnyadirProductoAlergenosPanel);
+        AnyadirProductoAlergenosPanel.setLayout(AnyadirProductoAlergenosPanelLayout);
+        AnyadirProductoAlergenosPanelLayout.setHorizontalGroup(
+            AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AnyadirProductoAlergenosPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AnyadirProductoSesamo)
+                    .addComponent(AnyadirProductoMostaza)
+                    .addComponent(AnyadirProductoApio)
+                    .addComponent(AnyadirProductoMoluscos))
+                .addGap(18, 18, 18)
+                .addGroup(AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AnyadirProductoLacteos)
+                    .addComponent(AnyadirProductoSoja)
+                    .addComponent(AnyadirProductoHuevo)
+                    .addComponent(AnyadirProductoGluten))
+                .addGap(18, 18, 18)
+                .addGroup(AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AnyadirProductoCacahuetes)
+                    .addComponent(AnyadirProductoPescado)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(AnyadirProductoAltramuces)
+                        .addComponent(AnyadirProductoCrustaceos)))
+                .addGap(18, 18, 18)
+                .addGroup(AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AnyadirProductoAzufreSulfitos)
+                    .addComponent(AnyadirProductoFrutosCascara))
+                .addContainerGap(145, Short.MAX_VALUE))
+        );
+        AnyadirProductoAlergenosPanelLayout.setVerticalGroup(
+            AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AnyadirProductoAlergenosPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AnyadirProductoAlergenosPanelLayout.createSequentialGroup()
+                        .addGroup(AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AnyadirProductoCacahuetes)
+                            .addComponent(AnyadirProductoAzufreSulfitos))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AnyadirProductoPescado)
+                            .addComponent(AnyadirProductoFrutosCascara))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(AnyadirProductoCrustaceos))
+                    .addGroup(AnyadirProductoAlergenosPanelLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(AnyadirProductoHuevo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AnyadirProductoLacteos)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(AnyadirProductoSoja))
+                    .addGroup(AnyadirProductoAlergenosPanelLayout.createSequentialGroup()
+                        .addComponent(AnyadirProductoSesamo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(AnyadirProductoMostaza)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(AnyadirProductoApio)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AnyadirProductoAlergenosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(AnyadirProductoMoluscos)
+                        .addComponent(AnyadirProductoGluten))
+                    .addComponent(AnyadirProductoAltramuces))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 468, Short.MAX_VALUE)
+                                .addComponent(AnyadirProductoInsertarButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(AnyadirProductoCerrarButton))
+                            .addComponent(AnyadirProductoAlergenosLabel)
+                            .addComponent(AnyadirProductoAlergenosPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(AnyadirProductoNombreLabel)
+                            .addComponent(AnyadirProductonombre)
+                            .addComponent(AnyadirProductoDescripcionLabel)
+                            .addComponent(AnyadirProductoScrollPanelDescripcion))
+                        .addGap(43, 43, 43)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(AnyadirProductoTipoLabel)
+                            .addComponent(AnyadirProductoTipo)
+                            .addComponent(AnyadirProductoImagenLabel)
+                            .addComponent(AnyadirProductoScrollPanelImagen))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(AnyadirProductoStock, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AnyadirProductoStockLabel)
+                            .addComponent(AnyadirProductoPrecioLabel)
+                            .addComponent(AnyadirProductoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(59, 59, 59))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(AnyadirProductoNombreLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AnyadirProductonombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(AnyadirProductoDescripcionLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AnyadirProductoScrollPanelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(AnyadirProductoTipoLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AnyadirProductoTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(AnyadirProductoImagenLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(AnyadirProductoPrecioLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(AnyadirProductoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AnyadirProductoStockLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(AnyadirProductoStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(AnyadirProductoScrollPanelImagen))))
+                .addGap(18, 18, 18)
+                .addComponent(AnyadirProductoAlergenosLabel)
+                .addGap(18, 18, 18)
+                .addComponent(AnyadirProductoAlergenosPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(67, 67, 67)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AnyadirProductoCerrarButton)
+                    .addComponent(AnyadirProductoInsertarButton))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void AnyadirProductoCerrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoCerrarButtonActionPerformed
+        this.setSize(0,0);
+    }//GEN-LAST:event_AnyadirProductoCerrarButtonActionPerformed
+
+    private void AnyadirProductoInsertarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoInsertarButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoInsertarButtonActionPerformed
+
+    private void AnyadirProductonombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductonombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductonombreActionPerformed
+
+    private void AnyadirProductoSesamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoSesamoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoSesamoActionPerformed
+
+    private void AnyadirProductoMostazaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoMostazaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoMostazaActionPerformed
+
+    private void AnyadirProductoApioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoApioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoApioActionPerformed
+
+    private void AnyadirProductoFrutosCascaraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoFrutosCascaraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoFrutosCascaraActionPerformed
+
+    private void AnyadirProductoLacteosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoLacteosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoLacteosActionPerformed
+
+    private void AnyadirProductoSojaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoSojaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoSojaActionPerformed
+
+    private void AnyadirProductoCacahuetesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoCacahuetesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoCacahuetesActionPerformed
+
+    private void AnyadirProductoPescadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoPescadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoPescadoActionPerformed
+
+    private void AnyadirProductoHuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoHuevoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoHuevoActionPerformed
+
+    private void AnyadirProductoCrustaceosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoCrustaceosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoCrustaceosActionPerformed
+
+    private void AnyadirProductoGlutenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoGlutenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoGlutenActionPerformed
+
+    private void AnyadirProductoAltramucesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoAltramucesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoAltramucesActionPerformed
+
+    private void AnyadirProductoMoluscosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoMoluscosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoMoluscosActionPerformed
+
+    private void AnyadirProductoAzufreSulfitosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoAzufreSulfitosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoAzufreSulfitosActionPerformed
+
+    private void AnyadirProductoTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoTipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnyadirProductoTipoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AnyadirProductoAlergenosLabel;
+    private javax.swing.JPanel AnyadirProductoAlergenosPanel;
+    private javax.swing.JCheckBox AnyadirProductoAltramuces;
+    private javax.swing.JCheckBox AnyadirProductoApio;
+    private javax.swing.JCheckBox AnyadirProductoAzufreSulfitos;
+    private javax.swing.JCheckBox AnyadirProductoCacahuetes;
+    private javax.swing.JButton AnyadirProductoCerrarButton;
+    private javax.swing.JCheckBox AnyadirProductoCrustaceos;
+    private javax.swing.JTextArea AnyadirProductoDescripcion;
+    private javax.swing.JLabel AnyadirProductoDescripcionLabel;
+    private javax.swing.JCheckBox AnyadirProductoFrutosCascara;
+    private javax.swing.JCheckBox AnyadirProductoGluten;
+    private javax.swing.JCheckBox AnyadirProductoHuevo;
+    private javax.swing.JTextArea AnyadirProductoImagen;
+    private javax.swing.JLabel AnyadirProductoImagenLabel;
+    private javax.swing.JButton AnyadirProductoInsertarButton;
+    private javax.swing.JCheckBox AnyadirProductoLacteos;
+    private javax.swing.JCheckBox AnyadirProductoMoluscos;
+    private javax.swing.JCheckBox AnyadirProductoMostaza;
+    private javax.swing.JLabel AnyadirProductoNombreLabel;
+    private javax.swing.JCheckBox AnyadirProductoPescado;
+    private javax.swing.JSpinner AnyadirProductoPrecio;
+    private javax.swing.JLabel AnyadirProductoPrecioLabel;
+    private javax.swing.JScrollPane AnyadirProductoScrollPanelDescripcion;
+    private javax.swing.JScrollPane AnyadirProductoScrollPanelImagen;
+    private javax.swing.JCheckBox AnyadirProductoSesamo;
+    private javax.swing.JCheckBox AnyadirProductoSoja;
+    private javax.swing.JSpinner AnyadirProductoStock;
+    private javax.swing.JLabel AnyadirProductoStockLabel;
+    private javax.swing.JTextField AnyadirProductoTipo;
+    private javax.swing.JLabel AnyadirProductoTipoLabel;
+    private javax.swing.JTextField AnyadirProductonombre;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox10;
+    private javax.swing.JCheckBox jCheckBox11;
+    private javax.swing.JCheckBox jCheckBox12;
+    private javax.swing.JCheckBox jCheckBox13;
+    private javax.swing.JCheckBox jCheckBox14;
+    private javax.swing.JCheckBox jCheckBox15;
+    private javax.swing.JCheckBox jCheckBox16;
+    private javax.swing.JCheckBox jCheckBox17;
+    private javax.swing.JCheckBox jCheckBox18;
+    private javax.swing.JCheckBox jCheckBox19;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox20;
+    private javax.swing.JCheckBox jCheckBox21;
+    private javax.swing.JCheckBox jCheckBox22;
+    private javax.swing.JCheckBox jCheckBox23;
+    private javax.swing.JCheckBox jCheckBox24;
+    private javax.swing.JCheckBox jCheckBox25;
+    private javax.swing.JCheckBox jCheckBox26;
+    private javax.swing.JCheckBox jCheckBox27;
+    private javax.swing.JCheckBox jCheckBox28;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

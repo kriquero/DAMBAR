@@ -17,8 +17,6 @@ class Comandas {
 class Comanda {
   int? id = 0;
   bool? pagado = false;
-  int? codigoMesa = 0;
-  int? codigoCamarero = 0;
   DateTime? fechaPedido;
   Mesa? mesa;
   Camarero? camarero;
@@ -27,8 +25,6 @@ class Comanda {
   Comanda(
       {required this.id,
       required this.pagado,
-      required this.codigoMesa,
-      required this.codigoCamarero,
       required this.fechaPedido,
       required this.mesa,
       required this.camarero,
@@ -36,9 +32,7 @@ class Comanda {
   Comanda.fromJsonMap(Map<String, dynamic> json) {
     id = json['id'];
     pagado = json['pagado'];
-    codigoMesa = json['codigoMesa'];
-    codigoCamarero = json['codigoCamarero'];
-    fechaPedido = json['fechaPedido'];
+    fechaPedido = json['fecha_pedido'];
     mesa = json['mesa'];
     camarero = json['camarero'];
     lineaComanda = json['lineaComanda'];
