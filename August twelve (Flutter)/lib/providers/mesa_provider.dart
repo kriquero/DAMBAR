@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 
 import 'package:splash_screen/models/mesa_model.dart';
 
@@ -54,5 +55,18 @@ class MesaProvider {
           'content-Type': 'application/json; charset=UTF-8'
         },
         body: jsonEncode(<String, String>{'estado': estado}));
+  }
+
+  //Ejemplo de put
+  Future<http.Response> updateMesasComanda(String id) {
+    return http.put(Uri.parse('http://' + _url + "/mesas/addComanda/$id"),
+        headers: <String, String>{
+          'content-Type': 'application/json; charset=UTF-8'
+        },
+        body: jsonEncode(<String, String>{
+          'pagado': 'false',
+          'fechaPedido':
+              DateFormat('yyyy-MM-dd').format(DateTime.now()).toString()
+        }));
   }
 }

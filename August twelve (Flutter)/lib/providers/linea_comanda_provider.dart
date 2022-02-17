@@ -27,4 +27,9 @@ class LineaComandaProvider {
     final url = Uri.http(_url, '/lineas');
     return await _procesarRespuesta(url);
   }
+
+  Future<List<LineaComanda>> getlineasComandaByComandaId(String id) async {
+    final url = Uri.http(_url, '/comandas/lineas/$id');
+    return await _procesarRespuesta(url);
+  }
 }

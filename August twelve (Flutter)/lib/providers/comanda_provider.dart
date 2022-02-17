@@ -30,4 +30,15 @@ class ComandaProvider {
     final url = Uri.http(_url, '/mesas/$mesaId/comandas');
     return await _procesarRespuesta(url);
   }
+
+  //Delete
+  Future<http.Response> deleteComanda(String id) async {
+    final http.Response response = await http.delete(
+      Uri.parse('http://' + _url + '/comandas/$id'),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+    );
+    return response;
+  }
 }

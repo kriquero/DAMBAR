@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:splash_screen/models/comanda_model.dart';
 import 'package:splash_screen/models/mesa_model.dart';
+import 'package:splash_screen/pcolors/palette.dart';
 import 'package:splash_screen/providers/comanda_provider.dart';
+import 'package:splash_screen/providers/mesa_provider.dart';
 import 'package:splash_screen/widgets/comanda_widget.dart';
+import 'package:intl/intl.dart';
 
 class MesaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Mesa mesa = ModalRoute.of(context)!.settings.arguments as Mesa;
+    final mesaProvider = MesaProvider();
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          mesaProvider.updateMesasComanda(mesa.id.toString());
+        },
+        backgroundColor: Palette.kToDark,
+        child: Icon(
+          Icons.add_rounded,
+          size: 40,
+        ),
+      ),
       appBar: AppBar(
         toolbarHeight: 100,
         title: Text(
