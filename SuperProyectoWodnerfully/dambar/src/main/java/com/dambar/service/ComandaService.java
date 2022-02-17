@@ -21,7 +21,7 @@ public interface ComandaService {
 
     Comanda addCamarero(long id, Camarero camarero);
 
-    Comanda deleteCamarero(long idComanda, long idCamarero);
+    Comanda deleteCamarero(long idComanda);
 
     Comanda addComanda(Comanda comanda);
 

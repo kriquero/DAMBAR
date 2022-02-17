@@ -38,8 +38,7 @@ public class Comanda {
     Set<LineaComanda> lineaComandas;
 
 
-    @JoinColumn(name = "Comanda_id")
-    private long camareroId;
+
 
     public Set<LineaComanda> getLineaComandas() {
         return lineaComandas;

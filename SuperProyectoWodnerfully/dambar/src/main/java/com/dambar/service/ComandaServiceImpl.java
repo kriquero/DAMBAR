@@ -74,13 +74,10 @@ public class ComandaServiceImpl implements ComandaService{
     }
 
     @Override
-    public Comanda deleteCamarero(long idComanda, long idCamarero) {
+    public Comanda deleteCamarero(long idComanda) {
         Comanda comanda = comandaRepository.findById(idComanda).
                 orElseThrow(()->new ComandaNotFoundException(idComanda));
-        long camId = comanda.getCamareroId();
-        if(camId==idCamarero) {
             comanda.setCamarero(null);
-        }
         return comandaRepository.save(comanda);
     }
 

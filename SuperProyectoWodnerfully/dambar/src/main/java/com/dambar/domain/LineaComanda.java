@@ -19,15 +19,7 @@ public class LineaComanda {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
-
-
-    @JoinColumn(name="linea_comanda_id")
-    long id_producto;
-
-
-    @JoinColumn(name="linea_comanda_id")
-    long id_comanda;
-
+    
     @Schema(description = "Cantidad", example = "1", required = true)
     @NotBlank
     @Column(name = "cantidad")

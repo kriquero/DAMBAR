@@ -120,9 +120,9 @@ public class ComandaController {
             @ApiResponse(responseCode = "200", description = "Se modifica la comanda", content = @Content(schema = @Schema(implementation = Comanda.class))),
             @ApiResponse(responseCode = "404", description = "La comanda no existe", content = @Content(schema = @Schema(implementation = Response.class))),
     })
-    @PutMapping(value = "/comandas/{idCo}/eliminareCamarero/{idCa}", produces = "application/json", consumes = "application/json")
-    public ResponseEntity<Comanda> deleteCamarero(@PathVariable long idCo, @PathVariable long idCa) {
-        Comanda comanda = comandaService.deleteCamarero(idCo, idCa);
+    @PutMapping(value = "/comandas/{idCo}/eliminareCamarero", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Comanda> deleteCamarero(@PathVariable long idCo) {
+        Comanda comanda = comandaService.deleteCamarero(idCo);
         return new ResponseEntity<>(comanda, HttpStatus.OK);
     }
 
