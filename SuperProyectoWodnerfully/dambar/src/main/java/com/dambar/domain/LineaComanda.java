@@ -20,13 +20,13 @@ public class LineaComanda {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-   /* @ManyToOne
-    @JoinColumn(name="producto_id")
-    Producto producto;
 
-    @ManyToOne
-    @JoinColumn(name="comanda_id")
-    Comanda comanda;*/
+    @JoinColumn(name="linea_comanda_id")
+    long id_producto;
+
+
+    @JoinColumn(name="linea_comanda_id")
+    long id_comanda;
 
     @Schema(description = "Cantidad", example = "1", required = true)
     @NotBlank

@@ -54,7 +54,7 @@ public class Producto {
 
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "linea_id")
+    @JoinColumn(name = "Producto_id")
     Set<LineaComanda> lineaComandas;
 
     public Set<LineaComanda> getLineaComandas() {

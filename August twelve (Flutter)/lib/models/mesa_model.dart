@@ -16,7 +16,7 @@ class Mesas {
 class Mesa {
   int? id = 0;
   String? estado = "";
-  List<Comanda> comandas = [];
+  List<dynamic> comandas = [];
 
   Mesa({
     required this.id,

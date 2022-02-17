@@ -26,7 +26,7 @@ public class Mesa {
     private String estado;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "comanda_id")
+    @JoinColumn(name = "mesa_id")
     private List<Comanda> comandas;
 
     public List<Comanda> getComandas() {

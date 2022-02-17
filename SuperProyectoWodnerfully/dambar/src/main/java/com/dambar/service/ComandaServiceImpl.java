@@ -77,8 +77,8 @@ public class ComandaServiceImpl implements ComandaService{
     public Comanda deleteCamarero(long idComanda, long idCamarero) {
         Comanda comanda = comandaRepository.findById(idComanda).
                 orElseThrow(()->new ComandaNotFoundException(idComanda));
-        Camarero camarero = comanda.getCamarero();
-        if(camarero.getIdCamarero()==idCamarero) {
+        long camId = comanda.getCamareroId();
+        if(camId==idCamarero) {
             comanda.setCamarero(null);
         }
         return comandaRepository.save(comanda);

@@ -34,14 +34,17 @@ public class Comanda {
     private LocalDate fechaPedido;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "linea_id")
+    @JoinColumn(name = "Comanda_id")
     Set<LineaComanda> lineaComandas;
 
-/*    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Camarero_id")
-    private Camarero camarero;*/
+
+    @JoinColumn(name = "Comanda_id")
+    private long camareroId;
 
     public Set<LineaComanda> getLineaComandas() {
         return lineaComandas;
+    }
+
+    public void setCamarero(Camarero camarero) {
     }
 }
