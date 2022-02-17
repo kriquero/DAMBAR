@@ -35,13 +35,13 @@ public class Comanda {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "Comanda_id")
-    Set<LineaComanda> lineaComandas;
+    Set<LineaComanda> lineasComanda;
 
 
 
 
-    public Set<LineaComanda> getLineaComandas() {
-        return lineaComandas;
+    public Set<LineaComanda> getLineasComanda() {
+        return lineasComanda;
     }
 
     public void setCamarero(Camarero camarero) {

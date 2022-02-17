@@ -46,7 +46,7 @@ public class ComandaServiceImpl implements ComandaService{
     public Comanda addLinea(long id, LineaComanda linea) {
         Comanda comanda = comandaRepository.findById(id).
                 orElseThrow(()->new ComandaNotFoundException(id));
-        comanda.getLineaComandas().add(linea);
+        comanda.getLineasComanda().add(linea);
         return comandaRepository.save(comanda);
     }
 
@@ -54,14 +54,14 @@ public class ComandaServiceImpl implements ComandaService{
     public Comanda deleteLinea(long idComanda, long idLinea) {
         Comanda comanda = comandaRepository.findById(idComanda).
                 orElseThrow(()->new ComandaNotFoundException(idComanda));
-        Set<LineaComanda> lineas = comanda.getLineaComandas();
+        Set<LineaComanda> lineas = comanda.getLineasComanda();
         for (LineaComanda l: lineas) {
             long id =l.getId();
             if(id==idLinea){
                 lineas.remove(l);
             }
         }
-        comanda.setLineaComandas(lineas);
+        comanda.setLineasComanda(lineas);
         return comandaRepository.save(comanda);
     }
 

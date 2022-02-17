@@ -4,6 +4,7 @@ package com.dambar.domain;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ import javax.validation.constraints.NotBlank;
 import java.util.Set;
 
 @Data
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "productos")
@@ -53,13 +55,8 @@ public class Producto {
     private String foto; //URL del producto
 
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Producto_id")
-    Set<LineaComanda> lineaComandas;
 
-    public Set<LineaComanda> getLineaComandas() {
-        return lineaComandas;
-    }
+
 
 
 }

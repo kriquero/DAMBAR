@@ -1,6 +1,7 @@
 package com.dambar.controller;
 
 import com.dambar.domain.Comanda;
+import com.dambar.domain.LineaComanda;
 import com.dambar.domain.Mesa;
 import com.dambar.exceptions.MesaNotFoundException;
 import com.dambar.service.ComandaService;
@@ -42,7 +43,7 @@ public class MesaController {
         return new ResponseEntity<>(mesas, HttpStatus.OK);
     }
 
-    @Operation(summary = "Obtiene una mesa determinado")
+    @Operation(summary = "Obtiene una mesa determinada")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Existe la mesa", content = @Content(schema = @Schema(implementation = Mesa.class))),
             @ApiResponse(responseCode = "404", description = "La mesa no existe", content = @Content(schema = @Schema(implementation = Response.class))),
@@ -110,7 +111,7 @@ public class MesaController {
         return new ResponseEntity<>(mesa, HttpStatus.OK);
     }
 
-    @Operation(summary = "Añade una comanda de la mesa")
+    @Operation(summary = "Elimina una comanda de la mesa")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Se modifica la mesa", content = @Content(schema = @Schema(implementation = Mesa.class))),
             @ApiResponse(responseCode = "404", description = "La mesa no existe", content = @Content(schema = @Schema(implementation = Response.class))),
@@ -119,6 +120,29 @@ public class MesaController {
     public ResponseEntity<Mesa> deleteConmanda(@PathVariable long idM, @PathVariable long idC) {
         Mesa mesa = mesaService.deleteComanda(idM, idC);
         return new ResponseEntity<>(mesa, HttpStatus.OK);
+    }
+
+    @Operation(summary = "Obtiene el precio total de las comandas de una mesa determinada")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Existe la mesa", content = @Content(schema = @Schema(implementation = Mesa.class))),
+            @ApiResponse(responseCode = "404", description = "La mesa no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+    })
+    @GetMapping(value = "/mesas/factura/{id}", produces = "application/json")
+    public float getFacturaMesa(@PathVariable long id) {
+        float precio=0;
+        Mesa mesa = mesaService.findById(id)
+                .orElseThrow(() -> new MesaNotFoundException(id));
+        List<Comanda> comandas = mesa.getComandas();
+        for (Comanda c:comandas) {
+            for (LineaComanda l: c.getLineasComanda()) {
+                precio += l == null? 0 : l.getProducto()==null? 0 : l.getProducto().getPrecio()* l.getCantidad();
+
+            }
+
+        }
+
+
+        return precio;
     }
 
 }

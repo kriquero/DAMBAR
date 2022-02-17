@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -25,5 +26,10 @@ public class LineaComanda {
     @Column(name = "cantidad")
     private int cantidad;
 
+
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "Producto_id")
+    Producto producto;
 
 }

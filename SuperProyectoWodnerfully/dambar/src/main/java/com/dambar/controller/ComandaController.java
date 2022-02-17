@@ -135,7 +135,7 @@ public class ComandaController {
     @GetMapping(value = "/comandas/lineas/{id}", produces = "application/json")
     public ResponseEntity<Set<LineaComanda>> getLineasComanda(@PathVariable long id){
         Comanda comanda =  comandaService.findById(id).orElseThrow(() -> new ComandaNotFoundException(id));
-        Set<LineaComanda> lineasComanda = comanda.getLineaComandas();
+        Set<LineaComanda> lineasComanda = comanda.getLineasComanda();
         return new ResponseEntity<>(lineasComanda, HttpStatus.OK);
     }
 
