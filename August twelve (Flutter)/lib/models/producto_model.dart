@@ -38,4 +38,16 @@ class Producto {
     tipo = json['tipo'];
     foto = json['foto'];
   }
+
+  factory Producto.fromJson(dynamic json) {
+    return Producto(
+      id: json['id'] as int,
+      nombre: json['nombre'] as String,
+      descripcion: json['descripcion'] as String,
+      precio: json['precio'] as double,
+      stock: json['stock'] as int,
+      tipo: json['tipo'] as String,
+      foto: json['foto'] as String,
+    );
+  }
 }

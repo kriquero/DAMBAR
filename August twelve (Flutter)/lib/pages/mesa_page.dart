@@ -21,10 +21,9 @@ class _MesaPageState extends State<MesaPage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          mesaProvider.updateMesasComanda(mesa.id.toString());
-          setState(() {
-            _MesaPageState();
-          });
+          mesaProvider
+              .updateMesasComanda(mesa.id.toString())
+              .then((value) => setState(() {}));
         },
         backgroundColor: Palette.kToDark,
         child: Icon(

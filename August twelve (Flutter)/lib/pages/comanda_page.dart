@@ -31,7 +31,7 @@ class _ComandaPageState extends State<ComandaPage> {
                 heroTag: 'DeleteComanda',
                 onPressed: () {
                   comandaProvider.deleteComanda(comanda.id.toString());
-                  setState(() {});
+                  Navigator.pop(context);
                 },
                 child: const Icon(
                   Icons.remove,

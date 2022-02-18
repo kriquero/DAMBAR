@@ -27,7 +27,7 @@ class _LineaComandaWidgetState extends State<LineaComandaWidget> {
                 children: [
                   Expanded(
                       child: Text(
-                    'linea ' + widget.lineas[index].id.toString(),
+                    widget.lineas[index].producto!.nombre.toString(),
                     style: TextStyle(
                       fontFamily: 'Enriqueta',
                       fontSize: 30,
