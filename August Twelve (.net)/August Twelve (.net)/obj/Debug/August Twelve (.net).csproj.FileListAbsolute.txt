@@ -21,3 +21,17 @@ C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Tw
 C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.dll
 C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.xml
 C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CopyComplete
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.AssemblyReference.cache
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Form1.resources
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Properties.Resources.resources
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.GenerateResource.cache
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CoreCompileInputs.cache
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).exe
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).pdb
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe.config
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).pdb
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.dll
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.xml
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CopyComplete
+D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.mesaDetalle.resources
