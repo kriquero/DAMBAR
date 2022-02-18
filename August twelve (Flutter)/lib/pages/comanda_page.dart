@@ -6,7 +6,12 @@ import 'package:splash_screen/providers/comanda_provider.dart';
 import 'package:splash_screen/providers/linea_comanda_provider.dart';
 import 'package:splash_screen/widgets/linea_comanda_widget.dart';
 
-class ComandaPage extends StatelessWidget {
+class ComandaPage extends StatefulWidget {
+  @override
+  State<ComandaPage> createState() => _ComandaPageState();
+}
+
+class _ComandaPageState extends State<ComandaPage> {
   @override
   Widget build(BuildContext context) {
     final Comanda comanda =
@@ -26,6 +31,7 @@ class ComandaPage extends StatelessWidget {
                 heroTag: 'DeleteComanda',
                 onPressed: () {
                   comandaProvider.deleteComanda(comanda.id.toString());
+                  setState(() {});
                 },
                 child: const Icon(
                   Icons.remove,

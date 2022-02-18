@@ -19,17 +19,12 @@ class LineasComanda {
 class LineaComanda {
   int? id = 0;
   Producto? producto;
-  Comanda? comanda;
   int? cantidad = 0;
   LineaComanda(
-      {required this.id,
-      required this.producto,
-      required this.comanda,
-      required this.cantidad});
+      {required this.id, required this.producto, required this.cantidad});
   LineaComanda.fromJsonMap(Map<String, dynamic> json) {
     id = json['id'];
     producto = json['producto'];
-    comanda = json['comanda'];
     cantidad = json['cantidad'];
   }
 }

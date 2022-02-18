@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:splash_screen/models/mesa_model.dart';
 
-class MesaWidget extends StatelessWidget {
+class MesaWidget extends StatefulWidget {
   final List<Mesa> mesas;
   MesaWidget({required this.mesas});
 
+  @override
+  State<MesaWidget> createState() => _MesaWidgetState();
+}
+
+class _MesaWidgetState extends State<MesaWidget> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -13,14 +18,14 @@ class MesaWidget extends StatelessWidget {
           color: Colors.grey[300],
           child: InkWell(
             onTap: () => Navigator.pushNamed(context, 'mesa_page',
-                arguments: mesas[index]),
+                arguments: widget.mesas[index]),
             child: Padding(
               padding: EdgeInsets.all(15),
               child: Row(
                 children: [
                   Expanded(
                       child: Text(
-                    'Mesa ' + mesas[index].id.toString(),
+                    'Mesa ' + widget.mesas[index].id.toString(),
                     style: TextStyle(
                       fontFamily: 'Enriqueta',
                       fontSize: 35,
@@ -28,7 +33,7 @@ class MesaWidget extends StatelessWidget {
                   )),
                   Icon(
                     Icons.brightness_1,
-                    color: color(mesas[index].estado.toString()),
+                    color: color(widget.mesas[index].estado.toString()),
                     size: 35,
                   ),
                 ],
@@ -37,7 +42,7 @@ class MesaWidget extends StatelessWidget {
           ),
         );
       },
-      itemCount: mesas.length,
+      itemCount: widget.mesas.length,
     );
   }
 

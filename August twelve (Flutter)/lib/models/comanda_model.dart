@@ -19,7 +19,6 @@ class Comanda {
   bool? pagado = false;
   String? fechaPedido;
   Camarero? camarero;
-  int? camareroId;
   List? lineasComanda;
 
   Comanda(
@@ -27,14 +26,12 @@ class Comanda {
       required this.pagado,
       required this.fechaPedido,
       required this.camarero,
-      required this.camareroId,
       required this.lineasComanda});
   Comanda.fromJsonMap(Map<String, dynamic> json) {
     id = json['idComanda'];
     pagado = json['pagado'];
     fechaPedido = json['fechaPedido'];
     camarero = json['camarero'];
-    camareroId = json['camareroId'];
-    lineasComanda = json['lineaComandas'];
+    lineasComanda = json['lineasComanda'];
   }
 }

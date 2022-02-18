@@ -4,10 +4,15 @@ import 'package:splash_screen/models/linea_comanda_model.dart';
 import 'package:splash_screen/providers/linea_comanda_provider.dart';
 import 'package:splash_screen/widgets/linea_comanda_widget.dart';
 
-class ComandaWidget extends StatelessWidget {
+class ComandaWidget extends StatefulWidget {
   final List<Comanda> comandas;
   ComandaWidget({required this.comandas});
 
+  @override
+  State<ComandaWidget> createState() => _ComandaWidgetState();
+}
+
+class _ComandaWidgetState extends State<ComandaWidget> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -17,14 +22,14 @@ class ComandaWidget extends StatelessWidget {
             color: Colors.grey[300],
             child: InkWell(
               onTap: () => Navigator.pushNamed(context, 'comanda_page',
-                  arguments: comandas[index]),
+                  arguments: widget.comandas[index]),
               child: Padding(
                 padding: EdgeInsets.all(15),
                 child: Row(
                   children: [
                     Expanded(
                         child: Text(
-                      'Comanda ' + comandas[index].id.toString(),
+                      'Comanda ' + widget.comandas[index].id.toString(),
                       style: TextStyle(
                         fontFamily: 'Enriqueta',
                         fontSize: 35,
@@ -37,7 +42,7 @@ class ComandaWidget extends StatelessWidget {
           ),
         ]);
       },
-      itemCount: comandas.length,
+      itemCount: widget.comandas.length,
     );
   }
 

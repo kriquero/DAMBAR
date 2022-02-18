@@ -7,7 +7,12 @@ import 'package:splash_screen/providers/mesa_provider.dart';
 import 'package:splash_screen/widgets/comanda_widget.dart';
 import 'package:intl/intl.dart';
 
-class MesaPage extends StatelessWidget {
+class MesaPage extends StatefulWidget {
+  @override
+  State<MesaPage> createState() => _MesaPageState();
+}
+
+class _MesaPageState extends State<MesaPage> {
   @override
   Widget build(BuildContext context) {
     final Mesa mesa = ModalRoute.of(context)!.settings.arguments as Mesa;
@@ -17,6 +22,9 @@ class MesaPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           mesaProvider.updateMesasComanda(mesa.id.toString());
+          setState(() {
+            _MesaPageState();
+          });
         },
         backgroundColor: Palette.kToDark,
         child: Icon(
