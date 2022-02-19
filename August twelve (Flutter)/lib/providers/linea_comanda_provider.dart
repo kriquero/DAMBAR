@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:splash_screen/models/linea_comanda_model.dart';
 
 class LineaComandaProvider {
-  String _url = "192.168.1.6:8080";
+  String _url = "192.168.3.3:8080";
   List<LineaComanda> _lineasComanda = [];
 
   final _lineaComandaStreamController = StreamController<List<LineaComanda>>();
@@ -31,5 +31,21 @@ class LineaComandaProvider {
   Future<List<LineaComanda>> getlineasComandaByComandaId(String id) async {
     final url = Uri.http(_url, '/comandas/lineas/$id');
     return await _procesarRespuesta(url);
+  }
+
+  Future<http.Response> updateLinea(String idL, String nuevaCantidad) {
+    return http.put(
+        Uri.parse('http://' + _url + "/comandas/suma/$idL/$nuevaCantidad"),
+        headers: <String, String>{
+          'content-Type': 'application/json; charset=UTF-8'
+        });
+  }
+
+  Future<http.Response> deleteLinea(String idC, String idL) {
+    return http.put(
+        Uri.parse('http://' + _url + "/comandas/$idC/deleteLinea/$idL"),
+        headers: <String, String>{
+          'content-Type': 'application/json; charset=UTF-8'
+        });
   }
 }

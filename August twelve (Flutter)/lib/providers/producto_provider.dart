@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:splash_screen/models/producto_model.dart';
 
 class ProductoProvider {
-  String _url = "192.168.1.6:8080";
+  String _url = "192.168.3.3:8080";
   List<Producto> _productos = [];
 
   final _productoStreamController = StreamController<List<Producto>>();

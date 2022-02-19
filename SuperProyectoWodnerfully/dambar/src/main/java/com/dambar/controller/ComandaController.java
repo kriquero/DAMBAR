@@ -83,7 +83,7 @@ public class ComandaController {
         return new ResponseEntity<>(Response.noErrorResponse(), HttpStatus.OK);
     }
 
-    @Operation(summary = "Modifica una linea de comanda de la comanda")
+    @Operation(summary = "Añade una linea de comanda de la comanda")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Se modifica la comanda", content = @Content(schema = @Schema(implementation = Comanda.class))),
             @ApiResponse(responseCode = "404", description = "La comanda no existe", content = @Content(schema = @Schema(implementation = Response.class))),
@@ -137,6 +137,17 @@ public class ComandaController {
         Comanda comanda =  comandaService.findById(id).orElseThrow(() -> new ComandaNotFoundException(id));
         Set<LineaComanda> lineasComanda = comanda.getLineasComanda();
         return new ResponseEntity<>(lineasComanda, HttpStatus.OK);
+    }
+
+    @Operation(summary = "Modifica una linea de comanda de la comanda")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Se modifica la comanda", content = @Content(schema = @Schema(implementation = Comanda.class))),
+            @ApiResponse(responseCode = "404", description = "La comanda no existe", content = @Content(schema = @Schema(implementation = Response.class))),
+    })
+    @PutMapping(value = "/comandas/suma/{idL}/{suma}", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<LineaComanda> modifyLineaComanda(@PathVariable long idL, @PathVariable int suma) {
+        LineaComanda l = comandaService.sumiLinea(idL, suma);
+        return new ResponseEntity<>(l, HttpStatus.OK);
     }
 
 

@@ -15,7 +15,6 @@ class _MesaWidgetState extends State<MesaWidget> {
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) {
         return Card(
-          color: Colors.grey[300],
           child: InkWell(
             onTap: () => Navigator.pushNamed(context, 'mesa_page',
                 arguments: widget.mesas[index]),

@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:splash_screen/models/mesa_model.dart';
 
 class MesaProvider {
-  String _url = "192.168.1.6:8080";
+  String _url = "192.168.3.3:8080";
   List<Mesa> _mesas = [];
 
   final _mesaStreamController = StreamController<List<Mesa>>();

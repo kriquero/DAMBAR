@@ -30,8 +30,9 @@ class _ComandaPageState extends State<ComandaPage> {
                 backgroundColor: Colors.red,
                 heroTag: 'DeleteComanda',
                 onPressed: () {
-                  comandaProvider.deleteComanda(comanda.id.toString());
-                  Navigator.pop(context);
+                  comandaProvider
+                      .deleteComanda(comanda.id.toString())
+                      .then((value) => Navigator.of(context).pop(true));
                 },
                 child: const Icon(
                   Icons.remove,
@@ -48,7 +49,11 @@ class _ComandaPageState extends State<ComandaPage> {
               child: FloatingActionButton(
                 backgroundColor: Palette.kToDark,
                 heroTag: 'addProducto',
-                onPressed: () {/* Do something */},
+                onPressed: () {
+                  Navigator.pushNamed(context, 'add_producto_page',
+                          arguments: comanda)
+                      .then((value) => _update(''));
+                },
                 child: const Icon(
                   Icons.add_rounded,
                   size: 40,
@@ -82,12 +87,20 @@ class _ComandaPageState extends State<ComandaPage> {
       builder:
           (BuildContext context, AsyncSnapshot<List<LineaComanda>> snapshot) {
         if (snapshot.hasData) {
-          return LineaComandaWidget(lineas: snapshot.data!);
+          return LineaComandaWidget(
+            lineas: snapshot.data!,
+            comanda: comanda,
+            parentAction: _update,
+          );
         } else {
           return Container(
               height: 350, child: Center(child: CircularProgressIndicator()));
         }
       },
     );
+  }
+
+  _update(String text) {
+    setState(() {});
   }
 }

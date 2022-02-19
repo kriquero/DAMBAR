@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:splash_screen/models/camarero_model.dart';
 
 class CamareroProvider {
-  String _url = "192.168.1.6:8080";
+  String _url = "192.168.3.3:8080";
   List<Camarero> _camareros = [];
 
   final _camareroStreamController = StreamController<List<Camarero>>();

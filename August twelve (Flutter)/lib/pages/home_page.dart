@@ -21,9 +21,7 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Center(
-        child: _swiperMesas(),
-      ),
+      body: _swiperMesas(),
     );
   }
 

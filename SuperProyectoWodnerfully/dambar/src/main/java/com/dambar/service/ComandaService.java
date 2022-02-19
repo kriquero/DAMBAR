@@ -25,4 +25,5 @@ public interface ComandaService {
 
     Comanda addComanda(Comanda comanda);
 
+    LineaComanda sumiLinea(long idL,int suma);
 }

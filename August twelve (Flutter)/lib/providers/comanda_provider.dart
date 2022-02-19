@@ -2,9 +2,10 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:splash_screen/models/comanda_model.dart';
+import 'package:splash_screen/models/producto_model.dart';
 
 class ComandaProvider {
-  String _url = "192.168.1.6:8080";
+  String _url = "192.168.3.3:8080";
   List<Comanda> _comandas = [];
 
   final _comandaStreamController = StreamController<List<Comanda>>();
@@ -40,5 +41,23 @@ class ComandaProvider {
       },
     );
     return response;
+  }
+
+  Future<http.Response> addLineaComanda(String id, Producto producto) {
+    return http.put(Uri.parse('http://' + _url + "/comandas/addLinea/$id"),
+        headers: <String, String>{
+          'content-Type': 'application/json; charset=UTF-8'
+        },
+        body: jsonEncode(<String, String>{
+          'cantidad': '1',
+          'producto': {
+            'nombre': producto.nombre,
+            'descripcion': producto.descripcion,
+            'precio': producto.precio,
+            'stock': producto.stock,
+            'tipo': producto.tipo,
+            'foto': producto.foto
+          }
+        }));
   }
 }

@@ -51,12 +51,20 @@ class _MesaPageState extends State<MesaPage> {
       future: comandaProvider.getComandasByMesaId(mesa.id.toString()),
       builder: (BuildContext context, AsyncSnapshot<List<Comanda>> snapshot) {
         if (snapshot.hasData) {
-          return ComandaWidget(comandas: snapshot.data!);
+          return ComandaWidget(
+            comandas: snapshot.data!,
+            parentAction: _update,
+          );
         } else {
           return Container(
               height: 350, child: Center(child: CircularProgressIndicator()));
         }
       },
     );
+  }
+
+  _update(String text) {
+    setState(() {});
+    print('hola');
   }
 }

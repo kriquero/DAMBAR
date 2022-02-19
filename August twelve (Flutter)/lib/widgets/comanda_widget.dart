@@ -6,7 +6,8 @@ import 'package:splash_screen/widgets/linea_comanda_widget.dart';
 
 class ComandaWidget extends StatefulWidget {
   final List<Comanda> comandas;
-  ComandaWidget({required this.comandas});
+  final ValueChanged<String> parentAction;
+  ComandaWidget({required this.comandas, required this.parentAction});
 
   @override
   State<ComandaWidget> createState() => _ComandaWidgetState();
@@ -19,10 +20,10 @@ class _ComandaWidgetState extends State<ComandaWidget> {
       itemBuilder: (BuildContext context, int index) {
         return Column(children: [
           Card(
-            color: Colors.grey[300],
             child: InkWell(
               onTap: () => Navigator.pushNamed(context, 'comanda_page',
-                  arguments: widget.comandas[index]),
+                      arguments: widget.comandas[index])
+                  .then((value) => widget.parentAction("update")),
               child: Padding(
                 padding: EdgeInsets.all(15),
                 child: Row(
@@ -43,23 +44,6 @@ class _ComandaWidgetState extends State<ComandaWidget> {
         ]);
       },
       itemCount: widget.comandas.length,
-    );
-  }
-
-  Widget _swiperLineasComandas(Comanda comanda) {
-    final lineaComandaProvider = LineaComandaProvider();
-    return FutureBuilder(
-      future: lineaComandaProvider
-          .getlineasComandaByComandaId(comanda.id.toString()),
-      builder:
-          (BuildContext context, AsyncSnapshot<List<LineaComanda>> snapshot) {
-        if (snapshot.hasData) {
-          return LineaComandaWidget(lineas: snapshot.data!);
-        } else {
-          return Container(
-              height: 350, child: Center(child: CircularProgressIndicator()));
-        }
-      },
     );
   }
 }

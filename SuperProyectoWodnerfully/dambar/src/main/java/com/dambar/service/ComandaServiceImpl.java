@@ -4,7 +4,9 @@ import com.dambar.domain.Camarero;
 import com.dambar.domain.Comanda;
 import com.dambar.domain.LineaComanda;
 import com.dambar.exceptions.ComandaNotFoundException;
+import com.dambar.exceptions.LineaComandaNotFoundException;
 import com.dambar.repository.ComandaRepository;
+import com.dambar.repository.LineaComandaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,8 @@ public class ComandaServiceImpl implements ComandaService{
 
     @Autowired
     private ComandaRepository comandaRepository;
+    @Autowired
+    private LineaComandaRepository lineaComandaRepository;
 
     @Override
     public Set<Comanda> findAll() {
@@ -84,5 +88,15 @@ public class ComandaServiceImpl implements ComandaService{
     @Override
     public Comanda addComanda(Comanda comanda) {
         return comandaRepository.save(comanda);
+    }
+
+    @Override
+    public LineaComanda sumiLinea(long idl, int suma) {
+        LineaComanda l = lineaComandaRepository.findById(idl).
+                orElseThrow(()->new LineaComandaNotFoundException(idl));
+
+                l.setCantidad(suma);
+
+        return lineaComandaRepository.save(l);
     }
 }
