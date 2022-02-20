@@ -63,6 +63,7 @@ public class ComandaServiceImpl implements ComandaService{
             long id =l.getId();
             if(id==idLinea){
                 lineas.remove(l);
+                lineaComandaRepository.deleteById(idLinea);
             }
         }
         comanda.setLineasComanda(lineas);
