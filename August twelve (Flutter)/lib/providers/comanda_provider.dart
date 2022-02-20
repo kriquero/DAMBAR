@@ -44,20 +44,23 @@ class ComandaProvider {
   }
 
   Future<http.Response> addLineaComanda(String id, Producto producto) {
+    var jsonMap = {
+      'cantidad': '1',
+      'producto': {
+        'id': producto.id,
+        'nombre': '',
+        'descripcion': '',
+        'precio': '0',
+        'stock': '0',
+        'tipo': '',
+        'foto': ''
+      }
+    };
+
     return http.put(Uri.parse('http://' + _url + "/comandas/addLinea/$id"),
         headers: <String, String>{
           'content-Type': 'application/json; charset=UTF-8'
         },
-        body: jsonEncode(<String, String>{
-          'cantidad': '1',
-          'producto': {
-            'nombre': producto.nombre,
-            'descripcion': producto.descripcion,
-            'precio': producto.precio,
-            'stock': producto.stock,
-            'tipo': producto.tipo,
-            'foto': producto.foto
-          }
-        }));
+        body: jsonEncode(jsonMap));
   }
 }

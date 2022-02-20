@@ -4,6 +4,7 @@ import 'package:splash_screen/pages/add_producto_page.dart';
 import 'package:splash_screen/pages/comanda_page.dart';
 import 'package:splash_screen/pages/home_page.dart';
 import 'package:splash_screen/pages/mesa_page.dart';
+import 'package:splash_screen/pages/producto_detalle_page.dart';
 import 'package:splash_screen/pcolors/palette.dart';
 
 void main() {
@@ -36,6 +37,8 @@ class MyApp extends StatelessWidget {
         'mesa_page': (BuildContext context) => MesaPage(),
         'comanda_page': (BuildContext context) => ComandaPage(),
         'add_producto_page': (BuildContext context) => AddProductoPage(),
+        'producto_detalle_page': (BuildContext context) =>
+            ProductoDetallePage(),
       },
     );
   }

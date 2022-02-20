@@ -65,6 +65,5 @@ class _MesaPageState extends State<MesaPage> {
 
   _update(String text) {
     setState(() {});
-    print('hola');
   }
 }
