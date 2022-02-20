@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Newtonsoft.Json;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -13,35 +8,51 @@ namespace August_Twelve__.net_
 {
     public partial class Form1 : Form
     {
+       private Mesa[] mesas;
+        
         public Form1()
         {
             RestMesa rm = new RestMesa("http://localhost:8080/mesas", "GET");
             InitializeComponent();
-           
-            Console.WriteLine(rm.getItem());
+
+            mesas = JsonConvert.DeserializeObject<Mesa[]>(rm.getItem());
+
+
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int i = 1;
-            Button unidad = new Button();
-            unidad.SetBounds(0, panelLogo.Height + (i * 25), 200, 25);
-            unidad.Text = "mesa " + "id de la mesa";
-            unidad.Click += new System.EventHandler(muestraMesaDetalle(1),);
-            panelMenu.Controls.Add(unidad);
+            for (int i = 0; i < mesas.Length; i++)
+            {
+                Button unidad = new Button();
+                unidad.SetBounds(0, panelLogo.Height + (i * 25), 200, 25);
+                unidad.Text = "mesa " + mesas[i].id;
+                unidad.ForeColor = Color.White;
+                unidad.FlatStyle = FlatStyle.Flat;
+                unidad.FlatAppearance.BorderSize = 0;
+                unidad.Click += new EventHandler(handlerComun_Click);
+                unidad.Parent = panelMenu;
+            }
+            
+            
+
+        }
+
+        private void handlerComun_Click(object sender, EventArgs e) {
+            string[] pepe = ((Button)sender).Text.Split();
+
+            int idMesa = int.Parse(pepe[1]) ;
+
+            muestraMesaDetalle(idMesa);
 
         }
 
         private void muestraMesaDetalle(int id) {
-            reset(new mesaDetalle());
+            reset(new mesaDetalle(id));
         }
 
-        private void btMesaUnidad_Click(object sender, EventArgs e)
-        {
-            
-            reset(new mesaDetalle());
-        }
+       
 
         private void reset(object formfill) {
 

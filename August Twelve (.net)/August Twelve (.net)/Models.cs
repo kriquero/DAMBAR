@@ -7,17 +7,45 @@ using System.Threading.Tasks;
 
 namespace August_Twelve__.net_
 {
-    class Models
+    class Mesa
     {
         public int id { get; set; }
-        public String estado { get; set; }
+        public string estado { get; set; }
         public List<Comanda> comandas { get; set; }
     }
 
-    class MesaModel
+    class Comanda
     {
         public int id { get; set; }
-        public String estado { get; set; }
-        public List<object> comandas { get; set; }
+        public bool pagado { get; set; }
+        public DateTime fechaPedido { get; set; }
+        public List<LineaComanda> lineas { get; set; }
+        
+
+    }
+    class LineaComanda
+    {
+        public int id { get; set; } 
+        public int cantidad { get; set; }
+        public Producto producto { get; set; }
+    }
+    public class Producto
+    {
+        public int id { get; set; }
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
+        public decimal precio { get; set; }
+        public int cantidad { get; set; }
+        public string url { get; set; }
+
+    }
+
+    public class Camarero
+    {
+        public int idCamarero { get; set; }
+        public String nombre { get; set; }
+        public String puesto { get; set; }
+        public DateTime fechaInicio { get; set; }
+        public String telefono { get; set; }
     }
 }

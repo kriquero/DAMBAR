@@ -35,3 +35,19 @@ D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Ne
 D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.xml
 D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CopyComplete
 D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.mesaDetalle.resources
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.AssemblyReference.cache
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.SuggestedBindingRedirects.cache
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Form1.resources
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.mesaDetalle.resources
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Properties.Resources.resources
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.GenerateResource.cache
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CoreCompileInputs.cache
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).exe
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).pdb
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe.config
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).pdb
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CopyComplete
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.ComandaDetalle.resources

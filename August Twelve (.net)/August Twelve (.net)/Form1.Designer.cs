@@ -31,7 +31,6 @@ namespace August_Twelve__.net_
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btMesaUnidad = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,28 +43,14 @@ namespace August_Twelve__.net_
             // 
             // panelMenu
             // 
+            this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(75)))), ((int)(((byte)(139)))));
-            this.panelMenu.Controls.Add(this.btMesaUnidad);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 561);
+            this.panelMenu.Size = new System.Drawing.Size(228, 561);
             this.panelMenu.TabIndex = 0;
-            // 
-            // btMesaUnidad
-            // 
-            this.btMesaUnidad.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btMesaUnidad.FlatAppearance.BorderSize = 0;
-            this.btMesaUnidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMesaUnidad.ForeColor = System.Drawing.Color.White;
-            this.btMesaUnidad.Location = new System.Drawing.Point(0, 92);
-            this.btMesaUnidad.Name = "btMesaUnidad";
-            this.btMesaUnidad.Size = new System.Drawing.Size(200, 25);
-            this.btMesaUnidad.TabIndex = 1;
-            this.btMesaUnidad.Text = "Mesa ";
-            this.btMesaUnidad.UseVisualStyleBackColor = true;
-            this.btMesaUnidad.Click += new System.EventHandler(this.btMesaUnidad_Click);
             // 
             // panelLogo
             // 
@@ -73,7 +58,7 @@ namespace August_Twelve__.net_
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 92);
+            this.panelLogo.Size = new System.Drawing.Size(228, 92);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -90,9 +75,9 @@ namespace August_Twelve__.net_
             // 
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(200, 0);
+            this.panel1.Location = new System.Drawing.Point(228, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 561);
+            this.panel1.Size = new System.Drawing.Size(706, 561);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -129,7 +114,6 @@ namespace August_Twelve__.net_
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btMesaUnidad;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
     }
