@@ -14,19 +14,26 @@ class ProductoWidget extends StatelessWidget {
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) {
         return Card(
-          child: Row(
-            children: [
-              TextButton(
-                  onPressed: () {cp.addLineaComanda(comanda.id.toString(), productos[index]);},
-                  child: Icon(
-                    Icons.add_circle,
-                    size: 50,
-                  )),
-              Text(
-                productos[index].nombre.toString(),
-                style: TextStyle(fontFamily: 'Enriqueta', fontSize: 20),
-              ),
-            ],
+          child: InkWell(
+            onTap: () => Navigator.pushNamed(context, 'producto_detalle_page',
+                arguments: productos[index]),
+            child: Row(
+              children: [
+                TextButton(
+                    onPressed: () {
+                      cp.addLineaComanda(
+                          comanda.id.toString(), productos[index]);
+                    },
+                    child: Icon(
+                      Icons.add_circle,
+                      size: 50,
+                    )),
+                Text(
+                  productos[index].nombre.toString(),
+                  style: TextStyle(fontFamily: 'Enriqueta', fontSize: 20),
+                ),
+              ],
+            ),
           ),
         );
       },
