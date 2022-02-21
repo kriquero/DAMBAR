@@ -16,7 +16,7 @@ namespace August_Twelve__.net_
 
     class Comanda
     {
-        public int id { get; set; }
+        public int idComanda { get; set; }
         public bool pagado { get; set; }
         public DateTime fechaPedido { get; set; }
         public List<LineaComanda> lineas { get; set; }
@@ -35,8 +35,9 @@ namespace August_Twelve__.net_
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public decimal precio { get; set; }
-        public int cantidad { get; set; }
-        public string url { get; set; }
+        public int stock { get; set; }
+        public string foto { get; set; }
+        public string tipo { get; set; }
 
     }
 

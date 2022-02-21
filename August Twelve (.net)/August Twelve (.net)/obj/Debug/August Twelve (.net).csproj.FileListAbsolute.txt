@@ -1,53 +1,17 @@
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe.config
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).pdb
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.AssemblyReference.cache
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Form1.resources
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Properties.Resources.resources
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.GenerateResource.cache
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CoreCompileInputs.cache
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).exe
-C:\Users\dam_mml\Desktop\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).pdb
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.AssemblyReference.cache
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Form1.resources
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Properties.Resources.resources
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.GenerateResource.cache
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CoreCompileInputs.cache
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).exe
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).pdb
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe.config
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).pdb
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.dll
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.xml
-C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CopyComplete
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.AssemblyReference.cache
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Form1.resources
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Properties.Resources.resources
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.GenerateResource.cache
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CoreCompileInputs.cache
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).exe
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).pdb
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe.config
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).pdb
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.dll
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.xml
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CopyComplete
-D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.mesaDetalle.resources
 C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.AssemblyReference.cache
 C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.SuggestedBindingRedirects.cache
-C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Form1.resources
-C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.mesaDetalle.resources
-C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Properties.Resources.resources
-C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.GenerateResource.cache
-C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CoreCompileInputs.cache
-C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).exe
-C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).pdb
 C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe.config
 C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe
 C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).pdb
 C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.linea.resources
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.menu.resources
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.mesaDetalle.resources
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Properties.Resources.resources
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.GenerateResource.cache
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CoreCompileInputs.cache
 C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CopyComplete
-C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.ComandaDetalle.resources
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).exe
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).pdb
+C:\Users\Kike\Desktop\DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Form1.resources

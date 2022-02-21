@@ -16,7 +16,7 @@ namespace August_Twelve__.net_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new menu());
         }
     }
 }
