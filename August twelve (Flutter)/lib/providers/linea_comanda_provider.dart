@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:splash_screen/models/linea_comanda_model.dart';
 
 class LineaComandaProvider {
-  String _url = "192.168.3.3:8080";
+  String _url = "192.168.1.6:8080";
   List<LineaComanda> _lineasComanda = [];
 
   final _lineaComandaStreamController = StreamController<List<LineaComanda>>();

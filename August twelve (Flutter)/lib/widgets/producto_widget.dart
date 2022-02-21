@@ -28,9 +28,11 @@ class ProductoWidget extends StatelessWidget {
                       Icons.add_circle,
                       size: 50,
                     )),
-                Text(
-                  productos[index].nombre.toString(),
-                  style: TextStyle(fontFamily: 'Enriqueta', fontSize: 20),
+                Expanded(
+                  child: Text(
+                    productos[index].nombre.toString(),
+                    style: TextStyle(fontFamily: 'Enriqueta', fontSize: 20),
+                  ),
                 ),
               ],
             ),

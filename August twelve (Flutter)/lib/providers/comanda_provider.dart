@@ -5,7 +5,7 @@ import 'package:splash_screen/models/comanda_model.dart';
 import 'package:splash_screen/models/producto_model.dart';
 
 class ComandaProvider {
-  String _url = "192.168.3.3:8080";
+  String _url = "192.168.1.6:8080";
   List<Comanda> _comandas = [];
 
   final _comandaStreamController = StreamController<List<Comanda>>();
