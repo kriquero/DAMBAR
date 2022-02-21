@@ -27,6 +27,9 @@ namespace August_Twelve__.net_
                 case "POST":
                     this.request.Method = "POST";
                     break;
+                case "PUT":
+                    this.request.Method = "PUT";
+                    break;
             }
 
             this.request.ContentType = "application/json";
@@ -49,6 +52,7 @@ namespace August_Twelve__.net_
                 else return null;
             }
             catch (WebException e) {
+                e.ToString();
                 return null;
             }
         }
@@ -87,7 +91,49 @@ namespace August_Twelve__.net_
             }
             catch (WebException e)
             {
+                e.ToString();
+                return null;
+            }
 
+            return null;
+        }
+
+        public String putItem(String data)
+        {
+
+            /*
+             El string data que le pasamos es un json válido de petición post (añadir por ejemplo)
+             */
+
+            try
+            {
+                Stream strWriter = request.GetRequestStream();
+                if (strWriter != null)
+                {
+                    StreamWriter sw = new StreamWriter(strWriter);
+
+                    sw.Write(data);
+                    sw.Flush();
+                    sw.Close();
+
+                    // Hasta aqui hemos hecho la petición POST
+                    // Ahora obtenemos la respuesta del server
+
+                    WebResponse response = request.GetResponse();
+                    Stream strReader = response.GetResponseStream();
+                    if (strReader != null)
+                    {
+                        StreamReader sr = new StreamReader(strReader);
+                        String respuesta = sr.ReadToEnd();
+                        return respuesta;
+                    }
+
+                }
+                else return null;
+            }
+            catch (WebException e)
+            {
+                e.ToString();
                 return null;
             }
 

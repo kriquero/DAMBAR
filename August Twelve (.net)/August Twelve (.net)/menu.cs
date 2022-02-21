@@ -27,6 +27,7 @@ namespace August_Twelve__.net_
             {
                 Button unidad = new Button();
                 unidad.SetBounds(0, panelLogo.Height + (i * 25), 200, 25);
+                unidad.Font = new Font(unidad.Font.Name, 12);
                 unidad.Text = "mesa " + mesas[i].id;
                 unidad.ForeColor = Color.White;
                 unidad.FlatStyle = FlatStyle.Flat;

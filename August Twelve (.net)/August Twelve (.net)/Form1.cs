@@ -19,6 +19,7 @@ namespace August_Twelve__.net_
     {
 
         public Ijs json { get; set; }
+        
         public Form1()
         {
             InitializeComponent();
