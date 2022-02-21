@@ -26,6 +26,7 @@ namespace August_Twelve__.net_
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
             RestMesa ru = new RestMesa("http://localhost:8080/productos/", "GET");
             Producto[] productos = JsonConvert.DeserializeObject<Producto[]>(ru.getItem());
 
@@ -61,21 +62,25 @@ namespace August_Twelve__.net_
         }
         private void handlerComun_Click(object sender, EventArgs e)
         {
-            RestMesa ru = new RestMesa("http://localhost:8080/productos/"+ ((Label)sender).Text.Split(' ')[0], "GET");
-            Producto producto = JsonConvert.DeserializeObject<Producto>(ru.getItem());
-            string pepe = "{" +
-    "\"id\": " + producto.id + "," +
-    "\"nombre\": \"" + producto.nombre + "\"," +
-    "\"descripcion\": \"" + producto.descripcion + "\"," +
-    "\"precio\": " + producto.precio + "," +
-    "\"stock\": " + producto.stock + "," +
-    "\"tipo\": \"" + producto.tipo + "\"," +
-    "\"foto\": \"" + producto.foto + "\"" +
-"}";
+            if (int.Parse(numericUpDown1.Text) > 0)
+            {
+                RestMesa ru = new RestMesa("http://localhost:8080/productos/" + ((Label)sender).Text.Split(' ')[0], "GET");
+                Producto producto = JsonConvert.DeserializeObject<Producto>(ru.getItem());
+                string pepe = "{\"cantidad\": " + numericUpDown1.Text + "," +
+                    "\"producto\": {"+
+        "\"id\": " + producto.id + "," +
+        "\"nombre\": \"" + producto.nombre + "\"," +
+        "\"descripcion\": \"" + producto.descripcion + "\"," +
+        "\"precio\": " + producto.precio.ToString().Replace(',','.') + "," +
+        "\"stock\": " + producto.stock + "," +
+        "\"tipo\": \"" + producto.tipo + "\"," +
+        "\"foto\": \"" + producto.foto + "\"" +
+    "}}";
 
-             json.Ejecutar(pepe);
+                json.Ejecutar(pepe);
 
-            this.Close();
+                this.Close();
+            }
         }
     }
 }

@@ -17,6 +17,8 @@ namespace August_Twelve__.net_
     {
 
         public string json = "";
+        public string fechaenJson = "";
+        public string arraydeLineas = "";
         public void Ejecutar(string texto)
         {
             json = texto;
@@ -31,8 +33,8 @@ namespace August_Twelve__.net_
             comanda = new Comanda();
             comanda.pagado = false;
             comanda.fechaPedido =  DateTime.Today;
-            string fechaenJson = comanda.fechaPedido.ToString("yyyy-MM-dd");
-            Console.WriteLine(fechaenJson);
+            fechaenJson = "\"fechaPedido\": \""+comanda.fechaPedido.ToString("yyyy-MM-dd")+"\",";
+            
 
 
         } 
@@ -42,6 +44,11 @@ namespace August_Twelve__.net_
             Form1 frm = new Form1();
             frm.json = this;
             frm.Show();
+
+            if (!json.Equals(""))
+            {
+                arraydeLineas += json;
+            }
             
         }
 
@@ -52,8 +59,31 @@ namespace August_Twelve__.net_
 
         private void check_Click(object sender, EventArgs e)
         {
+            if (!json.Equals(""))
+            {
+                arraydeLineas += json ;
+                string jsonfinal = "{ " +
+                "\"pagado\":false," +
+                fechaenJson +
+                "\"lineasComanda\":["+arraydeLineas + "]," +
+                "\"camarero\":{" +
+                 "\"idCamarero\": 1," +
+        "\"nombre\": \"Pepe\"," +
+        "\"puesto\": \"Terraza\"," +
+        "\"fechaInicio\": \"2022-02-20\"," +
+        "\"telefono\": \"669447151\"," +
+        /*"\"comandas\": [" +
+          "\"1\"" +
+        "]" +*/
+      "}" ;
 
-            Console.WriteLine(json);
+                Console.WriteLine(jsonfinal);
+                RestMesa ru = new RestMesa("http://localhost:8080/comandas" , "POST");
+
+                String res = ru.postItem(jsonfinal);
+                
+                this.Close();
+            }
         }
     }
 }
