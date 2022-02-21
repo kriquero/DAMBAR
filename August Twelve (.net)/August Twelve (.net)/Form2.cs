@@ -8,32 +8,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComunicarFormularios;
+
 
 namespace August_Twelve__.net_
 {
-    public partial class linea : Form
+    public partial class linea : Form, Ijs
     {
+
+        public string json = "";
+        public void Ejecutar(string texto)
+        {
+            json = texto;
+        }
 
         Comanda comanda = null;
         public linea(int idm)
         {
 
             InitializeComponent();
-            
+
             comanda = new Comanda();
             comanda.pagado = false;
-            comanda.fechaPedido = new DateTime();//pedir ayuda a quico
-            
+            comanda.fechaPedido =  DateTime.Today;
+            string fechaenJson = comanda.fechaPedido.ToString("yyyy-MM-dd");
+            Console.WriteLine(fechaenJson);
 
-        }
 
-        
+        } 
 
         private void btAdd_Click(object sender, EventArgs e)
         {
             Form1 frm = new Form1();
+            frm.json = this;
             frm.Show();
-            //avveriguar como sacar de aqui un objeto linea o producto
+            
         }
 
         private void btDel_Click(object sender, EventArgs e)
@@ -43,8 +52,8 @@ namespace August_Twelve__.net_
 
         private void check_Click(object sender, EventArgs e)
         {
-            //preguntar quico como se serializan las cosas
-            string jsonString = JsonSerializer.Serialize<Comanda>(comanda);
+
+            Console.WriteLine(json);
         }
     }
 }

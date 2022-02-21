@@ -54,6 +54,7 @@ namespace August_Twelve__.net_
                     linea.Location = new Point(30, 50 + o*18);
                     linea.Size = new Size(100, 15);
                     linea.Font = new Font(linea.Font.Name, 12); 
+                    if(!linea.Equals(""))
                     linea.Text = rellenaEspacios(rellenaEspacios(l.producto.nombre,100)
                         + l.cantidad + "    " + l.producto.precio*l.cantidad, 70);
 

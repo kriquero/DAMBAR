@@ -10,12 +10,15 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComunicarFormularios;
 
 
 namespace August_Twelve__.net_
 {
     public partial class Form1 : Form
     {
+
+        public Ijs json { get; set; }
         public Form1()
         {
             InitializeComponent();
@@ -43,18 +46,36 @@ namespace August_Twelve__.net_
                             panel.Show();
                             
 
-
                             Label label = new Label();
                             label.Text = producto.id + " " + producto.nombre;
                             label.TextAlign = ContentAlignment.MiddleCenter;
                             label.ForeColor = Color.Black;
                             label.Parent = panel;
                             label.SetBounds(5, 70, 130, 15);
+                            label.Click += handlerComun_Click;
                             label.Show();
                         }
                     }
                 }
             }
+        }
+        private void handlerComun_Click(object sender, EventArgs e)
+        {
+            RestMesa ru = new RestMesa("http://localhost:8080/productos/"+ ((Label)sender).Text.Split(' ')[0], "GET");
+            Producto producto = JsonConvert.DeserializeObject<Producto>(ru.getItem());
+            string pepe = "{" +
+    "\"id\": " + producto.id + "," +
+    "\"nombre\": \"" + producto.nombre + "\"," +
+    "\"descripcion\": \"" + producto.descripcion + "\"," +
+    "\"precio\": " + producto.precio + "," +
+    "\"stock\": " + producto.stock + "," +
+    "\"tipo\": \"" + producto.tipo + "\"," +
+    "\"foto\": \"" + producto.foto + "\"" +
+"}";
+
+             json.Ejecutar(pepe);
+
+            this.Close();
         }
     }
 }
