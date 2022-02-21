@@ -22,6 +22,7 @@ class _LineaComandaWidgetState extends State<LineaComandaWidget> {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) {
+        widget.lineas.sort((a, b) => a.id!.compareTo(b.id!));
         deleteNulls(index);
         return Card(
           child: InkWell(
@@ -29,11 +30,14 @@ class _LineaComandaWidgetState extends State<LineaComandaWidget> {
                 arguments: widget.lineas[index].producto),
             child: Row(
               children: [
-                Text(
-                  widget.lineas[index].producto?.nombre.toString() ?? '',
-                  style: TextStyle(
-                    fontFamily: 'Enriqueta',
-                    fontSize: 30,
+                Expanded(
+                  flex: 3,
+                  child: Text(
+                    widget.lineas[index].producto?.nombre.toString() ?? '',
+                    style: TextStyle(
+                      fontFamily: 'Enriqueta',
+                      fontSize: 25,
+                    ),
                   ),
                 ),
                 Expanded(
@@ -43,7 +47,7 @@ class _LineaComandaWidgetState extends State<LineaComandaWidget> {
                       widget.lineas[index].cantidad.toString(),
                       style: TextStyle(
                         fontFamily: 'Enriqueta',
-                        fontSize: 30,
+                        fontSize: 22,
                       ),
                     ),
                   ),
@@ -85,10 +89,6 @@ class _LineaComandaWidgetState extends State<LineaComandaWidget> {
     final lp = LineaComandaProvider();
 
     if (widget.lineas[index].cantidad! <= 1 && suma <= 0) {
-      print('Comanda ID: ' +
-          widget.comanda.id.toString() +
-          ', Linea ID: ' +
-          widget.lineas[index].id.toString());
       lp
           .deleteLinea(
               widget.comanda.id.toString(), widget.lineas[index].id.toString())
@@ -105,7 +105,6 @@ class _LineaComandaWidgetState extends State<LineaComandaWidget> {
     final lp = LineaComandaProvider();
 
     if (widget.lineas[index].producto == null) {
-      print('aqui estoy');
       lp
           .deleteLinea(
               widget.comanda.id.toString(), widget.lineas[index].id.toString())
