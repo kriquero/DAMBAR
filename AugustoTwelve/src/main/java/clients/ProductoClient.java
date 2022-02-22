@@ -84,5 +84,21 @@ public class ProductoClient {
         }
     }
      
+      public void elimiarProducto(long id){
+        try{
+
+            WebTarget wt = this.client.target("http://localhost:8080/productos/" + id);
+            Invocation.Builder invocationBuilder =
+            wt.request(MediaType.APPLICATION_JSON);
+            Response response =
+            invocationBuilder.delete();
+            System.out.println(response.getStatus());
+            System.out.println(response.readEntity(String.class));
+            System.out.println();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+     
      
 }
