@@ -43,8 +43,10 @@ namespace August_Twelve__.net_
                 comandaY.Location = new Point(25,25);
                 comandaY.Font = new Font(comandaY.Font.Name, 15);
                 comandaY.Size = new Size(100, 30);
+                comandaY.Click += new EventHandler(handlerComun_Click);
                 comandaY.Text = "Comanda " + (comanda.idComanda); 
                 comandaY.Show();
+                
                 int o = 0;
                 foreach (LineaComanda l in lineas) {
 
@@ -54,10 +56,11 @@ namespace August_Twelve__.net_
                     linea.Location = new Point(30, 50 + o*18);
                     linea.Size = new Size(100, 15);
                     linea.Font = new Font(linea.Font.Name, 12); 
+                    if(!linea.Equals(""))
                     linea.Text = rellenaEspacios(rellenaEspacios(l.producto.nombre,100)
                         + l.cantidad + "    " + l.producto.precio*l.cantidad, 70);
 
-                    linea.Click += new EventHandler(handlerComun_Click);
+                    
                     linea.BackColor = o%2==0? Color.Silver:Color.LightGray;
                     linea.Show();
                     o++;
@@ -83,16 +86,20 @@ namespace August_Twelve__.net_
 
         private void handlerComun_Click(object sender, EventArgs e)
         {
-
-            Console.WriteLine("UwU");
-
+            Console.WriteLine("elpepe");
+            string idcomanda = ((Label)sender).Text.Split(' ')[1];
+            linea frm = new linea();
+            Console.WriteLine("-" + idcomanda + "-");
+            frm.idcomandasimodifica = int.Parse(idcomanda);
+            frm.Show();
 
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            linea linea = new linea(idMesa);
+            linea linea = new linea();
+            linea.mesaid = idMesa;
             linea.Show();
         }
     }

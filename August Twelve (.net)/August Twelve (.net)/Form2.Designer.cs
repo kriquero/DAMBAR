@@ -40,9 +40,8 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(43, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "linea";
             // 
             // btAdd
             // 
@@ -89,6 +88,7 @@
             this.Controls.Add(this.label1);
             this.Name = "linea";
             this.Text = "Linea Comanda";
+            this.Activated += new System.EventHandler(this.linea_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 

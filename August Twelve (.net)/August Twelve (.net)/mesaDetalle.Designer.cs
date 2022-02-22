@@ -53,7 +53,7 @@ namespace August_Twelve__.net_
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(586, 0);
+            this.button1.Location = new System.Drawing.Point(609, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 95);
             this.button1.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace August_Twelve__.net_
             this.panelComandas.BackColor = System.Drawing.Color.Gainsboro;
             this.panelComandas.Location = new System.Drawing.Point(0, 93);
             this.panelComandas.Name = "panelComandas";
-            this.panelComandas.Size = new System.Drawing.Size(685, 468);
+            this.panelComandas.Size = new System.Drawing.Size(708, 468);
             this.panelComandas.TabIndex = 2;
             // 
             // label2
@@ -83,7 +83,7 @@ namespace August_Twelve__.net_
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(75)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(685, 561);
+            this.ClientSize = new System.Drawing.Size(708, 561);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panelComandas);
             this.Controls.Add(this.button1);
