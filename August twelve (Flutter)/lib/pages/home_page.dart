@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:splash_screen/models/mesa_model.dart';
 import 'package:splash_screen/providers/mesa_provider.dart';
-import 'package:splash_screen/widgets/mesa.dart';
 import 'package:splash_screen/widgets/mesa_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,10 +9,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        /*leading: GestureDetector(
-          onTap: () => mesaProvider.deleteMesa('1'),
-          child: Icon(Icons.add),
-        ),*/
         toolbarHeight: 100,
         title: Text(
           "Mesas",
