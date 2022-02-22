@@ -45,9 +45,15 @@ public class LineaComanda {
     
         @Override
     public String toString() {
+        if(producto == null){
+            return "{" +
+               "\"cantidad\":\"" + cantidad + "\"" +
+        "}"; //T
+        }else{
         return "{" +
                "\"cantidad\":\"" + cantidad + "\"," +
-               "\"producto\":\"" + producto.toString() + "\"," +
-        "}"; //To change body of generated methods, choose Tools | Templates.
+               "\"producto\":\"" + producto.toString() + "\"" +
+        "}";
+        }
     }
 }

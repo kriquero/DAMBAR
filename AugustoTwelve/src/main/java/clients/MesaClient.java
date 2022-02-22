@@ -28,7 +28,7 @@ public class MesaClient {
         this.client = ClientBuilder.newClient();
     }
     
-    public void getMesas(){
+    public List<Mesa> getMesas(){
         ObjectMapper mapper = new ObjectMapper();
         try{
 
@@ -37,12 +37,12 @@ public class MesaClient {
             .accept(MediaType.APPLICATION_JSON)
             .get(String.class);
            
-            System.out.println("Resultado: " + resultado);
-            List<Mesa> participantJsonList = mapper.readValue(resultado, new TypeReference<List<Mesa>>(){});
-            System.out.println("Resultado: " + resultado);
+            List<Mesa> mesas = mapper.readValue(resultado, new TypeReference<List<Mesa>>(){});
+            return mesas;
 
         }catch(Exception e){
             e.printStackTrace();
+            return null;
         }
     }
     

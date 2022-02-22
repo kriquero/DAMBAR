@@ -62,11 +62,19 @@ public class Comanda {
     
     @Override
     public String toString() {
+        if(lineasComanda == null){
+        return "{" +
+               "\"nombre\":\"" + pagado + "\"," +
+               "\"descripcion\":\"" + fechaPedido + "\"" +
+        "}"; 
+        
+        }else{
         return "{" +
                "\"nombre\":\"" + pagado + "\"," +
                "\"descripcion\":\"" + fechaPedido + "\"," +
                "\"precio\":\"" + lineasComanda.toString() + "\"," +
 
         "}"; //To change body of generated methods, choose Tools | Templates.
+    }
     }
 }

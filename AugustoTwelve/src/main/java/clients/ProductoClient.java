@@ -49,7 +49,7 @@ public class ProductoClient {
         }
     }
     
-     public void getProductos(){
+     public List<Producto> getProductos(){
          ObjectMapper mapper = new ObjectMapper();
         try{
 
@@ -58,13 +58,13 @@ public class ProductoClient {
             .accept(MediaType.APPLICATION_JSON)
             .get(String.class);
            
-            System.out.println("Resultado: " + resultado);
             
-            List<Producto> participantJsonList = mapper.readValue(resultado, new TypeReference<List<Producto>>(){});
+            List<Producto> productos = mapper.readValue(resultado, new TypeReference<List<Producto>>(){});
             
-            System.out.println("Prueba: " + participantJsonList);
+            return productos;
         }catch(Exception e){
             e.printStackTrace();
+            return null;
         }
     }
      
