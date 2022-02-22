@@ -9,12 +9,12 @@ package com.mycompany.augustotwelve.screens;
  *
  * @author dam_eml
  */
-public class delMesa extends javax.swing.JPanel {
+public class EliminaMesa extends javax.swing.JPanel {
 
     /**
      * Creates new form AddMesa
      */
-    public delMesa() {
+    public EliminaMesa() {
         initComponents();
     }
 
@@ -30,8 +30,7 @@ public class delMesa extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         Cerrar = new javax.swing.JButton();
-        modify = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        delete = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(600, 500));
         setMinimumSize(new java.awt.Dimension(600, 500));
@@ -61,14 +60,13 @@ public class delMesa extends javax.swing.JPanel {
             }
         });
 
-        modify.setText("Modificar");
-        modify.addActionListener(new java.awt.event.ActionListener() {
+        delete.setText("Eliminar");
+        delete.setActionCommand("Eliminar");
+        delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modifyActionPerformed(evt);
+                deleteActionPerformed(evt);
             }
         });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Libre", "Ocupada", "Reservada" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -80,9 +78,7 @@ public class delMesa extends javax.swing.JPanel {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(modify)
+                        .addComponent(delete)
                         .addGap(18, 18, 18)
                         .addComponent(Cerrar)))
                 .addContainerGap())
@@ -95,8 +91,7 @@ public class delMesa extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 255, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Cerrar)
-                    .addComponent(modify)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(delete))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -105,16 +100,15 @@ public class delMesa extends javax.swing.JPanel {
         this.setSize(0,0);
     }//GEN-LAST:event_CerrarActionPerformed
 
-    private void modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyActionPerformed
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_modifyActionPerformed
+    }//GEN-LAST:event_deleteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cerrar;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton delete;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JButton modify;
     // End of variables declaration//GEN-END:variables
 }
