@@ -43,7 +43,7 @@ namespace August_Twelve__.net_
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 32);
+            this.label1.Size = new System.Drawing.Size(92, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "MESA";
             // 
@@ -68,6 +68,7 @@ namespace August_Twelve__.net_
             this.panelComandas.Name = "panelComandas";
             this.panelComandas.Size = new System.Drawing.Size(708, 468);
             this.panelComandas.TabIndex = 2;
+            this.panelComandas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelComandas_Paint);
             // 
             // label2
             // 
@@ -91,6 +92,7 @@ namespace August_Twelve__.net_
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mesaDetalle";
             this.Text = "mesaDetalle";
+            this.Activated += new System.EventHandler(this.mesaDetalle_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 

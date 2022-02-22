@@ -86,6 +86,7 @@ namespace August_Twelve__.net_
 
         private void check_Click(object sender, EventArgs e)
         {
+            
             if (idcomandasimodifica<=0) { 
                 if (!json.Equals(""))
                 {
@@ -97,8 +98,8 @@ namespace August_Twelve__.net_
                     "}";
 
                     
-                    RestMesa ru = new RestMesa("http://localhost:8080/mesas/addComanda/" + mesaid, "POST");
-
+                    RestMesa ru = new RestMesa("http://localhost:8080/mesas/addComanda/" + mesaid, "PUT");
+                   
                     String res = ru.postItem(jsonfinal);
 
                     this.Close();
@@ -113,7 +114,7 @@ namespace August_Twelve__.net_
                     "\"lineasComanda\":[" + arraydeLineas + "]" +
                     "}";
 
-                    Console.WriteLine(jsonfinal);
+                   
                     RestMesa ru = new RestMesa("http://localhost:8080/comandas/" + idcomandasimodifica, "PUT");
 
                     String res = ru.putItem(jsonfinal);

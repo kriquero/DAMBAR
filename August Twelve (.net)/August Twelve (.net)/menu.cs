@@ -69,5 +69,10 @@ namespace August_Twelve__.net_
             figlio.Show();
 
         }
+
+        private void menu_Activated(object sender, EventArgs e)
+        {
+            //this.mesaDetalle.Focus();
+        }
     }
 }

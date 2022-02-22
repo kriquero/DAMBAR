@@ -77,7 +77,7 @@ namespace August_Twelve__.net_
             this.panel1.Size = new System.Drawing.Size(706, 561);
             this.panel1.TabIndex = 1;
             // 
-            // Form1
+            // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,9 +85,10 @@ namespace August_Twelve__.net_
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(950, 600);
-            this.Name = "Form1";
+            this.Name = "menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.menu_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
