@@ -146,6 +146,7 @@ public class Menu extends javax.swing.JFrame {
         malta.setForeground(new java.awt.Color(255, 255, 255));
         malta.setMnemonic('A');
         malta.setText("Alta");
+        malta.setToolTipText("Crear una nueva mesa");
         malta.setBorderPainted(false);
         malta.setContentAreaFilled(false);
         malta.setMaximumSize(new java.awt.Dimension(150, 40));
@@ -192,6 +193,7 @@ public class Menu extends javax.swing.JFrame {
         mbaja.setForeground(new java.awt.Color(255, 255, 255));
         mbaja.setMnemonic('B');
         mbaja.setText("Baja");
+        mbaja.setToolTipText("Eliminar una mesa");
         mbaja.setBorderPainted(false);
         mbaja.setContentAreaFilled(false);
         mbaja.setMaximumSize(new java.awt.Dimension(150, 40));
@@ -238,6 +240,7 @@ public class Menu extends javax.swing.JFrame {
         mmodi.setForeground(new java.awt.Color(255, 255, 255));
         mmodi.setMnemonic('M');
         mmodi.setText("Modificar");
+        mmodi.setToolTipText("Editar una mesa");
         mmodi.setBorderPainted(false);
         mmodi.setContentAreaFilled(false);
         mmodi.setMaximumSize(new java.awt.Dimension(150, 40));
@@ -284,6 +287,7 @@ public class Menu extends javax.swing.JFrame {
         mvisu.setForeground(new java.awt.Color(255, 255, 255));
         mvisu.setMnemonic('V');
         mvisu.setText("Visualizar");
+        mvisu.setToolTipText("Ver lista de mesas");
         mvisu.setBorderPainted(false);
         mvisu.setContentAreaFilled(false);
         mvisu.setMaximumSize(new java.awt.Dimension(150, 40));
@@ -426,6 +430,7 @@ public class Menu extends javax.swing.JFrame {
         palta.setForeground(new java.awt.Color(255, 255, 255));
         palta.setMnemonic('A');
         palta.setText("Alta");
+        palta.setToolTipText("Crear un producto");
         palta.setBorderPainted(false);
         palta.setContentAreaFilled(false);
         palta.setMaximumSize(new java.awt.Dimension(150, 40));
@@ -472,6 +477,7 @@ public class Menu extends javax.swing.JFrame {
         pbaja.setForeground(new java.awt.Color(255, 255, 255));
         pbaja.setMnemonic('B');
         pbaja.setText("Baja");
+        pbaja.setToolTipText("Eliminar un producto");
         pbaja.setBorderPainted(false);
         pbaja.setContentAreaFilled(false);
         pbaja.setMaximumSize(new java.awt.Dimension(150, 40));
@@ -518,6 +524,7 @@ public class Menu extends javax.swing.JFrame {
         pmodi.setForeground(new java.awt.Color(255, 255, 255));
         pmodi.setMnemonic('M');
         pmodi.setText("Modificar");
+        pmodi.setToolTipText("Editar un producto");
         pmodi.setBorderPainted(false);
         pmodi.setContentAreaFilled(false);
         pmodi.setMaximumSize(new java.awt.Dimension(150, 40));
@@ -564,6 +571,7 @@ public class Menu extends javax.swing.JFrame {
         pvisu.setForeground(new java.awt.Color(255, 255, 255));
         pvisu.setMnemonic('V');
         pvisu.setText("Visualizar");
+        pvisu.setToolTipText("Ver lista de productos");
         pvisu.setBorderPainted(false);
         pvisu.setContentAreaFilled(false);
         pvisu.setMaximumSize(new java.awt.Dimension(150, 40));

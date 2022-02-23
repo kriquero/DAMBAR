@@ -70,11 +70,13 @@ private void actualizaTabla(){
 
         jLabel3.setText("Descripción");
 
+        setToolTipText("Tipo");
         setMaximumSize(new java.awt.Dimension(600, 500));
         setMinimumSize(new java.awt.Dimension(600, 500));
         setPreferredSize(new java.awt.Dimension(600, 500));
 
         ModificarProductoCerrarButton.setText("Cerrar");
+        ModificarProductoCerrarButton.setToolTipText("Cerrar panel");
         ModificarProductoCerrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarProductoCerrarButtonActionPerformed(evt);
@@ -82,6 +84,7 @@ private void actualizaTabla(){
         });
 
         ModificarProductoModificarButton.setText("Modificar");
+        ModificarProductoModificarButton.setToolTipText("Edita el producto seleccionado");
         ModificarProductoModificarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarProductoModificarButtonActionPerformed(evt);
@@ -101,16 +104,19 @@ private void actualizaTabla(){
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setToolTipText("Selecciona producto a editar");
         jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
         jTable1.setRequestFocusEnabled(false);
         ModificarProductoScrollPanelTable.setViewportView(jTable1);
 
         ModificarProductoDescripcion.setColumns(20);
         ModificarProductoDescripcion.setRows(5);
+        ModificarProductoDescripcion.setToolTipText("Descripción");
         ModificarProductoScrollPanelDescripcion.setViewportView(ModificarProductoDescripcion);
 
         ModificarProductoImagen.setColumns(20);
         ModificarProductoImagen.setRows(5);
+        ModificarProductoImagen.setToolTipText("URL de la imagen");
         ModificarProductoScrollPanelImagen.setViewportView(ModificarProductoImagen);
 
         ModificarProductoTipo.addActionListener(new java.awt.event.ActionListener() {
@@ -119,6 +125,7 @@ private void actualizaTabla(){
             }
         });
 
+        ModificarProductoNombre.setToolTipText("Nombre");
         ModificarProductoNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarProductoNombreActionPerformed(evt);
@@ -126,8 +133,10 @@ private void actualizaTabla(){
         });
 
         ModificarProductoStock.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        ModificarProductoStock.setToolTipText("Stock");
 
         ModificarProductoPrecio.setModel(new javax.swing.SpinnerNumberModel(0.0d, 0.0d, null, 1.0d));
+        ModificarProductoPrecio.setToolTipText("Precio");
 
         ModificarProductoNombreLabel.setText("Nombre");
 

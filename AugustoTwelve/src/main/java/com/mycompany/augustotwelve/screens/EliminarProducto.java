@@ -73,11 +73,13 @@ private void actualizaTabla(){
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setToolTipText("Selecciona el producto a eliminar");
         jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
         jTable1.setRequestFocusEnabled(false);
         EliminarProductoScrollPanel.setViewportView(jTable1);
 
         EliminarProductoEliminarButton.setText("Eliminar");
+        EliminarProductoEliminarButton.setToolTipText("Elimina el producto seleccionado");
         EliminarProductoEliminarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EliminarProductoEliminarButtonActionPerformed(evt);
@@ -85,6 +87,7 @@ private void actualizaTabla(){
         });
 
         EliminarProductoCerrarButton.setText("Cerrar");
+        EliminarProductoCerrarButton.setToolTipText("Cerrar panel");
         EliminarProductoCerrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EliminarProductoCerrarButtonActionPerformed(evt);

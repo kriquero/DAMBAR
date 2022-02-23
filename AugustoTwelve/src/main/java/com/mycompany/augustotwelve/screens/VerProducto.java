@@ -69,12 +69,14 @@ private void actualizaTabla(){
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setToolTipText("Lista de productos");
         jTable1.setName(""); // NOI18N
         jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
         jTable1.setRequestFocusEnabled(false);
         VerProductoScrollPanel.setViewportView(jTable1);
 
         VerProductoActualizarTableButton.setText("Actualizar");
+        VerProductoActualizarTableButton.setToolTipText("Refrescar la lista");
         VerProductoActualizarTableButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VerProductoActualizarTableButtonActionPerformed(evt);
@@ -82,6 +84,7 @@ private void actualizaTabla(){
         });
 
         VerProductoCerrarButton.setText("Cerrar");
+        VerProductoCerrarButton.setToolTipText("Cerrar panel");
         VerProductoCerrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VerProductoCerrarButtonActionPerformed(evt);
