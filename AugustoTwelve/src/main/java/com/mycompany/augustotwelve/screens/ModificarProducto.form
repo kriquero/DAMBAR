@@ -37,46 +37,37 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ModificarProductoNombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoNombre" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="ModificarProductoScrollPanelDescripcion" max="32767" attributes="0"/>
-                              <Component id="ModificarProductoDescripcionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ModificarProductoTipoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoTipo" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="ModificarProductoScrollPanelImagen" alignment="0" max="32767" attributes="0"/>
-                              <Component id="ModificarProductoImagenLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Component id="ModificarProductoNombreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="ModificarProductoNombre" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="ModificarProductoScrollPanelDescripcion" max="32767" attributes="0"/>
+                      <Component id="ModificarProductoDescripcionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="ModificarProductoPrecioLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="ModificarProductoPrecio" min="-2" pref="100" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="ModificarProductoStock" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoPrecioLabel" min="-2" max="-2" attributes="0"/>
                           <Component id="ModificarProductoStockLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoPrecio" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="ModificarProductoTipoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ModificarProductoTipo" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                          <Component id="ModificarProductoScrollPanelImagen" alignment="0" max="32767" attributes="0"/>
+                          <Component id="ModificarProductoImagenLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="ModificarProductoModificarButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="ModificarProductoCerrarButton" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="ModificarProductoAlergenosLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="ModificarProductoAlergenosPanel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
-                      <EmptySpace pref="11" max="32767" attributes="0"/>
+                      <EmptySpace min="46" pref="215" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -103,37 +94,35 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="ModificarProductoScrollPanelDescripcion" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="ModificarProductoTipoLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="ModificarProductoTipo" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoImagenLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="ModificarProductoScrollPanelImagen" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="ModificarProductoPrecioLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="ModificarProductoPrecio" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="ModificarProductoStockLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="ModificarProductoStock" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="ModificarProductoTipoLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ModificarProductoTipo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="ModificarProductoImagenLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ModificarProductoScrollPanelImagen" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Component id="ModificarProductoAlergenosLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="ModificarProductoAlergenosPanel" max="32767" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="ModificarProductoCerrarButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ModificarProductoModificarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="ModificarProductoStockLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ModificarProductoStock" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="ModificarProductoPrecioLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ModificarProductoPrecio" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace pref="95" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="ModificarProductoModificarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ModificarProductoCerrarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
@@ -276,217 +265,5 @@
         <Property name="text" type="java.lang.String" value="Imagen (URL)"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="ModificarProductoAlergenosLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Alergenos"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JPanel" name="ModificarProductoAlergenosPanel">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-            <EtchetBorder/>
-          </Border>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="ModificarProductoSesamo" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ModificarProductoMostaza" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ModificarProductoApio" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ModificarProductoMoluscos" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="ModificarProductoLacteos" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ModificarProductoSoja" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ModificarProductoHuevo" min="-2" max="-2" attributes="0"/>
-                      <Component id="ModificarProductoGluten" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="ModificarProductoCacahuetes" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ModificarProductoPescado" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="ModificarProductoAltramuces" min="-2" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoCrustaceos" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="ModificarProductoAzufreSulfitos" min="-2" max="-2" attributes="0"/>
-                      <Component id="ModificarProductoFrutosCascara" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="145" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="ModificarProductoCacahuetes" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ModificarProductoAzufreSulfitos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="ModificarProductoPescado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ModificarProductoFrutosCascara" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoCrustaceos" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoHuevo" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="ModificarProductoLacteos" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoSoja" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="ModificarProductoSesamo" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoMostaza" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoApio" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ModificarProductoMoluscos" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ModificarProductoGluten" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="ModificarProductoAltramuces" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoSesamo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Sesamo"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoSesamoActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoMostaza">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Mostaza"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoMostazaActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoApio">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Apio"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoApioActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoFrutosCascara">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Frutos con cascara"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoFrutosCascaraActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoLacteos">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="L&#xe1;cteos"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoLacteosActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoSoja">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Soja"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoSojaActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoCacahuetes">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cacahuetes"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoCacahuetesActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoPescado">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Pescado"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoPescadoActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoHuevo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Huevo"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoHuevoActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoCrustaceos">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Crust&#xe1;ceos "/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoCrustaceosActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoGluten">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Gluten"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoGlutenActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoAltramuces">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Altramuces"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoAltramucesActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoMoluscos">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Moluscos"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoMoluscosActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="ModificarProductoAzufreSulfitos">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Dioxido de azufre y sulfitos"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModificarProductoAzufreSulfitosActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
   </SubComponents>
 </Form>

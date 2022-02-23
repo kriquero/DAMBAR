@@ -5,6 +5,10 @@
  */
 package com.mycompany.augustotwelve.screens;
 
+import clients.MesaClient;
+import javax.swing.table.DefaultTableModel;
+import models.Mesa;
+
 /**
  *
  * @author dam_eml
@@ -16,8 +20,20 @@ public class EliminaMesa extends javax.swing.JPanel {
      */
     public EliminaMesa() {
         initComponents();
+        actualizaTabla();
     }
-
+private void actualizaTabla(){
+        String[] datos  = new String[2];
+        String[] titulos = new String[] {"Id","Estado"};
+        DefaultTableModel modelo = new DefaultTableModel(null,titulos);
+        MesaClient mc = new MesaClient();
+        for(Mesa m : mc.getMesas()){
+        datos[0]=String.valueOf(m.getId());
+        datos[1]=m.getEstado();
+        modelo.addRow(datos);
+        }
+        jTable1.setModel(modelo);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

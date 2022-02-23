@@ -18,10 +18,10 @@ import javax.swing.JPanel;
  */
 public class Menu extends javax.swing.JFrame {
 
-    private Color GO = new Color(85,65,129);
-    private Color GB = new Color(95,75,139);
-    private Color LO = new Color(126,99,184);
-    private Color LB = new Color(136,119,194);
+    private final Color GO = new Color(85,65,129);
+    private final Color GB = new Color(95,75,139);
+    private final Color LO = new Color(126,99,184);
+    private final Color LB = new Color(136,119,194);
     /**
      * Creates new form Menu
      */
@@ -31,7 +31,7 @@ public class Menu extends javax.swing.JFrame {
         Menu.setDefaultLookAndFeelDecorated(true);
         JFrame m = this;
         m.setIconImage(new ImageIcon("src/Logo100.png").getImage());
-        this.setSize(775,550);
+        this.setSize(800,545);
         
         
         reset();

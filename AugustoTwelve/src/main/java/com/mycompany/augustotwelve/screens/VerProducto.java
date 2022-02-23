@@ -5,6 +5,8 @@
  */
 package com.mycompany.augustotwelve.screens;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author dam_mml
@@ -17,7 +19,18 @@ public class VerProducto extends javax.swing.JPanel {
     public VerProducto() {
         initComponents();
     }
-
+private void actualizaTabla(){
+        String[] datos  = new String[2];
+        String[] titulos = new String[] {"Id","Estado"};
+        DefaultTableModel modelo = new DefaultTableModel(null,titulos);
+        ProductoClient pc = new ProductoClient();
+        for(Mesa m : mc.getMesas()){
+        datos[0]=String.valueOf(m.getId());
+        datos[1]=m.getEstado();
+        modelo.addRow(datos);
+        }
+        jTable1.setModel(modelo);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

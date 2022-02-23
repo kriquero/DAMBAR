@@ -5,6 +5,10 @@
  */
 package com.mycompany.augustotwelve.screens;
 
+import clients.MesaClient;
+import javax.swing.table.DefaultTableModel;
+import models.Mesa;
+
 /**
  *
  * @author dam_eml
@@ -16,6 +20,7 @@ public class AddMesa extends javax.swing.JPanel {
      */
     public AddMesa() {
         initComponents();
+       actualizaTabla();
     }
 
     /**
@@ -100,9 +105,22 @@ public class AddMesa extends javax.swing.JPanel {
     }//GEN-LAST:event_CerrarActionPerformed
 
     private void modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyActionPerformed
-        // TODO add your handling code here:
+        MesaClient mc = new MesaClient();
+        mc.crearMesa();
+        actualizaTabla();
     }//GEN-LAST:event_modifyActionPerformed
-
+private void actualizaTabla(){
+        String[] datos  = new String[2];
+        String[] titulos = new String[] {"Id","Estado"};
+        DefaultTableModel modelo = new DefaultTableModel(null,titulos);
+        MesaClient mc = new MesaClient();
+        for(Mesa m : mc.getMesas()){
+        datos[0]=String.valueOf(m.getId());
+        datos[1]=m.getEstado();
+        modelo.addRow(datos);
+        }
+        jTable1.setModel(modelo);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cerrar;
