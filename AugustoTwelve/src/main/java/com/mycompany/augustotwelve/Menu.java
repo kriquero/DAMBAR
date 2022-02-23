@@ -144,6 +144,7 @@ public class Menu extends javax.swing.JFrame {
         ma.setPreferredSize(new java.awt.Dimension(150, 40));
 
         malta.setForeground(new java.awt.Color(255, 255, 255));
+        malta.setMnemonic('A');
         malta.setText("Alta");
         malta.setBorderPainted(false);
         malta.setContentAreaFilled(false);
@@ -189,6 +190,7 @@ public class Menu extends javax.swing.JFrame {
         mb.setPreferredSize(new java.awt.Dimension(150, 40));
 
         mbaja.setForeground(new java.awt.Color(255, 255, 255));
+        mbaja.setMnemonic('B');
         mbaja.setText("Baja");
         mbaja.setBorderPainted(false);
         mbaja.setContentAreaFilled(false);
@@ -234,6 +236,7 @@ public class Menu extends javax.swing.JFrame {
         mm.setPreferredSize(new java.awt.Dimension(150, 40));
 
         mmodi.setForeground(new java.awt.Color(255, 255, 255));
+        mmodi.setMnemonic('M');
         mmodi.setText("Modificar");
         mmodi.setBorderPainted(false);
         mmodi.setContentAreaFilled(false);
@@ -279,6 +282,7 @@ public class Menu extends javax.swing.JFrame {
         mv.setPreferredSize(new java.awt.Dimension(150, 40));
 
         mvisu.setForeground(new java.awt.Color(255, 255, 255));
+        mvisu.setMnemonic('V');
         mvisu.setText("Visualizar");
         mvisu.setBorderPainted(false);
         mvisu.setContentAreaFilled(false);
@@ -420,6 +424,7 @@ public class Menu extends javax.swing.JFrame {
         pa.setPreferredSize(new java.awt.Dimension(150, 40));
 
         palta.setForeground(new java.awt.Color(255, 255, 255));
+        palta.setMnemonic('A');
         palta.setText("Alta");
         palta.setBorderPainted(false);
         palta.setContentAreaFilled(false);
@@ -465,6 +470,7 @@ public class Menu extends javax.swing.JFrame {
         pb.setPreferredSize(new java.awt.Dimension(150, 40));
 
         pbaja.setForeground(new java.awt.Color(255, 255, 255));
+        pbaja.setMnemonic('B');
         pbaja.setText("Baja");
         pbaja.setBorderPainted(false);
         pbaja.setContentAreaFilled(false);
@@ -510,6 +516,7 @@ public class Menu extends javax.swing.JFrame {
         pm.setPreferredSize(new java.awt.Dimension(150, 40));
 
         pmodi.setForeground(new java.awt.Color(255, 255, 255));
+        pmodi.setMnemonic('M');
         pmodi.setText("Modificar");
         pmodi.setBorderPainted(false);
         pmodi.setContentAreaFilled(false);
@@ -555,6 +562,7 @@ public class Menu extends javax.swing.JFrame {
         pv.setPreferredSize(new java.awt.Dimension(150, 40));
 
         pvisu.setForeground(new java.awt.Color(255, 255, 255));
+        pvisu.setMnemonic('V');
         pvisu.setText("Visualizar");
         pvisu.setBorderPainted(false);
         pvisu.setContentAreaFilled(false);
