@@ -80,7 +80,7 @@ public class MesaClient {
         }
     }
          
-         public void elimiarMesa(long id){
+         public void eliminarMesa(long id){
         try{
 
             WebTarget wt = this.client.target("http://localhost:8080/mesas/" + id);

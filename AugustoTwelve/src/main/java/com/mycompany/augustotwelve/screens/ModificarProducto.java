@@ -5,6 +5,10 @@
  */
 package com.mycompany.augustotwelve.screens;
 
+import clients.ProductoClient;
+import javax.swing.table.DefaultTableModel;
+import models.Producto;
+
 /**
  *
  * @author dam_mml
@@ -16,6 +20,22 @@ public class ModificarProducto extends javax.swing.JPanel {
      */
     public ModificarProducto() {
         initComponents();
+    }
+private void actualizaTabla(){
+        String[] datos  = new String[2];
+        String[] titulos = new String[] {"Id","Nombre","Tipo","Precio","Stock"};
+        DefaultTableModel modelo = new DefaultTableModel(null,titulos);
+        ProductoClient pc = new ProductoClient();
+        for(Producto m : pc.getProductos()){
+        datos[0]=String.valueOf(m.getId());
+        datos[1]=String.valueOf(m.getNombre());
+        datos[2]=String.valueOf(m.getTipo());
+        datos[3]=String.valueOf(m.getPrecio());
+        datos[4]=String.valueOf(m.getStock());
+        
+        modelo.addRow(datos);
+        }
+        jTable1.setModel(modelo);
     }
 
     /**
@@ -31,7 +51,7 @@ public class ModificarProducto extends javax.swing.JPanel {
         ModificarProductoCerrarButton = new javax.swing.JButton();
         ModificarProductoModificarButton = new javax.swing.JButton();
         ModificarProductoScrollPanelTable = new javax.swing.JScrollPane();
-        ModificarProductoTable = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
         ModificarProductoScrollPanelDescripcion = new javax.swing.JScrollPane();
         ModificarProductoDescripcion = new javax.swing.JTextArea();
         ModificarProductoScrollPanelImagen = new javax.swing.JScrollPane();
@@ -69,7 +89,7 @@ public class ModificarProducto extends javax.swing.JPanel {
 
         ModificarProductoScrollPanelTable.setPreferredSize(new java.awt.Dimension(580, 400));
 
-        ModificarProductoTable.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -80,9 +100,9 @@ public class ModificarProducto extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        ModificarProductoTable.setPreferredSize(new java.awt.Dimension(580, 200));
-        ModificarProductoTable.setRequestFocusEnabled(false);
-        ModificarProductoScrollPanelTable.setViewportView(ModificarProductoTable);
+        jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
+        jTable1.setRequestFocusEnabled(false);
+        ModificarProductoScrollPanelTable.setViewportView(jTable1);
 
         ModificarProductoDescripcion.setColumns(20);
         ModificarProductoDescripcion.setRows(5);
@@ -136,22 +156,18 @@ public class ModificarProducto extends javax.swing.JPanel {
                     .addComponent(ModificarProductoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ModificarProductoStock, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ModificarProductoStockLabel))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ModificarProductoTipoLabel)
-                            .addComponent(ModificarProductoTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ModificarProductoScrollPanelImagen)
-                            .addComponent(ModificarProductoImagenLabel)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(ModificarProductoModificarButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ModificarProductoCerrarButton)))
-                        .addGap(46, 215, Short.MAX_VALUE))))
+                    .addComponent(ModificarProductoStock, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ModificarProductoStockLabel)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(ModificarProductoTipoLabel)
+                        .addComponent(ModificarProductoTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ModificarProductoScrollPanelImagen)
+                        .addComponent(ModificarProductoImagenLabel)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(ModificarProductoModificarButton)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ModificarProductoCerrarButton))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -203,7 +219,7 @@ public class ModificarProducto extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ModificarProductoCerrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarProductoCerrarButtonActionPerformed
-        this.setSize(0,0);
+        this.setVisible(false);
     }//GEN-LAST:event_ModificarProductoCerrarButtonActionPerformed
 
     private void ModificarProductoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarProductoNombreActionPerformed
@@ -235,9 +251,9 @@ public class ModificarProducto extends javax.swing.JPanel {
     private javax.swing.JScrollPane ModificarProductoScrollPanelTable;
     private javax.swing.JSpinner ModificarProductoStock;
     private javax.swing.JLabel ModificarProductoStockLabel;
-    private javax.swing.JTable ModificarProductoTable;
     private javax.swing.JTextField ModificarProductoTipo;
     private javax.swing.JLabel ModificarProductoTipoLabel;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

@@ -113,11 +113,14 @@ private void actualizaTabla(){
     }// </editor-fold>//GEN-END:initComponents
 
     private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
-        this.setSize(0,0);
+        this.setVisible(false);
     }//GEN-LAST:event_CerrarActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
-        // TODO add your handling code here:
+        MesaClient mc = new MesaClient();
+       
+        mc.eliminarMesa(Long.parseLong((String)jTable1.getValueAt(0,jTable1.getSelectedRow())));
+        
     }//GEN-LAST:event_deleteActionPerformed
 
 

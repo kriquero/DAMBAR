@@ -5,7 +5,9 @@
  */
 package com.mycompany.augustotwelve.screens;
 
+import clients.ProductoClient;
 import javax.swing.table.DefaultTableModel;
+import models.Producto;
 
 /**
  *
@@ -21,12 +23,16 @@ public class VerProducto extends javax.swing.JPanel {
     }
 private void actualizaTabla(){
         String[] datos  = new String[2];
-        String[] titulos = new String[] {"Id","Estado"};
+        String[] titulos = new String[] {"Id","Nombre","Tipo","Precio","Stock"};
         DefaultTableModel modelo = new DefaultTableModel(null,titulos);
         ProductoClient pc = new ProductoClient();
-        for(Mesa m : mc.getMesas()){
+        for(Producto m : pc.getProductos()){
         datos[0]=String.valueOf(m.getId());
-        datos[1]=m.getEstado();
+        datos[1]=String.valueOf(m.getNombre());
+        datos[2]=String.valueOf(m.getTipo());
+        datos[3]=String.valueOf(m.getPrecio());
+        datos[4]=String.valueOf(m.getStock());
+        
         modelo.addRow(datos);
         }
         jTable1.setModel(modelo);
@@ -41,7 +47,7 @@ private void actualizaTabla(){
     private void initComponents() {
 
         VerProductoScrollPanel = new javax.swing.JScrollPane();
-        VerProductoTable = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
         VerProductoActualizarTableButton = new javax.swing.JButton();
         VerProductoCerrarButton = new javax.swing.JButton();
 
@@ -51,7 +57,7 @@ private void actualizaTabla(){
 
         VerProductoScrollPanel.setPreferredSize(new java.awt.Dimension(580, 400));
 
-        VerProductoTable.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -62,10 +68,10 @@ private void actualizaTabla(){
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        VerProductoTable.setName(""); // NOI18N
-        VerProductoTable.setPreferredSize(new java.awt.Dimension(580, 200));
-        VerProductoTable.setRequestFocusEnabled(false);
-        VerProductoScrollPanel.setViewportView(VerProductoTable);
+        jTable1.setName(""); // NOI18N
+        jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
+        jTable1.setRequestFocusEnabled(false);
+        VerProductoScrollPanel.setViewportView(jTable1);
 
         VerProductoActualizarTableButton.setText("Actualizar");
 
@@ -105,7 +111,7 @@ private void actualizaTabla(){
     }// </editor-fold>//GEN-END:initComponents
 
     private void VerProductoCerrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerProductoCerrarButtonActionPerformed
-        this.setSize(0,0);
+       this.setVisible(false);
     }//GEN-LAST:event_VerProductoCerrarButtonActionPerformed
 
 
@@ -113,6 +119,6 @@ private void actualizaTabla(){
     private javax.swing.JButton VerProductoActualizarTableButton;
     private javax.swing.JButton VerProductoCerrarButton;
     private javax.swing.JScrollPane VerProductoScrollPanel;
-    private javax.swing.JTable VerProductoTable;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

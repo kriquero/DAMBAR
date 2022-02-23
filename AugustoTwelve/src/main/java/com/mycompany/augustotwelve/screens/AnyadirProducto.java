@@ -5,6 +5,10 @@
  */
 package com.mycompany.augustotwelve.screens;
 
+import clients.ProductoClient;
+import javax.swing.table.DefaultTableModel;
+import models.Producto;
+
 /**
  *
  * @author dam_mml
@@ -17,6 +21,7 @@ public class AnyadirProducto extends javax.swing.JPanel {
     public AnyadirProducto() {
         initComponents();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -171,7 +176,7 @@ public class AnyadirProducto extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AnyadirProductoCerrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoCerrarButtonActionPerformed
-        this.setSize(0,0);
+        this.setVisible(false);
     }//GEN-LAST:event_AnyadirProductoCerrarButtonActionPerformed
 
     private void AnyadirProductoInsertarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoInsertarButtonActionPerformed

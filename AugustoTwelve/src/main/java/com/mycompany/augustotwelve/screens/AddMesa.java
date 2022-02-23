@@ -101,7 +101,7 @@ public class AddMesa extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
-        this.setSize(0,0);
+        this.setVisible(false);
     }//GEN-LAST:event_CerrarActionPerformed
 
     private void modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyActionPerformed

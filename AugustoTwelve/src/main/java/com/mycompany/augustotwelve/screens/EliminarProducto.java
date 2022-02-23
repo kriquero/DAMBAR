@@ -5,6 +5,10 @@
  */
 package com.mycompany.augustotwelve.screens;
 
+import clients.ProductoClient;
+import javax.swing.table.DefaultTableModel;
+import models.Producto;
+
 /**
  *
  * @author dam_mml
@@ -16,6 +20,22 @@ public class EliminarProducto extends javax.swing.JPanel {
      */
     public EliminarProducto() {
         initComponents();
+    }
+private void actualizaTabla(){
+        String[] datos  = new String[2];
+        String[] titulos = new String[] {"Id","Nombre","Tipo","Precio","Stock"};
+        DefaultTableModel modelo = new DefaultTableModel(null,titulos);
+        ProductoClient pc = new ProductoClient();
+        for(Producto m : pc.getProductos()){
+        datos[0]=String.valueOf(m.getId());
+        datos[1]=String.valueOf(m.getNombre());
+        datos[2]=String.valueOf(m.getTipo());
+        datos[3]=String.valueOf(m.getPrecio());
+        datos[4]=String.valueOf(m.getStock());
+        
+        modelo.addRow(datos);
+        }
+        jTable1.setModel(modelo);
     }
 
     /**
@@ -29,7 +49,7 @@ public class EliminarProducto extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         EliminarProductoScrollPanel = new javax.swing.JScrollPane();
-        EliminarProductoTable = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
         EliminarProductoEliminarButton = new javax.swing.JButton();
         EliminarProductoCerrarButton = new javax.swing.JButton();
 
@@ -41,7 +61,7 @@ public class EliminarProducto extends javax.swing.JPanel {
 
         EliminarProductoScrollPanel.setPreferredSize(new java.awt.Dimension(580, 400));
 
-        EliminarProductoTable.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -52,9 +72,9 @@ public class EliminarProducto extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        EliminarProductoTable.setPreferredSize(new java.awt.Dimension(580, 200));
-        EliminarProductoTable.setRequestFocusEnabled(false);
-        EliminarProductoScrollPanel.setViewportView(EliminarProductoTable);
+        jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
+        jTable1.setRequestFocusEnabled(false);
+        EliminarProductoScrollPanel.setViewportView(jTable1);
 
         EliminarProductoEliminarButton.setText("Eliminar");
 
@@ -115,7 +135,7 @@ public class EliminarProducto extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EliminarProductoCerrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarProductoCerrarButtonActionPerformed
-        this.setSize(0,0);
+        this.setVisible(false);
     }//GEN-LAST:event_EliminarProductoCerrarButtonActionPerformed
 
 
@@ -123,7 +143,7 @@ public class EliminarProducto extends javax.swing.JPanel {
     private javax.swing.JButton EliminarProductoCerrarButton;
     private javax.swing.JButton EliminarProductoEliminarButton;
     private javax.swing.JScrollPane EliminarProductoScrollPanel;
-    private javax.swing.JTable EliminarProductoTable;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

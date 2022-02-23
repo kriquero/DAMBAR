@@ -108,7 +108,7 @@ public class modMesa extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
-        this.setSize(0,0);
+        this.setVisible(false);
     }//GEN-LAST:event_CerrarActionPerformed
 
     private void actualizaTabla(){
@@ -128,7 +128,8 @@ public class modMesa extends javax.swing.JPanel {
         
         Mesa m = new Mesa();
         m.setEstado(jComboBox1.getSelectedItem().toString());
-        System.out.println(m.getEstado());
+        MesaClient mc = new MesaClient();
+        mc.modificaMesa(Long.parseLong((String)jTable1.getValueAt(0,jTable1.getSelectedRow())), m);
         
         
     }//GEN-LAST:event_modifyActionPerformed
