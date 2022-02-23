@@ -78,11 +78,12 @@ public class Camarero {
         @Override
     public String toString() {
         return "{" +
+                "\"idCamarero\":\"" + idCamarero + "\"," +
                "\"nombre\":\"" + nombre + "\"," +
                "\"puesto\":\"" + puesto + "\"," +
                "\"fechaInicio\":\"" + fechaInicio + "\"," +
                "\"telefono\":\"" + telefono + "\"," +
-               "\"comanda\":\"" + comandas.toString() + "\"," +
+               "\"comanda\":" + comandas.toString() + "\"" +
         "}"; //To change body of generated methods, choose Tools | Templates.
     }
 }

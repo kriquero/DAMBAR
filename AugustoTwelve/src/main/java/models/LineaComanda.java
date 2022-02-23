@@ -47,12 +47,14 @@ public class LineaComanda {
     public String toString() {
         if(producto == null){
             return "{" +
-               "\"cantidad\":\"" + cantidad + "\"" +
+                   "\"id\" :\"" + id + "\"," +
+                   "\"cantidad\":\"" + cantidad + "\"" +
         "}"; //T
         }else{
         return "{" +
+                "\"id\":\"" + id + "\"," +
                "\"cantidad\":\"" + cantidad + "\"," +
-               "\"producto\":\"" + producto.toString() + "\"" +
+               "\"producto\":" + producto.toString() +
         "}";
         }
     }

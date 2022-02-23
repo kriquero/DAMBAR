@@ -55,8 +55,8 @@ public class Mesa {
         
         return "{" +
                "\"estado\":\"" + estado + "\"," +
-               "\"descripcion\":\"" + comandas.toString() + "\"," +
-        "}"; //To change body of generated methods, choose Tools | Templates.
+               "\"comandas\":" + comandas.toString() + "\"" +
+        "}"; //To change body of generated methods, choose To ols | Templates.
         }
         }
     

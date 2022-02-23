@@ -20,9 +20,10 @@ public class EliminarProducto extends javax.swing.JPanel {
      */
     public EliminarProducto() {
         initComponents();
+        actualizaTabla();
     }
 private void actualizaTabla(){
-        String[] datos  = new String[2];
+        String[] datos  = new String[5];
         String[] titulos = new String[] {"Id","Nombre","Tipo","Precio","Stock"};
         DefaultTableModel modelo = new DefaultTableModel(null,titulos);
         ProductoClient pc = new ProductoClient();
@@ -145,7 +146,7 @@ private void actualizaTabla(){
 
     private void EliminarProductoEliminarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarProductoEliminarButtonActionPerformed
         ProductoClient pc = new ProductoClient();
-        pc.elimiarProducto(Long.parseLong((String)jTable1.getValueAt(0,jTable1.getSelectedRow())));
+        pc.elimiarProducto(Long.parseLong((String)jTable1.getValueAt(jTable1.getSelectedRow(),0)));
     }//GEN-LAST:event_EliminarProductoEliminarButtonActionPerformed
 
 

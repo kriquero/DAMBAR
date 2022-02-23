@@ -31,3 +31,19 @@ D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Au
 D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.dll
 D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.xml
 D:\Proyecto DAMBAR\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CopyComplete
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe.config
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).exe
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\August Twelve (.net).pdb
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.AssemblyReference.cache
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Form1.resources
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.linea.resources
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.menu.resources
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.mesaDetalle.resources
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August_Twelve__.net_.Properties.Resources.resources
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.GenerateResource.cache
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CoreCompileInputs.cache
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).csproj.CopyComplete
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).exe
+C:\Users\dam_mml\Desktop\Proyecto\Proyecto\DAMBAR\August Twelve (.net)\August Twelve (.net)\obj\Debug\August Twelve (.net).pdb

@@ -20,9 +20,10 @@ public class ModificarProducto extends javax.swing.JPanel {
      */
     public ModificarProducto() {
         initComponents();
+        actualizaTabla();
     }
 private void actualizaTabla(){
-        String[] datos  = new String[2];
+        String[] datos  = new String[5];
         String[] titulos = new String[] {"Id","Nombre","Tipo","Precio","Stock"};
         DefaultTableModel modelo = new DefaultTableModel(null,titulos);
         ProductoClient pc = new ProductoClient();
@@ -235,7 +236,7 @@ private void actualizaTabla(){
         
         ProductoClient pc = new ProductoClient();
         
-        pc.modificaProducto(Long.parseLong((String)jTable1.getValueAt(0,jTable1.getSelectedRow())),p);
+        pc.modificaProducto(Long.parseLong((String)jTable1.getValueAt(jTable1.getSelectedRow(),0)),p);
     }//GEN-LAST:event_ModificarProductoNombreActionPerformed
 
     private void ModificarProductoTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarProductoTipoActionPerformed

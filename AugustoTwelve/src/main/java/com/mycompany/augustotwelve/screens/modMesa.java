@@ -15,6 +15,7 @@ import models.Mesa;
  */
 public class modMesa extends javax.swing.JPanel {
 
+    Mesa mesaAModificar;
     /**
      * Creates new form AddMesa
      */
@@ -124,12 +125,25 @@ public class modMesa extends javax.swing.JPanel {
         jTable1.setModel(modelo);
     }
     
-    private void modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyActionPerformed
-        
-        Mesa m = new Mesa();
-        m.setEstado(jComboBox1.getSelectedItem().toString());
+    private void buscaaa(long id){
         MesaClient mc = new MesaClient();
-        mc.modificaMesa(Long.parseLong((String)jTable1.getValueAt(0,jTable1.getSelectedRow())), m);
+    for(Mesa m : mc.getMesas()){
+        
+        if(m.getId()==id)
+        mesaAModificar = m;
+    }
+    
+    }
+    
+    private void modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyActionPerformed
+        MesaClient mc = new MesaClient();
+        buscaaa(Long.parseLong((String)jTable1.getValueAt(jTable1.getSelectedRow(),0)));
+        Mesa m = mesaAModificar;
+        System.out.println(m.toString());
+        m.setEstado(jComboBox1.getSelectedItem().toString());
+        m.setId(Long.parseLong((String)jTable1.getValueAt(jTable1.getSelectedRow(),0)));
+        
+        mc.modificaMesa(Long.parseLong((String)jTable1.getValueAt(jTable1.getSelectedRow(),0)), m);
         
         
     }//GEN-LAST:event_modifyActionPerformed

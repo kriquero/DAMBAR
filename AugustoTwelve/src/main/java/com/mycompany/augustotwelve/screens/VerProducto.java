@@ -20,9 +20,10 @@ public class VerProducto extends javax.swing.JPanel {
      */
     public VerProducto() {
         initComponents();
+        actualizaTabla();
     }
 private void actualizaTabla(){
-        String[] datos  = new String[2];
+        String[] datos  = new String[5];
         String[] titulos = new String[] {"Id","Nombre","Tipo","Precio","Stock"};
         DefaultTableModel modelo = new DefaultTableModel(null,titulos);
         ProductoClient pc = new ProductoClient();

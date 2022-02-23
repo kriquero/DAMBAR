@@ -63,7 +63,7 @@ public class MesaClient {
     }
     
          public void modificaMesa(long id, Mesa m){
-             
+             System.out.println(m.toString());
         try{
 
             WebTarget wt = this.client.target("http://localhost:8080/mesas/" + id);
@@ -75,6 +75,7 @@ public class MesaClient {
             System.out.println(response.getStatus());
             System.out.println(response.readEntity(String.class));
             System.out.println();
+            
         }catch(Exception e){
             e.printStackTrace();
         }

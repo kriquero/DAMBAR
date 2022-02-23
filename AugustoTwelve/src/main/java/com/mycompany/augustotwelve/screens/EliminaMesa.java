@@ -65,6 +65,7 @@ private void actualizaTabla(){
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setToolTipText("");
         jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
         jTable1.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(jTable1);
@@ -77,7 +78,6 @@ private void actualizaTabla(){
         });
 
         delete.setText("Eliminar");
-        delete.setActionCommand("Eliminar");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);
@@ -119,7 +119,7 @@ private void actualizaTabla(){
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         MesaClient mc = new MesaClient();
        
-        mc.eliminarMesa(Long.parseLong((String)jTable1.getValueAt(0,jTable1.getSelectedRow())));
+        mc.eliminarMesa(Long.parseLong((String)jTable1.getValueAt(jTable1.getSelectedRow(),0)));
         
     }//GEN-LAST:event_deleteActionPerformed
 

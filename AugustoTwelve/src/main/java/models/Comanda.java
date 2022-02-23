@@ -64,15 +64,24 @@ public class Comanda {
     public String toString() {
         if(lineasComanda == null){
         return "{" +
+               "\"idComanda\":\"" + idComanda + "\"," +
                "\"nombre\":\"" + pagado + "\"," +
-               "\"descripcion\":\"" + fechaPedido + "\"" +
+               "\"fechaPedido\":\"" + fechaPedido + "" +
         "}"; 
         
         }else{
+            String lineas="";
+            for(int i =0; i<lineasComanda.size();i++){
+                if(i==lineasComanda.size()-1)
+                    lineas += lineasComanda.get(i).toString();
+                else
+                lineas += lineasComanda.get(i).toString() + ",";
+            }
         return "{" +
+               "\"idComanda\":\"" + idComanda + "\"," +
                "\"nombre\":\"" + pagado + "\"," +
-               "\"descripcion\":\"" + fechaPedido + "\"," +
-               "\"precio\":\"" + lineasComanda.toString() + "\"," +
+               "\"fechaPedido\":\"" + fechaPedido + "\"," +
+               "\"lineasComanda\":[" + lineas + "" +
 
         "}"; //To change body of generated methods, choose Tools | Templates.
     }
