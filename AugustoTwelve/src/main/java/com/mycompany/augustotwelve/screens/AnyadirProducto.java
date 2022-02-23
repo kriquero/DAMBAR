@@ -180,7 +180,22 @@ public class AnyadirProducto extends javax.swing.JPanel {
     }//GEN-LAST:event_AnyadirProductoCerrarButtonActionPerformed
 
     private void AnyadirProductoInsertarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductoInsertarButtonActionPerformed
-        // TODO add your handling code here:
+        
+        Producto p = new Producto(
+        AnyadirProductonombre.getText(),
+                AnyadirProductoDescripcion.getText(),
+                AnyadirProductoPrecio.getComponentCount(),
+                AnyadirProductoStock.getComponentCount(),
+                AnyadirProductoTipo.getText(),
+                AnyadirProductoImagen.getText()
+                
+        );
+        
+        ProductoClient pc = new ProductoClient();
+        
+        pc.crearProducto(p);
+        
+        
     }//GEN-LAST:event_AnyadirProductoInsertarButtonActionPerformed
 
     private void AnyadirProductonombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnyadirProductonombreActionPerformed

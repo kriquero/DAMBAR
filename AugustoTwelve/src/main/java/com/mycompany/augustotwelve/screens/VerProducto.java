@@ -74,6 +74,11 @@ private void actualizaTabla(){
         VerProductoScrollPanel.setViewportView(jTable1);
 
         VerProductoActualizarTableButton.setText("Actualizar");
+        VerProductoActualizarTableButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerProductoActualizarTableButtonActionPerformed(evt);
+            }
+        });
 
         VerProductoCerrarButton.setText("Cerrar");
         VerProductoCerrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +118,10 @@ private void actualizaTabla(){
     private void VerProductoCerrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerProductoCerrarButtonActionPerformed
        this.setVisible(false);
     }//GEN-LAST:event_VerProductoCerrarButtonActionPerformed
+
+    private void VerProductoActualizarTableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerProductoActualizarTableButtonActionPerformed
+        actualizaTabla();
+    }//GEN-LAST:event_VerProductoActualizarTableButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

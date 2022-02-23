@@ -77,6 +77,11 @@ private void actualizaTabla(){
         EliminarProductoScrollPanel.setViewportView(jTable1);
 
         EliminarProductoEliminarButton.setText("Eliminar");
+        EliminarProductoEliminarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarProductoEliminarButtonActionPerformed(evt);
+            }
+        });
 
         EliminarProductoCerrarButton.setText("Cerrar");
         EliminarProductoCerrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -137,6 +142,11 @@ private void actualizaTabla(){
     private void EliminarProductoCerrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarProductoCerrarButtonActionPerformed
         this.setVisible(false);
     }//GEN-LAST:event_EliminarProductoCerrarButtonActionPerformed
+
+    private void EliminarProductoEliminarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarProductoEliminarButtonActionPerformed
+        ProductoClient pc = new ProductoClient();
+        pc.elimiarProducto(Long.parseLong((String)jTable1.getValueAt(0,jTable1.getSelectedRow())));
+    }//GEN-LAST:event_EliminarProductoEliminarButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -223,7 +223,19 @@ private void actualizaTabla(){
     }//GEN-LAST:event_ModificarProductoCerrarButtonActionPerformed
 
     private void ModificarProductoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarProductoNombreActionPerformed
-        // TODO add your handling code here:
+        Producto p = new Producto(
+        ModificarProductoNombre.getText(),
+                ModificarProductoDescripcion.getText(),
+                ModificarProductoPrecio.getComponentCount(),
+                ModificarProductoStock.getComponentCount(),
+                ModificarProductoTipo.getText(),
+                ModificarProductoImagen.getText()
+                
+        );
+        
+        ProductoClient pc = new ProductoClient();
+        
+        pc.modificaProducto(Long.parseLong((String)jTable1.getValueAt(0,jTable1.getSelectedRow())),p);
     }//GEN-LAST:event_ModificarProductoNombreActionPerformed
 
     private void ModificarProductoTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarProductoTipoActionPerformed
