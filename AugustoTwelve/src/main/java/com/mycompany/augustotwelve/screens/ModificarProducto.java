@@ -54,7 +54,6 @@ public class ModificarProducto extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(600, 500));
 
         ModificarProductoCerrarButton.setText("Cerrar");
-        ModificarProductoCerrarButton.setToolTipText("Cerrar panel");
         ModificarProductoCerrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarProductoCerrarButtonActionPerformed(evt);
@@ -62,7 +61,6 @@ public class ModificarProducto extends javax.swing.JPanel {
         });
 
         ModificarProductoModificarButton.setText("Modificar");
-        ModificarProductoModificarButton.setToolTipText("Editar producto seleccionado");
         ModificarProductoModificarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarProductoModificarButtonActionPerformed(evt);
@@ -82,29 +80,24 @@ public class ModificarProducto extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        ModificarProductoTable.setToolTipText("Selecciona un producto para modificarlo");
         ModificarProductoTable.setPreferredSize(new java.awt.Dimension(580, 200));
         ModificarProductoTable.setRequestFocusEnabled(false);
         ModificarProductoScrollPanelTable.setViewportView(ModificarProductoTable);
 
         ModificarProductoDescripcion.setColumns(20);
         ModificarProductoDescripcion.setRows(5);
-        ModificarProductoDescripcion.setToolTipText("Descripcion");
         ModificarProductoScrollPanelDescripcion.setViewportView(ModificarProductoDescripcion);
 
         ModificarProductoImagen.setColumns(20);
         ModificarProductoImagen.setRows(5);
-        ModificarProductoImagen.setToolTipText("Url de la imagen");
         ModificarProductoScrollPanelImagen.setViewportView(ModificarProductoImagen);
 
-        ModificarProductoTipo.setToolTipText("Tipo");
         ModificarProductoTipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarProductoTipoActionPerformed(evt);
             }
         });
 
-        ModificarProductoNombre.setToolTipText("Nombre");
         ModificarProductoNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarProductoNombreActionPerformed(evt);
@@ -112,10 +105,8 @@ public class ModificarProducto extends javax.swing.JPanel {
         });
 
         ModificarProductoStock.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
-        ModificarProductoStock.setToolTipText("Unidades");
 
         ModificarProductoPrecio.setModel(new javax.swing.SpinnerNumberModel(0.0d, 0.0d, null, 1.0d));
-        ModificarProductoPrecio.setToolTipText("Precio");
 
         ModificarProductoNombreLabel.setText("Nombre");
 
@@ -145,18 +136,22 @@ public class ModificarProducto extends javax.swing.JPanel {
                     .addComponent(ModificarProductoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ModificarProductoStock, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ModificarProductoStockLabel)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(ModificarProductoTipoLabel)
-                        .addComponent(ModificarProductoTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ModificarProductoScrollPanelImagen)
-                        .addComponent(ModificarProductoImagenLabel)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(ModificarProductoModificarButton)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ModificarProductoCerrarButton))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ModificarProductoStock, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ModificarProductoStockLabel))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ModificarProductoTipoLabel)
+                            .addComponent(ModificarProductoTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ModificarProductoScrollPanelImagen)
+                            .addComponent(ModificarProductoImagenLabel)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(ModificarProductoModificarButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ModificarProductoCerrarButton)))
+                        .addGap(46, 215, Short.MAX_VALUE))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()

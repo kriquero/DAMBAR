@@ -56,13 +56,11 @@ public class modMesa extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setToolTipText("Selecciona una mesa para modificar su estado");
         jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
         jTable1.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(jTable1);
 
         Cerrar.setText("Cerrar");
-        Cerrar.setToolTipText("Cerrar panel");
         Cerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CerrarActionPerformed(evt);
@@ -70,7 +68,6 @@ public class modMesa extends javax.swing.JPanel {
         });
 
         modify.setText("Modificar");
-        modify.setToolTipText("Edita la mesa seleccionada");
         modify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modifyActionPerformed(evt);
@@ -78,7 +75,6 @@ public class modMesa extends javax.swing.JPanel {
         });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Libre", "Ocupada", "Reservada" }));
-        jComboBox1.setToolTipText("Selecciona el nuevo estado de la mesa");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

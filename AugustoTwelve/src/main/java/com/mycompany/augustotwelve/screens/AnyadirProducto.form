@@ -125,7 +125,6 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="toolTipText" type="java.lang.String" value="Url de la imagen del nuevo producto"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -141,7 +140,6 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="toolTipText" type="java.lang.String" value="Descripci&#xf3;n del nuevo producto"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -149,7 +147,6 @@
     <Component class="javax.swing.JButton" name="AnyadirProductoCerrarButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cerrar"/>
-        <Property name="toolTipText" type="java.lang.String" value="Cerrar panel"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnyadirProductoCerrarButtonActionPerformed"/>
@@ -158,7 +155,6 @@
     <Component class="javax.swing.JButton" name="AnyadirProductoInsertarButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insertar"/>
-        <Property name="toolTipText" type="java.lang.String" value="Crear nuevo producto"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnyadirProductoInsertarButtonActionPerformed"/>
@@ -169,7 +165,6 @@
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="0.0" minimum="0.0" numberType="java.lang.Double" stepSize="1.0" type="number"/>
         </Property>
-        <Property name="toolTipText" type="java.lang.String" value="Precio del nuevo producto"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="AnyadirProductoStock">
@@ -177,21 +172,14 @@
         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
           <SpinnerModel initial="0" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
         </Property>
-        <Property name="toolTipText" type="java.lang.String" value="Unidades del nuevo producto"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="AnyadirProductonombre">
-      <Properties>
-        <Property name="toolTipText" type="java.lang.String" value="Nombre del nuevo producto"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnyadirProductonombreActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="AnyadirProductoTipo">
-      <Properties>
-        <Property name="toolTipText" type="java.lang.String" value="Tipo del nuevo producto"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnyadirProductoTipoActionPerformed"/>
       </Events>

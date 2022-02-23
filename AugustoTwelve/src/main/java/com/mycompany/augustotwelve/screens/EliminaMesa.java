@@ -65,13 +65,11 @@ private void actualizaTabla(){
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setToolTipText("Selleciona una mesa para elimninar");
         jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
         jTable1.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(jTable1);
 
         Cerrar.setText("Cerrar");
-        Cerrar.setToolTipText("Cierra el panel");
         Cerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CerrarActionPerformed(evt);
@@ -79,7 +77,7 @@ private void actualizaTabla(){
         });
 
         delete.setText("Eliminar");
-        delete.setToolTipText("Borrar mesa seleccionada");
+        delete.setActionCommand("Eliminar");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);

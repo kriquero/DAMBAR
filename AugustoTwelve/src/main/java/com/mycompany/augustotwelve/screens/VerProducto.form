@@ -80,7 +80,6 @@
                 <Column editable="true" title="Title 4" type="java.lang.Object"/>
               </Table>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ver productos"/>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
@@ -120,13 +119,11 @@
     <Component class="javax.swing.JButton" name="VerProductoActualizarTableButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Actualizar"/>
-        <Property name="toolTipText" type="java.lang.String" value="Refresca la tabla"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="VerProductoCerrarButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cerrar"/>
-        <Property name="toolTipText" type="java.lang.String" value="Cerrar panel"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VerProductoCerrarButtonActionPerformed"/>

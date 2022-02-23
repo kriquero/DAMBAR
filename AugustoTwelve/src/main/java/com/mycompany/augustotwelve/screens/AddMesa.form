@@ -91,7 +91,6 @@
     <Component class="javax.swing.JButton" name="Cerrar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cerrar"/>
-        <Property name="toolTipText" type="java.lang.String" value="Cerrar panel"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CerrarActionPerformed"/>
@@ -100,7 +99,6 @@
     <Component class="javax.swing.JButton" name="modify">
       <Properties>
         <Property name="text" type="java.lang.String" value="Anyadir"/>
-        <Property name="toolTipText" type="java.lang.String" value="Crear producto"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modifyActionPerformed"/>
