@@ -65,6 +65,7 @@ private void actualizaTabla(){
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.setToolTipText("Ver mesas");
         jTable1.setPreferredSize(new java.awt.Dimension(580, 200));
         jTable1.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(jTable1);
@@ -77,6 +78,7 @@ private void actualizaTabla(){
         });
 
         modify.setText("Actualizar");
+        modify.setToolTipText("Refresca la tabla");
         modify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modifyActionPerformed(evt);

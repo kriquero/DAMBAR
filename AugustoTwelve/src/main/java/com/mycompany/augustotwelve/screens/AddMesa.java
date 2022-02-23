@@ -59,6 +59,7 @@ public class AddMesa extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jTable1);
 
         Cerrar.setText("Cerrar");
+        Cerrar.setToolTipText("Cerrar panel");
         Cerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CerrarActionPerformed(evt);
@@ -66,6 +67,7 @@ public class AddMesa extends javax.swing.JPanel {
         });
 
         modify.setText("Anyadir");
+        modify.setToolTipText("Crear producto");
         modify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modifyActionPerformed(evt);

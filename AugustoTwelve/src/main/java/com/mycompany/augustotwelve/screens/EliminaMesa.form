@@ -80,6 +80,7 @@
                 <Column editable="true" title="Title 4" type="java.lang.Object"/>
               </Table>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Selleciona una mesa para elimninar"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[580, 200]"/>
             </Property>
@@ -91,6 +92,7 @@
     <Component class="javax.swing.JButton" name="Cerrar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cerrar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Cierra el panel"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CerrarActionPerformed"/>
@@ -99,6 +101,7 @@
     <Component class="javax.swing.JButton" name="delete">
       <Properties>
         <Property name="text" type="java.lang.String" value="Eliminar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Borrar mesa seleccionada"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteActionPerformed"/>

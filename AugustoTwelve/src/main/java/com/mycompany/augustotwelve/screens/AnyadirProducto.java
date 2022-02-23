@@ -50,13 +50,16 @@ public class AnyadirProducto extends javax.swing.JPanel {
 
         AnyadirProductoImagen.setColumns(20);
         AnyadirProductoImagen.setRows(5);
+        AnyadirProductoImagen.setToolTipText("Url de la imagen del nuevo producto");
         AnyadirProductoScrollPanelImagen.setViewportView(AnyadirProductoImagen);
 
         AnyadirProductoDescripcion.setColumns(20);
         AnyadirProductoDescripcion.setRows(5);
+        AnyadirProductoDescripcion.setToolTipText("Descripción del nuevo producto");
         AnyadirProductoScrollPanelDescripcion.setViewportView(AnyadirProductoDescripcion);
 
         AnyadirProductoCerrarButton.setText("Cerrar");
+        AnyadirProductoCerrarButton.setToolTipText("Cerrar panel");
         AnyadirProductoCerrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AnyadirProductoCerrarButtonActionPerformed(evt);
@@ -64,6 +67,7 @@ public class AnyadirProducto extends javax.swing.JPanel {
         });
 
         AnyadirProductoInsertarButton.setText("Insertar");
+        AnyadirProductoInsertarButton.setToolTipText("Crear nuevo producto");
         AnyadirProductoInsertarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AnyadirProductoInsertarButtonActionPerformed(evt);
@@ -71,15 +75,19 @@ public class AnyadirProducto extends javax.swing.JPanel {
         });
 
         AnyadirProductoPrecio.setModel(new javax.swing.SpinnerNumberModel(0.0d, 0.0d, null, 1.0d));
+        AnyadirProductoPrecio.setToolTipText("Precio del nuevo producto");
 
         AnyadirProductoStock.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        AnyadirProductoStock.setToolTipText("Unidades del nuevo producto");
 
+        AnyadirProductonombre.setToolTipText("Nombre del nuevo producto");
         AnyadirProductonombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AnyadirProductonombreActionPerformed(evt);
             }
         });
 
+        AnyadirProductoTipo.setToolTipText("Tipo del nuevo producto");
         AnyadirProductoTipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AnyadirProductoTipoActionPerformed(evt);

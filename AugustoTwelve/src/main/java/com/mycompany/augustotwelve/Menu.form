@@ -322,6 +322,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Alta"/>
+                        <Property name="toolTipText" type="java.lang.String" value="A&#xf1;adir una mesa"/>
                         <Property name="borderPainted" type="boolean" value="false"/>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -385,6 +386,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Baja"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Eliminar una mesa"/>
                         <Property name="borderPainted" type="boolean" value="false"/>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -448,6 +450,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Modificar"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Editar una mesa"/>
                         <Property name="borderPainted" type="boolean" value="false"/>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -511,6 +514,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Visualizar"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Ver lista de mesas"/>
                         <Property name="borderPainted" type="boolean" value="false"/>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -716,6 +720,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Alta"/>
+                        <Property name="toolTipText" type="java.lang.String" value="A&#xf1;adir un producto"/>
                         <Property name="borderPainted" type="boolean" value="false"/>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -779,6 +784,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Baja"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Eliminar un producto"/>
                         <Property name="borderPainted" type="boolean" value="false"/>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -842,6 +848,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Modificar"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Editar un producto"/>
                         <Property name="borderPainted" type="boolean" value="false"/>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -905,6 +912,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Visualizar"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Ver lista de productos"/>
                         <Property name="borderPainted" type="boolean" value="false"/>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">

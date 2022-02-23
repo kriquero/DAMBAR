@@ -52,13 +52,16 @@ public class EliminarProducto extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        EliminarProductoTable.setToolTipText("Selecciona un producto para eliminar");
         EliminarProductoTable.setPreferredSize(new java.awt.Dimension(580, 200));
         EliminarProductoTable.setRequestFocusEnabled(false);
         EliminarProductoScrollPanel.setViewportView(EliminarProductoTable);
 
         EliminarProductoEliminarButton.setText("Eliminar");
+        EliminarProductoEliminarButton.setToolTipText("Borra el producto seleccionado");
 
         EliminarProductoCerrarButton.setText("Cerrar");
+        EliminarProductoCerrarButton.setToolTipText("Cierra el panel");
         EliminarProductoCerrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EliminarProductoCerrarButtonActionPerformed(evt);
